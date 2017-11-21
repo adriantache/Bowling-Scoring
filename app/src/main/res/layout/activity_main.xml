@@ -1,0 +1,1003 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--Top logo-->
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:maxHeight="100dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/logo" />
+
+    <!--Player 1 Tag-->
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+
+        android:background="#ff5722"
+        android:orientation="horizontal"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="16dp"
+            android:layout_weight="1"
+            android:src="@drawable/ball" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="8"
+            android:gravity="center_vertical"
+            android:text="Player 1"
+            android:textColor="#fff"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="16dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="300"
+            android:textColor="#fff"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <!--Player 1 Scores-->
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="2"
+            android:background="@drawable/border"
+            android:padding="2dp">
+
+            <TextView
+                android:id="@+id/Frame1Score1Player1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:text="153"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/Frame1Score2Player1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/border"
+                android:padding="2dp"
+                android:text="X"
+                android:textSize="14dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@id/Frame1Score2Player1"
+                android:background="@drawable/border"
+                android:padding="2dp"
+                android:text="9"
+                android:textSize="14dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="2"
+            android:background="@drawable/border"
+            android:padding="2dp">
+
+            <TextView
+                android:id="@+id/Frame2Score1Player1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:text="153"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/Frame2Score2Player1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/border"
+                android:padding="2dp"
+                android:text="X"
+                android:textSize="14dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@id/Frame2Score2Player1"
+                android:background="@drawable/border"
+                android:padding="2dp"
+                android:text="9"
+                android:textSize="14dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="2"
+            android:background="@drawable/border"
+            android:padding="2dp">
+
+            <TextView
+                android:id="@+id/Frame3Score1Player1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:text="153"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/Frame3Score2Player1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/border"
+                android:padding="2dp"
+                android:text="X"
+                android:textSize="14dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@id/Frame3Score2Player1"
+                android:background="@drawable/border"
+                android:padding="2dp"
+                android:text="9"
+                android:textSize="14dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="2"
+            android:background="@drawable/border"
+            android:padding="2dp">
+
+            <TextView
+                android:id="@+id/Frame4Score1Player1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:text="153"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/Frame4Score2Player1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/border"
+                android:padding="2dp"
+                android:text="X"
+                android:textSize="14dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@id/Frame4Score2Player1"
+                android:background="@drawable/border"
+                android:padding="2dp"
+                android:text="9"
+                android:textSize="14dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="2"
+            android:background="@drawable/border"
+            android:padding="2dp">
+
+            <TextView
+                android:id="@+id/Frame5Score1Player1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:text="153"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/Frame5Score2Player1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/border"
+                android:padding="2dp"
+                android:text="X"
+                android:textSize="14dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@id/Frame5Score2Player1"
+                android:background="@drawable/border"
+                android:padding="2dp"
+                android:text="9"
+                android:textSize="14dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="2"
+            android:background="@drawable/border"
+            android:padding="2dp">
+
+            <TextView
+                android:id="@+id/Frame6Score1Player1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:text="153"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/Frame6Score2Player1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/border"
+                android:padding="2dp"
+                android:text="X"
+                android:textSize="14dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@id/Frame6Score2Player1"
+                android:background="@drawable/border"
+                android:padding="2dp"
+                android:text="9"
+                android:textSize="14dp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="2"
+            android:background="@drawable/border"
+            android:padding="2dp">
+
+            <TextView
+                android:id="@+id/Frame7Score1Player1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:text="153"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/Frame7Score2Player1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/border"
+                android:padding="2dp"
+                android:text="X"
+                android:textSize="14dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@id/Frame7Score2Player1"
+                android:background="@drawable/border"
+                android:padding="2dp"
+                android:text="9"
+                android:textSize="14dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="2"
+            android:background="@drawable/border"
+            android:padding="2dp">
+
+            <TextView
+                android:id="@+id/Frame8Score1Player1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:text="153"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/Frame8Score2Player1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/border"
+                android:padding="2dp"
+                android:text="X"
+                android:textSize="14dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@id/Frame8Score2Player1"
+                android:background="@drawable/border"
+                android:padding="2dp"
+                android:text="9"
+                android:textSize="14dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="2"
+            android:background="@drawable/border"
+            android:padding="2dp">
+
+            <TextView
+                android:id="@+id/Frame9Score1Player1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:text="153"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/Frame9Score2Player1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/border"
+                android:padding="2dp"
+                android:text="X"
+                android:textSize="14dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@id/Frame9Score2Player1"
+                android:background="@drawable/border"
+                android:padding="2dp"
+                android:text="9"
+                android:textSize="14dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/border"
+            android:padding="2dp">
+
+            <TextView
+                android:id="@+id/Frame10Score1Player1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:text="153"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/Frame10Score2Player1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/border"
+                android:padding="2dp"
+                android:text="X"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/Frame10Score3Player1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@id/Frame10Score2Player1"
+                android:background="@drawable/border"
+                android:padding="2dp"
+                android:text="4"
+                android:textSize="14dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@id/Frame10Score3Player1"
+                android:background="@drawable/border"
+                android:padding="2dp"
+                android:text="9"
+                android:textSize="14dp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <!--Player 2 Tag-->
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#3e2723"
+        android:orientation="horizontal"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="16dp"
+            android:layout_weight="1"
+            android:src="@drawable/ball"
+            android:visibility="invisible" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="8"
+            android:gravity="center_vertical"
+            android:text="Player 2"
+            android:textColor="#fff"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="16dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="300"
+            android:textColor="#fff"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <!--Player 2 Scores-->
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="4dp"
+
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="2"
+            android:background="@drawable/border"
+            android:padding="2dp">
+
+            <TextView
+                android:id="@+id/Frame1Score1Player2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:text="153"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/Frame1Score2Player2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/border"
+                android:padding="2dp"
+                android:text="X"
+                android:textSize="14dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@id/Frame1Score2Player2"
+                android:background="@drawable/border"
+                android:padding="2dp"
+                android:text="9"
+                android:textSize="14dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="2"
+            android:background="@drawable/border"
+            android:padding="2dp">
+
+            <TextView
+                android:id="@+id/Frame2Score1Player2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:text="153"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/Frame2Score2Player2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/border"
+                android:padding="2dp"
+                android:text="X"
+                android:textSize="14dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@id/Frame2Score2Player2"
+                android:background="@drawable/border"
+                android:padding="2dp"
+                android:text="9"
+                android:textSize="14dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="2"
+            android:background="@drawable/border"
+            android:padding="2dp">
+
+            <TextView
+                android:id="@+id/Frame3Score1Player2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:text="153"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/Frame3Score2Player2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/border"
+                android:padding="2dp"
+                android:text="X"
+                android:textSize="14dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@id/Frame3Score2Player2"
+                android:background="@drawable/border"
+                android:padding="2dp"
+                android:text="9"
+                android:textSize="14dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="2"
+            android:background="@drawable/border"
+            android:padding="2dp">
+
+            <TextView
+                android:id="@+id/Frame4Score1Player2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:text="153"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/Frame4Score2Player2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/border"
+                android:padding="2dp"
+                android:text="X"
+                android:textSize="14dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@id/Frame4Score2Player2"
+                android:background="@drawable/border"
+                android:padding="2dp"
+                android:text="9"
+                android:textSize="14dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="2"
+            android:background="@drawable/border"
+            android:padding="2dp">
+
+            <TextView
+                android:id="@+id/Frame5Score1Player2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:text="153"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/Frame5Score2Player2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/border"
+                android:padding="2dp"
+                android:text="X"
+                android:textSize="14dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@id/Frame5Score2Player2"
+                android:background="@drawable/border"
+                android:padding="2dp"
+                android:text="9"
+                android:textSize="14dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="2"
+            android:background="@drawable/border"
+            android:padding="2dp">
+
+            <TextView
+                android:id="@+id/Frame6Score1Player2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:text="153"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/Frame6Score2Player2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/border"
+                android:padding="2dp"
+                android:text="X"
+                android:textSize="14dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@id/Frame6Score2Player2"
+                android:background="@drawable/border"
+                android:padding="2dp"
+                android:text="9"
+                android:textSize="14dp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="2"
+            android:background="@drawable/border"
+            android:padding="2dp">
+
+            <TextView
+                android:id="@+id/Frame7Score1Player2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:text="153"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/Frame7Score2Player2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/border"
+                android:padding="2dp"
+                android:text="X"
+                android:textSize="14dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@id/Frame7Score2Player2"
+                android:background="@drawable/border"
+                android:padding="2dp"
+                android:text="9"
+                android:textSize="14dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="2"
+            android:background="@drawable/border"
+            android:padding="2dp">
+
+            <TextView
+                android:id="@+id/Frame8Score1Player2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:text="153"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/Frame8Score2Player2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/border"
+                android:padding="2dp"
+                android:text="X"
+                android:textSize="14dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@id/Frame8Score2Player2"
+                android:background="@drawable/border"
+                android:padding="2dp"
+                android:text="9"
+                android:textSize="14dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="2"
+            android:background="@drawable/border"
+            android:padding="2dp">
+
+            <TextView
+                android:id="@+id/Frame9Score1Player2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:text="153"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/Frame9Score2Player2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/border"
+                android:padding="2dp"
+                android:text="X"
+                android:textSize="14dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@id/Frame9Score2Player2"
+                android:background="@drawable/border"
+                android:padding="2dp"
+                android:text="9"
+                android:textSize="14dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/border"
+            android:padding="2dp">
+
+            <TextView
+                android:id="@+id/Frame10Score1Player2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:text="153"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/Frame10Score2Player2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/border"
+                android:padding="2dp"
+                android:text="X"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/Frame10Score3Player2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@id/Frame10Score2Player2"
+                android:background="@drawable/border"
+                android:padding="2dp"
+                android:text="4"
+                android:textSize="14dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@id/Frame10Score3Player2"
+                android:background="@drawable/border"
+                android:padding="2dp"
+                android:text="9"
+                android:textSize="14dp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <!--separator-->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/line" />
+
+    <!--Downed pins tag-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:background="#f44336"
+        android:gravity="center"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
+        android:text="select number of downed pins:"
+        android:textColor="#fff"
+        android:textStyle="bold" />
+
+    <!--Pin number selector-->
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:background="#fff"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:onClick=""
+            android:src="@drawable/subtract" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:layout_weight="2"
+            android:src="@drawable/instructions" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:onClick=""
+            android:src="@drawable/add" />
+
+    </LinearLayout>
+
+    <!--Pin submit button-->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:clickable="true"
+        android:onClick=""
+        android:scaleType="centerCrop"
+        android:src="@drawable/submit" />
+
+    <!--separator-->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/line" />
+
+    <!--Reset button-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center_vertical"
+        android:background="#ffeb3b"
+        android:clickable="true"
+        android:gravity="center"
+        android:onClick=""
+        android:text="reset"
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+</LinearLayout>
