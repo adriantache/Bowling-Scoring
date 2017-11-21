@@ -1,5 +1,5 @@
 # Bowling-Scoring
-Bowling Scoring app for the Google Android Basics Nanodegree
+*Bowling Scoring app for the Google Android Basics Nanodegree*
 
 The assignment for Project 2 of the Google Android Basics Nanodegree was to create a scorekeeping app for a sport of our choice,
 with a number of requirements such as including two players, and tracking multiple scores. Since I wanted a challenge, I decided
@@ -14,7 +14,7 @@ on future moves, without simply hardcoding all the possibilities.
 From there, I moved on to mocking up the app, then printing it out and figuring how to lay everything out in XML. This is pretty much
 where the project is currently, and it looks 90% how I intended it to. 
 
-*To do:*
+**To do:**
 - write Java to automate selection of # of pins
 - write Java to automate moving cursor to active player
 - write Java to automate game logic and scoring
