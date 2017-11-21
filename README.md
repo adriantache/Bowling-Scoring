@@ -14,6 +14,7 @@ on future moves, without simply hardcoding all the possibilities.
 From there, I moved on to mocking up the app, then printing it out and figuring how to lay everything out in XML. This is pretty much
 where the project is currently, and it looks 90% how I intended it to. 
 
+
 **To do:**
 - write Java to automate selection of # of pins
 - write Java to automate moving cursor to active player
@@ -22,3 +23,6 @@ where the project is currently, and it looks 90% how I intended it to.
 - improve XML layout to use widths
 - (optional) create a landscape layout
 - (optional) improve UI for selection of # of pins
+
+You can see the design mockup below:
+![design mockup](https://github.com/adriantache/Bowling-Scoring/blob/master/app/src/main/res/drawable-xxhdpi/mockup.png)
