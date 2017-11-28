@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="number_of_pins">
+        <item>@drawable/zero</item>
+        <item>@drawable/one</item>
+        <item>@drawable/two</item>
+        <item>@drawable/three</item>
+        <item>@drawable/four</item>
+        <item>@drawable/five</item>
+        <item>@drawable/six</item>
+        <item>@drawable/seven</item>
+        <item>@drawable/eight</item>
+        <item>@drawable/nine</item>
+        <item>@drawable/strike</item>
+    </integer-array>
+</resources>
