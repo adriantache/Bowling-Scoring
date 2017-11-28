@@ -23,6 +23,7 @@ where the project is currently, and it looks 90% how I intended it to.
 - improve XML layout to use widths
 - (optional) create a landscape layout
 - (optional) improve UI for selection of # of pins
+- (optional) add UNDO button
 
 You can see the design mockup below:
 ![design mockup](https://github.com/adriantache/Bowling-Scoring/blob/master/app/src/main/res/drawable-xxhdpi/mockup.png)
