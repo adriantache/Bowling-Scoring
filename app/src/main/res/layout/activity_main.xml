@@ -67,7 +67,7 @@
             android:padding="2dp">
 
             <TextView
-                android:id="@+id/Frame1Score1Player1"
+                android:id="@+id/frame1Score1Player1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
@@ -76,7 +76,7 @@
                 android:textSize="14dp" />
 
             <TextView
-                android:id="@+id/Frame1Score2Player1"
+                android:id="@+id/frame1Score2Player1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
@@ -87,10 +87,11 @@
                 android:textSize="14dp" />
 
             <TextView
+                android:id="@+id/frame1TotalScorePlayer1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
-                android:layout_toLeftOf="@id/Frame1Score2Player1"
+                android:layout_toLeftOf="@id/frame1Score2Player1"
                 android:background="@drawable/border"
                 android:padding="2dp"
                 android:text="9"
@@ -106,7 +107,7 @@
             android:padding="2dp">
 
             <TextView
-                android:id="@+id/Frame2Score1Player1"
+                android:id="@+id/frame2Score1Player1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
@@ -115,7 +116,7 @@
                 android:textSize="14dp" />
 
             <TextView
-                android:id="@+id/Frame2Score2Player1"
+                android:id="@+id/frame2Score2Player1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
@@ -126,10 +127,11 @@
                 android:textSize="14dp" />
 
             <TextView
+                android:id="@+id/frame2TotalScorePlayer1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
-                android:layout_toLeftOf="@id/Frame2Score2Player1"
+                android:layout_toLeftOf="@id/frame2Score2Player1"
                 android:background="@drawable/border"
                 android:padding="2dp"
                 android:text="9"
@@ -145,7 +147,7 @@
             android:padding="2dp">
 
             <TextView
-                android:id="@+id/Frame3Score1Player1"
+                android:id="@+id/frame3Score1Player1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
@@ -154,7 +156,7 @@
                 android:textSize="14dp" />
 
             <TextView
-                android:id="@+id/Frame3Score2Player1"
+                android:id="@+id/frame3Score2Player1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
@@ -165,10 +167,11 @@
                 android:textSize="14dp" />
 
             <TextView
+                android:id="@+id/frame3TotalScorePlayer1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
-                android:layout_toLeftOf="@id/Frame3Score2Player1"
+                android:layout_toLeftOf="@id/frame3Score2Player1"
                 android:background="@drawable/border"
                 android:padding="2dp"
                 android:text="9"
@@ -184,7 +187,7 @@
             android:padding="2dp">
 
             <TextView
-                android:id="@+id/Frame4Score1Player1"
+                android:id="@+id/frame4Score1Player1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
@@ -193,7 +196,7 @@
                 android:textSize="14dp" />
 
             <TextView
-                android:id="@+id/Frame4Score2Player1"
+                android:id="@+id/frame4Score2Player1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
@@ -204,10 +207,11 @@
                 android:textSize="14dp" />
 
             <TextView
+                android:id="@+id/frame4TotalScorePlayer1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
-                android:layout_toLeftOf="@id/Frame4Score2Player1"
+                android:layout_toLeftOf="@id/frame4Score2Player1"
                 android:background="@drawable/border"
                 android:padding="2dp"
                 android:text="9"
@@ -223,7 +227,7 @@
             android:padding="2dp">
 
             <TextView
-                android:id="@+id/Frame5Score1Player1"
+                android:id="@+id/frame5Score1Player1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
@@ -232,7 +236,7 @@
                 android:textSize="14dp" />
 
             <TextView
-                android:id="@+id/Frame5Score2Player1"
+                android:id="@+id/frame5Score2Player1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
@@ -243,10 +247,11 @@
                 android:textSize="14dp" />
 
             <TextView
+                android:id="@+id/frame5TotalScorePlayer1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
-                android:layout_toLeftOf="@id/Frame5Score2Player1"
+                android:layout_toLeftOf="@id/frame5Score2Player1"
                 android:background="@drawable/border"
                 android:padding="2dp"
                 android:text="9"
@@ -262,7 +267,7 @@
             android:padding="2dp">
 
             <TextView
-                android:id="@+id/Frame6Score1Player1"
+                android:id="@+id/frame6Score1Player1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
@@ -271,7 +276,7 @@
                 android:textSize="14dp" />
 
             <TextView
-                android:id="@+id/Frame6Score2Player1"
+                android:id="@+id/frame6Score2Player1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
@@ -282,10 +287,11 @@
                 android:textSize="14dp" />
 
             <TextView
+                android:id="@+id/frame6TotalScorePlayer1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
-                android:layout_toLeftOf="@id/Frame6Score2Player1"
+                android:layout_toLeftOf="@id/frame6Score2Player1"
                 android:background="@drawable/border"
                 android:padding="2dp"
                 android:text="9"
@@ -302,7 +308,7 @@
             android:padding="2dp">
 
             <TextView
-                android:id="@+id/Frame7Score1Player1"
+                android:id="@+id/frame7Score1Player1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
@@ -311,7 +317,7 @@
                 android:textSize="14dp" />
 
             <TextView
-                android:id="@+id/Frame7Score2Player1"
+                android:id="@+id/frame7Score2Player1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
@@ -322,10 +328,11 @@
                 android:textSize="14dp" />
 
             <TextView
+                android:id="@+id/frame7TotalScorePlayer1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
-                android:layout_toLeftOf="@id/Frame7Score2Player1"
+                android:layout_toLeftOf="@id/frame7Score2Player1"
                 android:background="@drawable/border"
                 android:padding="2dp"
                 android:text="9"
@@ -341,7 +348,7 @@
             android:padding="2dp">
 
             <TextView
-                android:id="@+id/Frame8Score1Player1"
+                android:id="@+id/frame8Score1Player1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
@@ -350,7 +357,7 @@
                 android:textSize="14dp" />
 
             <TextView
-                android:id="@+id/Frame8Score2Player1"
+                android:id="@+id/frame8Score2Player1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
@@ -361,10 +368,11 @@
                 android:textSize="14dp" />
 
             <TextView
+                android:id="@+id/frame8TotalScorePlayer1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
-                android:layout_toLeftOf="@id/Frame8Score2Player1"
+                android:layout_toLeftOf="@id/frame8Score2Player1"
                 android:background="@drawable/border"
                 android:padding="2dp"
                 android:text="9"
@@ -380,7 +388,7 @@
             android:padding="2dp">
 
             <TextView
-                android:id="@+id/Frame9Score1Player1"
+                android:id="@+id/frame9Score1Player1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
@@ -389,7 +397,7 @@
                 android:textSize="14dp" />
 
             <TextView
-                android:id="@+id/Frame9Score2Player1"
+                android:id="@+id/frame9Score2Player1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
@@ -400,10 +408,11 @@
                 android:textSize="14dp" />
 
             <TextView
+                android:id="@+id/frame9TotalScorePlayer1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
-                android:layout_toLeftOf="@id/Frame9Score2Player1"
+                android:layout_toLeftOf="@id/frame9Score2Player1"
                 android:background="@drawable/border"
                 android:padding="2dp"
                 android:text="9"
@@ -419,7 +428,7 @@
             android:padding="2dp">
 
             <TextView
-                android:id="@+id/Frame10Score1Player1"
+                android:id="@+id/frame10Score1Player1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
@@ -428,7 +437,7 @@
                 android:textSize="14dp" />
 
             <TextView
-                android:id="@+id/Frame10Score2Player1"
+                android:id="@+id/frame10Score2Player1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
@@ -439,21 +448,22 @@
                 android:textSize="14dp" />
 
             <TextView
-                android:id="@+id/Frame10Score3Player1"
+                android:id="@+id/frame10Score3Player1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
-                android:layout_toLeftOf="@id/Frame10Score2Player1"
+                android:layout_toLeftOf="@id/frame10Score2Player1"
                 android:background="@drawable/border"
                 android:padding="2dp"
                 android:text="4"
                 android:textSize="14dp" />
 
             <TextView
+                android:id="@+id/frame10TotalScorePlayer1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
-                android:layout_toLeftOf="@id/Frame10Score3Player1"
+                android:layout_toLeftOf="@id/frame10Score3Player1"
                 android:background="@drawable/border"
                 android:padding="2dp"
                 android:text="9"
@@ -519,7 +529,7 @@
             android:padding="2dp">
 
             <TextView
-                android:id="@+id/Frame1Score1Player2"
+                android:id="@+id/frame1Score1Player2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
@@ -528,7 +538,7 @@
                 android:textSize="14dp" />
 
             <TextView
-                android:id="@+id/Frame1Score2Player2"
+                android:id="@+id/frame1Score2Player2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
@@ -539,10 +549,11 @@
                 android:textSize="14dp" />
 
             <TextView
+                android:id="@+id/frame1TotalScorePlayer2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
-                android:layout_toLeftOf="@id/Frame1Score2Player2"
+                android:layout_toLeftOf="@id/frame1Score2Player2"
                 android:background="@drawable/border"
                 android:padding="2dp"
                 android:text="9"
@@ -558,7 +569,7 @@
             android:padding="2dp">
 
             <TextView
-                android:id="@+id/Frame2Score1Player2"
+                android:id="@+id/frame2Score1Player2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
@@ -567,7 +578,7 @@
                 android:textSize="14dp" />
 
             <TextView
-                android:id="@+id/Frame2Score2Player2"
+                android:id="@+id/frame2Score2Player2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
@@ -578,10 +589,11 @@
                 android:textSize="14dp" />
 
             <TextView
+                android:id="@+id/frame2TotalScorePlayer2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
-                android:layout_toLeftOf="@id/Frame2Score2Player2"
+                android:layout_toLeftOf="@id/frame2Score2Player2"
                 android:background="@drawable/border"
                 android:padding="2dp"
                 android:text="9"
@@ -597,7 +609,7 @@
             android:padding="2dp">
 
             <TextView
-                android:id="@+id/Frame3Score1Player2"
+                android:id="@+id/frame3Score1Player2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
@@ -606,7 +618,7 @@
                 android:textSize="14dp" />
 
             <TextView
-                android:id="@+id/Frame3Score2Player2"
+                android:id="@+id/frame3Score2Player2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
@@ -617,10 +629,11 @@
                 android:textSize="14dp" />
 
             <TextView
+                android:id="@+id/frame3TotalScorePlayer2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
-                android:layout_toLeftOf="@id/Frame3Score2Player2"
+                android:layout_toLeftOf="@id/frame3Score2Player2"
                 android:background="@drawable/border"
                 android:padding="2dp"
                 android:text="9"
@@ -636,7 +649,7 @@
             android:padding="2dp">
 
             <TextView
-                android:id="@+id/Frame4Score1Player2"
+                android:id="@+id/frame4Score1Player2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
@@ -645,7 +658,7 @@
                 android:textSize="14dp" />
 
             <TextView
-                android:id="@+id/Frame4Score2Player2"
+                android:id="@+id/frame4Score2Player2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
@@ -656,10 +669,11 @@
                 android:textSize="14dp" />
 
             <TextView
+                android:id="@+id/frame4TotalScorePlayer2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
-                android:layout_toLeftOf="@id/Frame4Score2Player2"
+                android:layout_toLeftOf="@id/frame4Score2Player2"
                 android:background="@drawable/border"
                 android:padding="2dp"
                 android:text="9"
@@ -675,7 +689,7 @@
             android:padding="2dp">
 
             <TextView
-                android:id="@+id/Frame5Score1Player2"
+                android:id="@+id/frame5Score1Player2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
@@ -684,7 +698,7 @@
                 android:textSize="14dp" />
 
             <TextView
-                android:id="@+id/Frame5Score2Player2"
+                android:id="@+id/frame5Score2Player2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
@@ -695,10 +709,11 @@
                 android:textSize="14dp" />
 
             <TextView
+                android:id="@+id/frame5TotalScorePlayer2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
-                android:layout_toLeftOf="@id/Frame5Score2Player2"
+                android:layout_toLeftOf="@id/frame5Score2Player2"
                 android:background="@drawable/border"
                 android:padding="2dp"
                 android:text="9"
@@ -714,7 +729,7 @@
             android:padding="2dp">
 
             <TextView
-                android:id="@+id/Frame6Score1Player2"
+                android:id="@+id/frame6Score1Player2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
@@ -723,7 +738,7 @@
                 android:textSize="14dp" />
 
             <TextView
-                android:id="@+id/Frame6Score2Player2"
+                android:id="@+id/frame6Score2Player2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
@@ -734,10 +749,11 @@
                 android:textSize="14dp" />
 
             <TextView
+                android:id="@+id/frame6TotalScorePlayer2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
-                android:layout_toLeftOf="@id/Frame6Score2Player2"
+                android:layout_toLeftOf="@id/frame6Score2Player2"
                 android:background="@drawable/border"
                 android:padding="2dp"
                 android:text="9"
@@ -754,7 +770,7 @@
             android:padding="2dp">
 
             <TextView
-                android:id="@+id/Frame7Score1Player2"
+                android:id="@+id/frame7Score1Player2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
@@ -763,7 +779,7 @@
                 android:textSize="14dp" />
 
             <TextView
-                android:id="@+id/Frame7Score2Player2"
+                android:id="@+id/frame7Score2Player2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
@@ -774,10 +790,11 @@
                 android:textSize="14dp" />
 
             <TextView
+                android:id="@+id/frame7TotalScorePlayer2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
-                android:layout_toLeftOf="@id/Frame7Score2Player2"
+                android:layout_toLeftOf="@id/frame7Score2Player2"
                 android:background="@drawable/border"
                 android:padding="2dp"
                 android:text="9"
@@ -793,7 +810,7 @@
             android:padding="2dp">
 
             <TextView
-                android:id="@+id/Frame8Score1Player2"
+                android:id="@+id/frame8Score1Player2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
@@ -802,7 +819,7 @@
                 android:textSize="14dp" />
 
             <TextView
-                android:id="@+id/Frame8Score2Player2"
+                android:id="@+id/frame8Score2Player2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
@@ -813,10 +830,11 @@
                 android:textSize="14dp" />
 
             <TextView
+                android:id="@+id/frame8TotalScorePlayer2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
-                android:layout_toLeftOf="@id/Frame8Score2Player2"
+                android:layout_toLeftOf="@id/frame8Score2Player2"
                 android:background="@drawable/border"
                 android:padding="2dp"
                 android:text="9"
@@ -832,7 +850,7 @@
             android:padding="2dp">
 
             <TextView
-                android:id="@+id/Frame9Score1Player2"
+                android:id="@+id/frame9Score1Player2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
@@ -841,7 +859,7 @@
                 android:textSize="14dp" />
 
             <TextView
-                android:id="@+id/Frame9Score2Player2"
+                android:id="@+id/frame9Score2Player2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
@@ -852,10 +870,11 @@
                 android:textSize="14dp" />
 
             <TextView
+                android:id="@+id/frame9TotalScorePlayer2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
-                android:layout_toLeftOf="@id/Frame9Score2Player2"
+                android:layout_toLeftOf="@id/frame9Score2Player2"
                 android:background="@drawable/border"
                 android:padding="2dp"
                 android:text="9"
@@ -871,7 +890,7 @@
             android:padding="2dp">
 
             <TextView
-                android:id="@+id/Frame10Score1Player2"
+                android:id="@+id/frame10Score1Player2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
@@ -880,7 +899,7 @@
                 android:textSize="14dp" />
 
             <TextView
-                android:id="@+id/Frame10Score2Player2"
+                android:id="@+id/frame10Score2Player2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
@@ -891,21 +910,22 @@
                 android:textSize="14dp" />
 
             <TextView
-                android:id="@+id/Frame10Score3Player2"
+                android:id="@+id/frame10Score3Player2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
-                android:layout_toLeftOf="@id/Frame10Score2Player2"
+                android:layout_toLeftOf="@id/frame10Score2Player2"
                 android:background="@drawable/border"
                 android:padding="2dp"
                 android:text="4"
                 android:textSize="14dp" />
 
             <TextView
+                android:id="@+id/frame10TotalScorePlayer2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
-                android:layout_toLeftOf="@id/Frame10Score3Player2"
+                android:layout_toLeftOf="@id/frame10Score3Player2"
                 android:background="@drawable/border"
                 android:padding="2dp"
                 android:text="9"
