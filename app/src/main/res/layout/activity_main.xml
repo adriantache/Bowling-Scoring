@@ -23,6 +23,7 @@
         android:paddingTop="8dp">
 
         <ImageView
+            android:id="@+id/activePlayer1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
@@ -483,6 +484,7 @@
         android:paddingTop="8dp">
 
         <ImageView
+            android:id="@+id/activePlayer2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
@@ -970,6 +972,7 @@
             android:layout_gravity="center_vertical"
             android:layout_weight="1"
             android:clickable="true"
+            android:focusable="true"
             android:onClick="minusDownedPin"
             android:src="@drawable/subtract" />
 
@@ -986,6 +989,7 @@
             android:layout_gravity="center_vertical"
             android:layout_weight="1"
             android:clickable="true"
+            android:focusable="true"
             android:onClick="plusDownedPin"
             android:src="@drawable/add" />
 
@@ -996,6 +1000,7 @@
         android:layout_width="match_parent"
         android:layout_height="120dp"
         android:clickable="true"
+        android:focusable="true"
         android:onClick="submitScore"
         android:scaleType="centerCrop"
         android:src="@drawable/submit" />
@@ -1014,8 +1019,9 @@
         android:layout_gravity="center_vertical"
         android:background="#ffeb3b"
         android:clickable="true"
+        android:focusable="true"
         android:gravity="center"
-        android:onClick="submitScore"
+        android:onClick="resetGame"
         android:text="reset"
         android:textColor="#000"
         android:textSize="18sp"
