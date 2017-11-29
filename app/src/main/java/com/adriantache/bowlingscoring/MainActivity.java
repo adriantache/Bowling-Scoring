@@ -47,14 +47,8 @@ public class MainActivity extends AppCompatActivity {
             downedPinsPointer++;
         }
 
-        /*ImageView imageView = (ImageView) this.findViewById(R.id.downedPins);*/
-        imageViewdownedPins.setImageResource(downedPins.getResourceId(downedPinsPointer, -1) );
+        updateDownedPins();
 
-        /*Drawable drawable = downedPins.getDrawable(downedPinsPointer);*//*
-        ImageView imageView = (ImageView) this.findViewById(R.id.downedPins);
-        imageView downedPins.setImageResource(downedPins.getResourceId(downedPinsPointer, -1) );
-       *//* imageView.setImageResource(downedPins[downedPinsPointer]);
-        imageView.invalidate();*/
     }
 
     // decrement the drawable vector to show number of downed pins
@@ -63,12 +57,12 @@ public class MainActivity extends AppCompatActivity {
             downedPinsPointer--;
         }
 
-        imageViewdownedPins.setImageResource(downedPins.getResourceId(downedPinsPointer, -1) );
+        updateDownedPins();
 
-       /* *//*Drawable drawable = downedPins.getDrawable(downedPinsPointer);*//*
-        ImageView imageView = (ImageView) this.findViewById(R.id.downedPins);
-        imageView.setImageResource(downedPins[downedPinsPointer]);
-        imageView.invalidate();*/
+    }
+
+    private void updateDownedPins(){
+        imageViewdownedPins.setImageResource(downedPins.getResourceId(downedPinsPointer, -1) );
     }
 
     // process the indicated number of downed pins
