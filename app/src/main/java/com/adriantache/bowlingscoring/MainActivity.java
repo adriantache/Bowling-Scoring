@@ -877,7 +877,7 @@ public class MainActivity extends AppCompatActivity {
 
     // increment the drawable vector to show number of downed pins
     public void plusDownedPin(View view) {
-        if (downedPinsPointer < 10) {
+        if (downedPinsPointer < maxPins) {
             downedPinsPointer++;
         }
 
@@ -908,12 +908,24 @@ public class MainActivity extends AppCompatActivity {
     public void submitScore(View view) {
         if (frameNumber == 10) {
             // process three scores instead of two
-        } else {
 
+        } else {
+            //process strike
             if ( downedPinsPointer == 10) {
-                //process strike
+                if(activePlayer==1){
+                    frameScoresPlayer1[frameNumber] = downedPinsPointer;
+                    frameScoresPlayer1[frameNumber+1] = 40;
+                }
+                else {
+                    frameScoresPlayer2[frameNumber] = downedPinsPointer;
+                    frameScoresPlayer2[frameNumber+2] = 40;
+                }
+                updateDownedPins();
+                calculateScore();
+                activePlayer();
             }
 
+            //if not strike
             else if (frameEnd == false) {
                 if(activePlayer==1){
                 frameScoresPlayer1[frameNumber] = downedPinsPointer;}
@@ -934,11 +946,13 @@ public class MainActivity extends AppCompatActivity {
                     maxPins = 10;
                     frameEnd = false;
                     calculateScore();
+                    activePlayer();
                 } else {
                     frameScoresPlayer1[frameNumber+1] = downedPinsPointer;
                     maxPins = 10;
                     frameEnd = false;
                     calculateScore();
+                    activePlayer();
                 }}
                 else {
                     if (frameScoresPlayer2[frameNumber]+downedPinsPointer == 10) {
@@ -946,17 +960,19 @@ public class MainActivity extends AppCompatActivity {
                         maxPins = 10;
                         frameEnd = false;
                         calculateScore();
+                        activePlayer();
                     } else {
                         frameScoresPlayer2[frameNumber+1] = downedPinsPointer;
                         maxPins = 10;
                         frameEnd = false;
                         calculateScore();
+                        activePlayer();
                     }
                 }
             }
 
         }
-        activePlayer();
+        //
     }
 
     // retroactively calculate score for strikes and spares
