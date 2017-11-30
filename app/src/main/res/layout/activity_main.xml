@@ -68,7 +68,7 @@
             android:padding="2dp">
 
             <TextView
-                android:id="@+id/frame1Score1Player1"
+                android:id="@+id/frame1TotalScorePlayer1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
@@ -88,7 +88,7 @@
                 android:textSize="14sp" />
 
             <TextView
-                android:id="@+id/frame1TotalScorePlayer1"
+                android:id="@+id/frame1Score1Player1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
@@ -108,7 +108,7 @@
             android:padding="2dp">
 
             <TextView
-                android:id="@+id/frame2Score1Player1"
+                android:id="@+id/frame2TotalScorePlayer1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
@@ -128,7 +128,7 @@
                 android:textSize="14sp" />
 
             <TextView
-                android:id="@+id/frame2TotalScorePlayer1"
+                android:id="@+id/frame2Score1Player1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
@@ -148,7 +148,7 @@
             android:padding="2dp">
 
             <TextView
-                android:id="@+id/frame3Score1Player1"
+                android:id="@+id/frame3TotalScorePlayer1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
@@ -168,7 +168,7 @@
                 android:textSize="14sp" />
 
             <TextView
-                android:id="@+id/frame3TotalScorePlayer1"
+                android:id="@+id/frame3Score1Player1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
@@ -188,7 +188,7 @@
             android:padding="2dp">
 
             <TextView
-                android:id="@+id/frame4Score1Player1"
+                android:id="@+id/frame4TotalScorePlayer1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
@@ -208,7 +208,7 @@
                 android:textSize="14sp" />
 
             <TextView
-                android:id="@+id/frame4TotalScorePlayer1"
+                android:id="@+id/frame4Score1Player1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
@@ -228,7 +228,7 @@
             android:padding="2dp">
 
             <TextView
-                android:id="@+id/frame5Score1Player1"
+                android:id="@+id/frame5TotalScorePlayer1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
@@ -248,7 +248,7 @@
                 android:textSize="14sp" />
 
             <TextView
-                android:id="@+id/frame5TotalScorePlayer1"
+                android:id="@+id/frame5Score1Player1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
@@ -268,7 +268,7 @@
             android:padding="2dp">
 
             <TextView
-                android:id="@+id/frame6Score1Player1"
+                android:id="@+id/frame6TotalScorePlayer1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
@@ -288,7 +288,7 @@
                 android:textSize="14sp" />
 
             <TextView
-                android:id="@+id/frame6TotalScorePlayer1"
+                android:id="@+id/frame6Score1Player1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
@@ -309,7 +309,7 @@
             android:padding="2dp">
 
             <TextView
-                android:id="@+id/frame7Score1Player1"
+                android:id="@+id/frame7TotalScorePlayer1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
@@ -329,7 +329,7 @@
                 android:textSize="14sp" />
 
             <TextView
-                android:id="@+id/frame7TotalScorePlayer1"
+                android:id="@+id/frame7Score1Player1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
@@ -349,7 +349,7 @@
             android:padding="2dp">
 
             <TextView
-                android:id="@+id/frame8Score1Player1"
+                android:id="@+id/frame8TotalScorePlayer1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
@@ -369,7 +369,7 @@
                 android:textSize="14sp" />
 
             <TextView
-                android:id="@+id/frame8TotalScorePlayer1"
+                android:id="@+id/frame8Score1Player1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
@@ -389,7 +389,7 @@
             android:padding="2dp">
 
             <TextView
-                android:id="@+id/frame9Score1Player1"
+                android:id="@+id/frame9TotalScorePlayer1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
@@ -409,7 +409,7 @@
                 android:textSize="14sp" />
 
             <TextView
-                android:id="@+id/frame9TotalScorePlayer1"
+                android:id="@+id/frame9Score1Player1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
@@ -429,7 +429,7 @@
             android:padding="2dp">
 
             <TextView
-                android:id="@+id/frame10Score1Player1"
+                android:id="@+id/frame10TotalScorePlayer1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
@@ -460,7 +460,7 @@
                 android:textSize="14sp" />
 
             <TextView
-                android:id="@+id/frame10TotalScorePlayer1"
+                android:id="@+id/frame10Score1Player1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
@@ -531,7 +531,7 @@
             android:padding="2dp">
 
             <TextView
-                android:id="@+id/frame1Score1Player2"
+                android:id="@+id/frame1TotalScorePlayer2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
@@ -551,7 +551,7 @@
                 android:textSize="14sp" />
 
             <TextView
-                android:id="@+id/frame1TotalScorePlayer2"
+                android:id="@+id/frame1Score1Player2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
@@ -571,7 +571,7 @@
             android:padding="2dp">
 
             <TextView
-                android:id="@+id/frame2Score1Player2"
+                android:id="@+id/frame2TotalScorePlayer2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
@@ -591,7 +591,7 @@
                 android:textSize="14sp" />
 
             <TextView
-                android:id="@+id/frame2TotalScorePlayer2"
+                android:id="@+id/frame2Score1Player2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
@@ -611,7 +611,7 @@
             android:padding="2dp">
 
             <TextView
-                android:id="@+id/frame3Score1Player2"
+                android:id="@+id/frame3TotalScorePlayer2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
@@ -631,7 +631,7 @@
                 android:textSize="14sp" />
 
             <TextView
-                android:id="@+id/frame3TotalScorePlayer2"
+                android:id="@+id/frame3Score1Player2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
@@ -651,7 +651,7 @@
             android:padding="2dp">
 
             <TextView
-                android:id="@+id/frame4Score1Player2"
+                android:id="@+id/frame4TotalScorePlayer2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
@@ -671,7 +671,7 @@
                 android:textSize="14sp" />
 
             <TextView
-                android:id="@+id/frame4TotalScorePlayer2"
+                android:id="@+id/frame4Score1Player2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
@@ -691,7 +691,7 @@
             android:padding="2dp">
 
             <TextView
-                android:id="@+id/frame5Score1Player2"
+                android:id="@+id/frame5TotalScorePlayer2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
@@ -711,7 +711,7 @@
                 android:textSize="14sp" />
 
             <TextView
-                android:id="@+id/frame5TotalScorePlayer2"
+                android:id="@+id/frame5Score1Player2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
@@ -731,7 +731,7 @@
             android:padding="2dp">
 
             <TextView
-                android:id="@+id/frame6Score1Player2"
+                android:id="@+id/frame6TotalScorePlayer2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
@@ -751,7 +751,7 @@
                 android:textSize="14sp" />
 
             <TextView
-                android:id="@+id/frame6TotalScorePlayer2"
+                android:id="@+id/frame6Score1Player2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
@@ -772,7 +772,7 @@
             android:padding="2dp">
 
             <TextView
-                android:id="@+id/frame7Score1Player2"
+                android:id="@+id/frame7TotalScorePlayer2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
@@ -792,7 +792,7 @@
                 android:textSize="14sp" />
 
             <TextView
-                android:id="@+id/frame7TotalScorePlayer2"
+                android:id="@+id/frame7Score1Player2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
@@ -812,7 +812,7 @@
             android:padding="2dp">
 
             <TextView
-                android:id="@+id/frame8Score1Player2"
+                android:id="@+id/frame8TotalScorePlayer2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
@@ -832,7 +832,7 @@
                 android:textSize="14sp" />
 
             <TextView
-                android:id="@+id/frame8TotalScorePlayer2"
+                android:id="@+id/frame8Score1Player2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
@@ -852,7 +852,7 @@
             android:padding="2dp">
 
             <TextView
-                android:id="@+id/frame9Score1Player2"
+                android:id="@+id/frame9TotalScorePlayer2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
@@ -872,7 +872,7 @@
                 android:textSize="14sp" />
 
             <TextView
-                android:id="@+id/frame9TotalScorePlayer2"
+                android:id="@+id/frame9Score1Player2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
@@ -892,7 +892,7 @@
             android:padding="2dp">
 
             <TextView
-                android:id="@+id/frame10Score1Player2"
+                android:id="@+id/frame10TotalScorePlayer2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
@@ -923,7 +923,7 @@
                 android:textSize="14sp" />
 
             <TextView
-                android:id="@+id/frame10TotalScorePlayer2"
+                android:id="@+id/frame10Score1Player2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
