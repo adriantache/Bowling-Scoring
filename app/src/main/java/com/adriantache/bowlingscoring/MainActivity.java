@@ -98,6 +98,7 @@ public class MainActivity extends AppCompatActivity {
     int maxPins = 10;
     int lastScore = 0;
     int strikeScore = 0;
+    int scorePointer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -264,6 +265,8 @@ public class MainActivity extends AppCompatActivity {
     public void minusDownedPin(View view) {
         if (downedPinsPointer > 0) {
             downedPinsPointer--;
+        } else if (downedPinsPointer==-1) {
+            downedPinsPointer++;
         }
 
         updateDownedPins();
@@ -324,6 +327,7 @@ public class MainActivity extends AppCompatActivity {
             frameTotalScoresPlayer2[i] = 0;
         }*/
         updateScores();
+        activePlayer = 1;
         //remove this, only included for testing
     }
 
