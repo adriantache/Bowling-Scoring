@@ -948,8 +948,14 @@ public class MainActivity extends AppCompatActivity {
             frameTotalScoresPlayer1[i] = 0;
             frameTotalScoresPlayer2[i] = 0;
         }*/
+        frameScoresPlayer1 = new int[22];
+        frameScoresPlayer2 = new int[22];
+        frameTotalScoresPlayer1 = new int[11];
+        frameTotalScoresPlayer2 = new int[11];
+        activePlayer = 2;
         updateScores();
         activePlayer = 1;
+        updateScores();
         //remove this, only included for testing
     }
 
