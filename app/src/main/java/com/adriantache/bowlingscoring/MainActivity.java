@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import static java.lang.Boolean.FALSE;
+import static java.lang.Boolean.TRUE;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -94,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
     // declare various other variables
     int frameNumber = 1;
     int activePlayer = 1;
-    boolean frameEnd = FALSE;
+    boolean frameEnd = false;
     int maxPins = 10;
     int lastScore = 0;
     int strikeScore = 0;
@@ -909,30 +910,71 @@ public class MainActivity extends AppCompatActivity {
             // process three scores instead of two
         } else {
 
+            if ( downedPinsPointer == 10) {
+                //process strike
+            }
+
+            else if (frameEnd == false) {
+                if(activePlayer==1){
+                frameScoresPlayer1[frameNumber] = downedPinsPointer;}
+                else {
+                    frameScoresPlayer2[frameNumber] = downedPinsPointer;
+                }
+                maxPins = 10 - downedPinsPointer;
+                downedPinsPointer = maxPins;
+                updateDownedPins();
+                frameEnd = true;
+                calculateScore();
+            }
+
+            else if (frameEnd) {
+                if(activePlayer==1){
+                if (frameScoresPlayer1[frameNumber]+downedPinsPointer == 10) {
+                    frameScoresPlayer1[frameNumber+1] = 30;
+                    maxPins = 10;
+                    frameEnd = false;
+                    calculateScore();
+                } else {
+                    frameScoresPlayer1[frameNumber+1] = downedPinsPointer;
+                    maxPins = 10;
+                    frameEnd = false;
+                    calculateScore();
+                }}
+                else {
+                    if (frameScoresPlayer2[frameNumber]+downedPinsPointer == 10) {
+                        frameScoresPlayer2[frameNumber+1] = 30;
+                        maxPins = 10;
+                        frameEnd = false;
+                        calculateScore();
+                    } else {
+                        frameScoresPlayer2[frameNumber+1] = downedPinsPointer;
+                        maxPins = 10;
+                        frameEnd = false;
+                        calculateScore();
+                    }
+                }
+            }
+
         }
         activePlayer();
-    }
-
-    // set up a new frame
-    private void newFrame() {
-        // reset maxPins, minPins, call activePlayer, etc.
     }
 
     // retroactively calculate score for strikes and spares
     private void calculateScore() {
         // process score vectors as appropriate using lastScore and strikeScore and frameNumber
+        updateScores();
     }
 
     // change player icon when appropriate
     private void activePlayer() {
         if (activePlayer == 1) {
-            activePlayer1.setVisibility(activePlayer1.VISIBLE);
-            activePlayer2.setVisibility(activePlayer2.INVISIBLE);
             activePlayer = 2;
-        } else if (activePlayer == 2) {
             activePlayer1.setVisibility(activePlayer1.INVISIBLE);
             activePlayer2.setVisibility(activePlayer2.VISIBLE);
+        } else if (activePlayer == 2) {
             activePlayer = 1;
+            activePlayer1.setVisibility(activePlayer1.VISIBLE);
+            activePlayer2.setVisibility(activePlayer2.INVISIBLE);
         }
     }
 
