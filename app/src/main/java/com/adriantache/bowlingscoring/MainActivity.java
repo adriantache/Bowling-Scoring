@@ -908,6 +908,7 @@ public class MainActivity extends AppCompatActivity {
         if (frameNumber == 10) {
             // process three scores instead of two
         } else {
+
         }
         activePlayer();
     }
