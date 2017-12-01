@@ -1,4 +1,4 @@
-# Bowling-Scoring
+# Bowling-Scoring [WIP]
 *Bowling Scoring app for the Google Android Basics Nanodegree*
 
 The assignment for Project 2 of the Google Android Basics Nanodegree was to create a scorekeeping app for a sport of our choice,
