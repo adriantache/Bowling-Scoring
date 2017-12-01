@@ -418,116 +418,16 @@ public class MainActivity extends AppCompatActivity {
             } else {
                 frame10Score3Player1.setText("" + frameScoresPlayer1[21]);
             }
-            if (frameTotalScoresPlayer1[1] == 10) {
-                frame1TotalScorePlayer1.setText("X");
-            } else if (frameTotalScoresPlayer1[1] < 0) {
-                frame1TotalScorePlayer1.setText("/");
-            } else if (frameTotalScoresPlayer1[1] == 40) {
-                frame1TotalScorePlayer1.setText("");
-            } else if (frameTotalScoresPlayer1[1] == 0) {
-                frame1TotalScorePlayer1.setText("-");
-            } else {
-                frame1TotalScorePlayer1.setText("" + frameTotalScoresPlayer1[1]);
-            }
-            if (frameTotalScoresPlayer1[2] == 10) {
-                frame2TotalScorePlayer1.setText("X");
-            } else if (frameTotalScoresPlayer1[2] < 0) {
-                frame2TotalScorePlayer1.setText("/");
-            } else if (frameTotalScoresPlayer1[2] == 40) {
-                frame2TotalScorePlayer1.setText("");
-            } else if (frameTotalScoresPlayer1[2] == 0) {
-                frame2TotalScorePlayer1.setText("-");
-            } else {
-                frame2TotalScorePlayer1.setText("" + frameTotalScoresPlayer1[2]);
-            }
-            if (frameTotalScoresPlayer1[3] == 10) {
-                frame3TotalScorePlayer1.setText("X");
-            } else if (frameTotalScoresPlayer1[3] < 0) {
-                frame3TotalScorePlayer1.setText("/");
-            } else if (frameTotalScoresPlayer1[3] == 40) {
-                frame3TotalScorePlayer1.setText("");
-            } else if (frameTotalScoresPlayer1[3] == 0) {
-                frame3TotalScorePlayer1.setText("-");
-            } else {
-                frame3TotalScorePlayer1.setText("" + frameTotalScoresPlayer1[3]);
-            }
-            if (frameTotalScoresPlayer1[4] == 10) {
-                frame4TotalScorePlayer1.setText("X");
-            } else if (frameTotalScoresPlayer1[4] < 0) {
-                frame4TotalScorePlayer1.setText("/");
-            } else if (frameTotalScoresPlayer1[4] == 40) {
-                frame4TotalScorePlayer1.setText("");
-            } else if (frameTotalScoresPlayer1[4] == 0) {
-                frame4TotalScorePlayer1.setText("-");
-            } else {
-                frame4TotalScorePlayer1.setText("" + frameTotalScoresPlayer1[4]);
-            }
-            if (frameTotalScoresPlayer1[5] == 10) {
-                frame5TotalScorePlayer1.setText("X");
-            } else if (frameTotalScoresPlayer1[5] < 0) {
-                frame5TotalScorePlayer1.setText("/");
-            } else if (frameTotalScoresPlayer1[5] == 40) {
-                frame5TotalScorePlayer1.setText("");
-            } else if (frameTotalScoresPlayer1[5] == 0) {
-                frame5TotalScorePlayer1.setText("-");
-            } else {
-                frame5TotalScorePlayer1.setText("" + frameTotalScoresPlayer1[5]);
-            }
-            if (frameTotalScoresPlayer1[6] == 10) {
-                frame6TotalScorePlayer1.setText("X");
-            } else if (frameTotalScoresPlayer1[6] < 0) {
-                frame6TotalScorePlayer1.setText("/");
-            } else if (frameTotalScoresPlayer1[6] == 40) {
-                frame6TotalScorePlayer1.setText("");
-            } else if (frameTotalScoresPlayer1[6] == 0) {
-                frame6TotalScorePlayer1.setText("-");
-            } else {
-                frame6TotalScorePlayer1.setText("" + frameTotalScoresPlayer1[6]);
-            }
-            if (frameTotalScoresPlayer1[7] == 10) {
-                frame7TotalScorePlayer1.setText("X");
-            } else if (frameTotalScoresPlayer1[7] < 0) {
-                frame7TotalScorePlayer1.setText("/");
-            } else if (frameTotalScoresPlayer1[7] == 40) {
-                frame7TotalScorePlayer1.setText("");
-            } else if (frameTotalScoresPlayer1[7] == 0) {
-                frame7TotalScorePlayer1.setText("-");
-            } else {
-                frame7TotalScorePlayer1.setText("" + frameTotalScoresPlayer1[7]);
-            }
-            if (frameTotalScoresPlayer1[8] == 10) {
-                frame8TotalScorePlayer1.setText("X");
-            } else if (frameTotalScoresPlayer1[8] < 0) {
-                frame8TotalScorePlayer1.setText("/");
-            } else if (frameTotalScoresPlayer1[8] == 40) {
-                frame8TotalScorePlayer1.setText("");
-            } else if (frameTotalScoresPlayer1[8] == 0) {
-                frame8TotalScorePlayer1.setText("-");
-            } else {
-                frame8TotalScorePlayer1.setText("" + frameTotalScoresPlayer1[8]);
-            }
-            if (frameTotalScoresPlayer1[9] == 10) {
-                frame9TotalScorePlayer1.setText("X");
-            } else if (frameTotalScoresPlayer1[9] < 0) {
-                frame9TotalScorePlayer1.setText("/");
-            } else if (frameTotalScoresPlayer1[9] == 40) {
-                frame9TotalScorePlayer1.setText("");
-            } else if (frameTotalScoresPlayer1[9] == 0) {
-                frame9TotalScorePlayer1.setText("-");
-            } else {
-                frame9TotalScorePlayer1.setText("" + frameTotalScoresPlayer1[9]);
-            }
-            if (frameTotalScoresPlayer1[10] == 10) {
-                frame10TotalScorePlayer1.setText("X");
-            } else if (frameTotalScoresPlayer1[10] < 0) {
-                frame10TotalScorePlayer1.setText("/");
-            } else if (frameTotalScoresPlayer1[10] == 40) {
-                frame10TotalScorePlayer1.setText("");
-            } else if (frameTotalScoresPlayer1[10] == 0) {
-                frame10TotalScorePlayer1.setText("-");
-            } else {
-                frame10TotalScorePlayer1.setText("" + frameTotalScoresPlayer1[10]);
-            }
+            frame1TotalScorePlayer1.setText("" + frameTotalScoresPlayer1[1]);
+            frame2TotalScorePlayer1.setText("" + frameTotalScoresPlayer1[2]);
+            frame3TotalScorePlayer1.setText("" + frameTotalScoresPlayer1[3]);
+            frame4TotalScorePlayer1.setText("" + frameTotalScoresPlayer1[4]);
+            frame5TotalScorePlayer1.setText("" + frameTotalScoresPlayer1[5]);
+            frame6TotalScorePlayer1.setText("" + frameTotalScoresPlayer1[6]);
+            frame7TotalScorePlayer1.setText("" + frameTotalScoresPlayer1[7]);
+            frame8TotalScorePlayer1.setText("" + frameTotalScoresPlayer1[8]);
+            frame9TotalScorePlayer1.setText("" + frameTotalScoresPlayer1[9]);
+            frame10TotalScorePlayer1.setText("" + frameTotalScoresPlayer1[10]);
 
         } else {
             if (frameScoresPlayer2[1] == 10) {
@@ -761,116 +661,16 @@ public class MainActivity extends AppCompatActivity {
             } else {
                 frame10Score3Player2.setText("" + frameScoresPlayer2[21]);
             }
-            if (frameTotalScoresPlayer2[1] == 10) {
-                frame1TotalScorePlayer2.setText("X");
-            } else if (frameTotalScoresPlayer2[1] < 0) {
-                frame1TotalScorePlayer2.setText("/");
-            } else if (frameTotalScoresPlayer2[1] == 40) {
-                frame1TotalScorePlayer2.setText("");
-            } else if (frameTotalScoresPlayer2[1] == 0) {
-                frame1TotalScorePlayer2.setText("-");
-            } else {
-                frame1TotalScorePlayer2.setText("" + frameTotalScoresPlayer2[1]);
-            }
-            if (frameTotalScoresPlayer2[2] == 10) {
-                frame2TotalScorePlayer2.setText("X");
-            } else if (frameTotalScoresPlayer2[2] < 0) {
-                frame2TotalScorePlayer2.setText("/");
-            } else if (frameTotalScoresPlayer2[2] == 40) {
-                frame2TotalScorePlayer2.setText("");
-            } else if (frameTotalScoresPlayer2[2] == 0) {
-                frame2TotalScorePlayer2.setText("-");
-            } else {
-                frame2TotalScorePlayer2.setText("" + frameTotalScoresPlayer2[2]);
-            }
-            if (frameTotalScoresPlayer2[3] == 10) {
-                frame3TotalScorePlayer2.setText("X");
-            } else if (frameTotalScoresPlayer2[3] < 0) {
-                frame3TotalScorePlayer2.setText("/");
-            } else if (frameTotalScoresPlayer2[3] == 40) {
-                frame3TotalScorePlayer2.setText("");
-            } else if (frameTotalScoresPlayer2[3] == 0) {
-                frame3TotalScorePlayer2.setText("-");
-            } else {
-                frame3TotalScorePlayer2.setText("" + frameTotalScoresPlayer2[3]);
-            }
-            if (frameTotalScoresPlayer2[4] == 10) {
-                frame4TotalScorePlayer2.setText("X");
-            } else if (frameTotalScoresPlayer2[4] < 0) {
-                frame4TotalScorePlayer2.setText("/");
-            } else if (frameTotalScoresPlayer2[4] == 40) {
-                frame4TotalScorePlayer2.setText("");
-            } else if (frameTotalScoresPlayer2[4] == 0) {
-                frame4TotalScorePlayer2.setText("-");
-            } else {
-                frame4TotalScorePlayer2.setText("" + frameTotalScoresPlayer2[4]);
-            }
-            if (frameTotalScoresPlayer2[5] == 10) {
-                frame5TotalScorePlayer2.setText("X");
-            } else if (frameTotalScoresPlayer2[5] < 0) {
-                frame5TotalScorePlayer2.setText("/");
-            } else if (frameTotalScoresPlayer2[5] == 40) {
-                frame5TotalScorePlayer2.setText("");
-            } else if (frameTotalScoresPlayer2[5] == 0) {
-                frame5TotalScorePlayer2.setText("-");
-            } else {
-                frame5TotalScorePlayer2.setText("" + frameTotalScoresPlayer2[5]);
-            }
-            if (frameTotalScoresPlayer2[6] == 10) {
-                frame6TotalScorePlayer2.setText("X");
-            } else if (frameTotalScoresPlayer2[6] < 0) {
-                frame6TotalScorePlayer2.setText("/");
-            } else if (frameTotalScoresPlayer2[6] == 40) {
-                frame6TotalScorePlayer2.setText("");
-            } else if (frameTotalScoresPlayer2[6] == 0) {
-                frame6TotalScorePlayer2.setText("-");
-            } else {
-                frame6TotalScorePlayer2.setText("" + frameTotalScoresPlayer2[6]);
-            }
-            if (frameTotalScoresPlayer2[7] == 10) {
-                frame7TotalScorePlayer2.setText("X");
-            } else if (frameTotalScoresPlayer2[7] < 0) {
-                frame7TotalScorePlayer2.setText("/");
-            } else if (frameTotalScoresPlayer2[7] == 40) {
-                frame7TotalScorePlayer2.setText("");
-            } else if (frameTotalScoresPlayer2[7] == 0) {
-                frame7TotalScorePlayer2.setText("-");
-            } else {
-                frame7TotalScorePlayer2.setText("" + frameTotalScoresPlayer2[7]);
-            }
-            if (frameTotalScoresPlayer2[8] == 10) {
-                frame8TotalScorePlayer2.setText("X");
-            } else if (frameTotalScoresPlayer2[8] < 0) {
-                frame8TotalScorePlayer2.setText("/");
-            } else if (frameTotalScoresPlayer2[8] == 40) {
-                frame8TotalScorePlayer2.setText("");
-            } else if (frameTotalScoresPlayer2[8] == 0) {
-                frame8TotalScorePlayer2.setText("-");
-            } else {
-                frame8TotalScorePlayer2.setText("" + frameTotalScoresPlayer2[8]);
-            }
-            if (frameTotalScoresPlayer2[9] == 10) {
-                frame9TotalScorePlayer2.setText("X");
-            } else if (frameTotalScoresPlayer2[9] < 0) {
-                frame9TotalScorePlayer2.setText("/");
-            } else if (frameTotalScoresPlayer2[9] == 40) {
-                frame9TotalScorePlayer2.setText("");
-            } else if (frameTotalScoresPlayer2[9] == 0) {
-                frame9TotalScorePlayer2.setText("-");
-            } else {
-                frame9TotalScorePlayer2.setText("" + frameTotalScoresPlayer2[9]);
-            }
-            if (frameTotalScoresPlayer2[10] == 10) {
-                frame10TotalScorePlayer2.setText("X");
-            } else if (frameTotalScoresPlayer2[10] < 0) {
-                frame10TotalScorePlayer2.setText("/");
-            } else if (frameTotalScoresPlayer2[10] == 40) {
-                frame10TotalScorePlayer2.setText("");
-            } else if (frameTotalScoresPlayer2[10] == 0) {
-                frame10TotalScorePlayer2.setText("-");
-            } else {
-                frame10TotalScorePlayer2.setText("" + frameTotalScoresPlayer2[10]);
-            }
+            frame1TotalScorePlayer2.setText("" + frameTotalScoresPlayer2[1]);
+            frame2TotalScorePlayer2.setText("" + frameTotalScoresPlayer2[2]);
+            frame3TotalScorePlayer2.setText("" + frameTotalScoresPlayer2[3]);
+            frame4TotalScorePlayer2.setText("" + frameTotalScoresPlayer2[4]);
+            frame5TotalScorePlayer2.setText("" + frameTotalScoresPlayer2[5]);
+            frame6TotalScorePlayer2.setText("" + frameTotalScoresPlayer2[6]);
+            frame7TotalScorePlayer2.setText("" + frameTotalScoresPlayer2[7]);
+            frame8TotalScorePlayer2.setText("" + frameTotalScoresPlayer2[8]);
+            frame9TotalScorePlayer2.setText("" + frameTotalScoresPlayer2[9]);
+            frame10TotalScorePlayer2.setText("" + frameTotalScoresPlayer2[10]);
 
         }
     }
