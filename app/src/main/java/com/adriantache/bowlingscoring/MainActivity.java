@@ -2,14 +2,11 @@ package com.adriantache.bowlingscoring;
 
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import static java.lang.Boolean.FALSE;
-import static java.lang.Boolean.TRUE;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -98,6 +95,7 @@ public class MainActivity extends AppCompatActivity {
     int frameNumber = 1;
     int activePlayer = 1;
     boolean frameEnd = false;
+    boolean extraScore = false;
     int maxPins = 10;
     int tScorePlayer1 = 0;
     int tScorePlayer2 = 0;
@@ -711,16 +709,79 @@ public class MainActivity extends AppCompatActivity {
     // also add the current score to the array, if applicable
     // stop if strike, store spare as special number (negative?/11?)
     public void submitScore(View view) {
-        //exit out if player hasn't chosen a score yet
+        //exit out if player hasn't chosen a score before pressing the button
         if (downedPinsPointer < 0) {
             return;
         }
 
-        //process last frame differently
+        // !!! RECHECK THIS !!!
+        // for last frame process three scores instead of two, but only if first two scores == 10+
         if (frameNumber == 10) {
-            // process three scores instead of two, but only if first two scores == 10+
+            if (!frameEnd && !extraScore) {
+                if (activePlayer == 1) {
+                    frameScoresPlayer1[frameNumber] = downedPinsPointer;
+                } else {
+                    frameScoresPlayer2[frameNumber] = downedPinsPointer;
+                }
+                if (downedPinsPointer < 10) {
+                    maxPins = 10 - downedPinsPointer;
+                }
+                downedPinsPointer = maxPins;
+                updateDownedPins();
+                frameEnd = true;
+                calculateScore();
+            } else if (frameEnd && !extraScore) {
+                if (activePlayer == 1) {
+                    if (frameScoresPlayer1[frameNumber] + downedPinsPointer >= 10) {
+                        extraScore = true;
+                        frameScoresPlayer1[frameNumber + 1] = downedPinsPointer;
+                        maxPins = 10;
+                        frameEnd = false;
+                        calculateScore();
+                    } else {
+                        frameScoresPlayer1[frameNumber + 1] = downedPinsPointer;
+                        frameScoresPlayer1[frameNumber + 2] = 0;
+                        maxPins = 10;
+                        frameEnd = false;
+                        calculateScore();
+                        activePlayer();
+                    }
+                } else {
+                    if (frameScoresPlayer2[frameNumber] + downedPinsPointer >= 10) {
+                        extraScore = true;
+                        frameScoresPlayer2[frameNumber + 1] = downedPinsPointer;
+                        maxPins = 10;
+                        frameEnd = false;
+                        calculateScore();
+                    } else {
+                        frameScoresPlayer2[frameNumber + 1] = downedPinsPointer;
+                        frameScoresPlayer2[frameNumber + 2] = 0;
+                        maxPins = 10;
+                        frameEnd = false;
+                        calculateScore();
+                        gameEnd();
+                    }
+                }
+            }
 
-        } else {
+            //add third shot per player
+            if (extraScore) {
+                if (activePlayer == 1) {
+                    frameScoresPlayer1[frameNumber + 2] = downedPinsPointer;
+                    extraScore = false;
+                    calculateScore();
+                    activePlayer();
+                } else {
+                    frameScoresPlayer2[frameNumber + 2] = downedPinsPointer;
+                    extraScore = false;
+                    calculateScore();
+                    gameEnd();
+                }
+            }
+        }
+
+        // score for frames 1-9
+        else {
             //process strike
             if (downedPinsPointer == 10) {
                 if (activePlayer == 1) {
@@ -738,7 +799,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
             //if not strike
-            else if (frameEnd == false) {
+            else if (!frameEnd) {
                 if (activePlayer == 1) {
                     frameScoresPlayer1[frameNumber] = downedPinsPointer;
                 } else {
@@ -797,13 +858,12 @@ public class MainActivity extends AppCompatActivity {
 
     //process end of game
     private void gameEnd() {
-        //change winning playercard background? remember to reset it.
+        //change winning player card background? remember to reset it.
     }
 
     // retroactively calculate score for strikes and spares
     private void calculateScore() {
         // !!!process score vectors as appropriate using lastScore and strikeScore and frameNumber
-        //REVERSE SCORE CALCULATION
         int k; //!!!remember to plan for frameNumber = 10;
         int l = frameNumber;
         int x;
@@ -880,6 +940,7 @@ public class MainActivity extends AppCompatActivity {
         downedPinsPointer = -1;
         frameNumber = 1;
         frameEnd = false;
+        extraScore = false;
         maxPins = 10;
 
 
