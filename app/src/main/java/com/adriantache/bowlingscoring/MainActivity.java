@@ -706,6 +706,12 @@ public class MainActivity extends AppCompatActivity {
     // also add the current score to the array, if applicable
     // stop if strike, store spare as special number (negative?/11?)
     public void submitScore(View view) {
+        //exit out if player hasn't chosen a score yet
+        if(downedPinsPointer<0){
+            return;
+        }
+
+        //process last frame differently
         if (frameNumber == 10) {
             // process three scores instead of two
 
@@ -836,18 +842,8 @@ public class MainActivity extends AppCompatActivity {
 
     // reset the game
     public void resetGame(View v) {
-        //remove this, only included for testing
-        /*int i = 0;
-        while (i < 22) {
-            i++;
-            frameScoresPlayer1[i] = 0;
-            frameScoresPlayer2[i] = 0;
-        }
-        while (i < 11) {
-            i++;
-            frameTotalScoresPlayer1[i] = 0;
-            frameTotalScoresPlayer2[i] = 0;
-        }*/
+
+        //reset all scores
         frameScoresPlayer1 = new int[22];
         frameScoresPlayer2 = new int[22];
         frameTotalScoresPlayer1 = new int[11];
@@ -856,7 +852,10 @@ public class MainActivity extends AppCompatActivity {
         updateScores();
         activePlayer = 1;
         updateScores();
-        //remove this, only included for testing
+
+        //set number of pins to the instructions
+        Drawable instructions = getResources().getDrawable(R.drawable.instructions);
+        imageViewDownedPins.setImageDrawable(instructions);
     }
 
 }
