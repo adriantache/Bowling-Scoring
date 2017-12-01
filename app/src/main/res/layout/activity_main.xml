@@ -41,6 +41,7 @@
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/totalScorePlayer1"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginRight="16dp"
@@ -503,6 +504,7 @@
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/totalScorePlayer2"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginRight="16dp"

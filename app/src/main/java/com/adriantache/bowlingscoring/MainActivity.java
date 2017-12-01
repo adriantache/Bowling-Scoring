@@ -84,6 +84,8 @@ public class MainActivity extends AppCompatActivity {
     TextView frame8TotalScorePlayer2;
     TextView frame9TotalScorePlayer2;
     TextView frame10TotalScorePlayer2;
+    TextView totalScorePlayer1;
+    TextView totalScorePlayer2;
 
     // declare the variable arrays that contain the scores
     // and the pointers to indicate frame
@@ -97,9 +99,8 @@ public class MainActivity extends AppCompatActivity {
     int activePlayer = 1;
     boolean frameEnd = false;
     int maxPins = 10;
-    int lastScore = 0;
-    int strikeScore = 0;
-    int scorePointer;
+    int tScorePlayer1 = 0;
+    int tScorePlayer2 = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -179,11 +180,13 @@ public class MainActivity extends AppCompatActivity {
         frame8TotalScorePlayer2 = findViewById(R.id.frame8TotalScorePlayer2);
         frame9TotalScorePlayer2 = findViewById(R.id.frame9TotalScorePlayer2);
         frame10TotalScorePlayer2 = findViewById(R.id.frame10TotalScorePlayer2);
-
+        totalScorePlayer1 = findViewById(R.id.totalScorePlayer1);
+        totalScorePlayer2 = findViewById(R.id.totalScorePlayer2);
     }
 
     // update all the TextViews that display scores, by assigning values from
     // the vectors with frame scores and frame total scores (split/condition it per player?)
+    //!!! also update total scores
     public void updateScores() {
         if (activePlayer == 1) {
 
@@ -428,6 +431,7 @@ public class MainActivity extends AppCompatActivity {
             frame8TotalScorePlayer1.setText("" + frameTotalScoresPlayer1[8]);
             frame9TotalScorePlayer1.setText("" + frameTotalScoresPlayer1[9]);
             frame10TotalScorePlayer1.setText("" + frameTotalScoresPlayer1[10]);
+            totalScorePlayer1.setText("" + tScorePlayer1);
 
         } else {
             if (frameScoresPlayer2[1] == 10) {
@@ -672,6 +676,7 @@ public class MainActivity extends AppCompatActivity {
             frame9TotalScorePlayer2.setText("" + frameTotalScoresPlayer2[9]);
             frame10TotalScorePlayer2.setText("" + frameTotalScoresPlayer2[10]);
 
+            totalScorePlayer2.setText("" + tScorePlayer2);
         }
     }
 
@@ -707,27 +712,29 @@ public class MainActivity extends AppCompatActivity {
     // stop if strike, store spare as special number (negative?/11?)
     public void submitScore(View view) {
         //exit out if player hasn't chosen a score yet
-        if(downedPinsPointer<0){
+        if (downedPinsPointer < 0) {
             return;
         }
 
         //process last frame differently
         if (frameNumber == 10) {
-            // process three scores instead of two
+            // process three scores instead of two, but only if first two scores == 10+
 
         } else {
             //process strike
             if (downedPinsPointer == 10) {
                 if (activePlayer == 1) {
-                    frameScoresPlayer1[frameNumber] = downedPinsPointer;
-                    frameScoresPlayer1[frameNumber + 1] = 40;
+                    frameScoresPlayer1[frameNumber * 2 - 1] = downedPinsPointer;
+                    frameScoresPlayer1[frameNumber * 2] = 40;
+                    calculateScore();
+                    activePlayer();
                 } else {
-                    frameScoresPlayer2[frameNumber] = downedPinsPointer;
-                    frameScoresPlayer2[frameNumber + 2] = 40;
+                    frameScoresPlayer2[frameNumber * 2 - 1] = downedPinsPointer;
+                    frameScoresPlayer2[frameNumber * 2] = 40;
+                    calculateScore();
+                    nextFrame();
+                    activePlayer();
                 }
-                updateDownedPins();
-                calculateScore();
-                activePlayer();
             }
 
             //if not strike
@@ -750,6 +757,7 @@ public class MainActivity extends AppCompatActivity {
                         frameEnd = false;
                         calculateScore();
                         activePlayer();
+
                     } else {
                         frameScoresPlayer1[frameNumber + 1] = downedPinsPointer;
                         maxPins = 10;
@@ -764,66 +772,79 @@ public class MainActivity extends AppCompatActivity {
                         frameEnd = false;
                         calculateScore();
                         activePlayer();
+                        nextFrame();
                     } else {
                         frameScoresPlayer2[frameNumber + 1] = downedPinsPointer;
                         maxPins = 10;
                         frameEnd = false;
                         calculateScore();
                         activePlayer();
+                        nextFrame();
                     }
                 }
             }
-
         }
-        //
+    }
+
+    //move to next frame
+    private void nextFrame() {
+        if (frameNumber < 10) {
+            frameNumber++;
+        } else if (frameNumber == 10) {
+            gameEnd();
+        }
+    }
+
+    //process end of game
+    private void gameEnd() {
+        //change winning playercard background? remember to reset it.
     }
 
     // retroactively calculate score for strikes and spares
     private void calculateScore() {
-        // process score vectors as appropriate using lastScore and strikeScore and frameNumber
-
+        // !!!process score vectors as appropriate using lastScore and strikeScore and frameNumber
         //REVERSE SCORE CALCULATION
+        int k; //!!!remember to plan for frameNumber = 10;
+        int l = frameNumber;
+        int x;
+        int lastScore = 0;
+        int strikeScore = 0;
 
-        // process individual frame scores to calculate total frame score
         if (activePlayer == 1) {
-            // process player 1 vectors
-            int i = 1;
-            int j = 1;
-            while (i < frameNumber * 2 + 1) {
-                int x = Math.abs(frameScoresPlayer1[i]);
-                if (x == 40) {
-                    x = 0;
+            lastScore = frameScoresPlayer1[frameNumber * 2 - 1];
+            strikeScore = frameScoresPlayer1[frameNumber * 2];
+            frameTotalScoresPlayer1 = new int[11];
+            while (l > 0) {
+                k = l * 2 - 1;
+                while (k > 0) {
+                    x = Math.abs(frameScoresPlayer1[k]);
+                    if (x == 40) {
+                        x = 0;
+                    }
+                    frameTotalScoresPlayer1[l] += x;
+                    k--;
                 }
-                frameTotalScoresPlayer1[j] = x;
-                i++;
-                x = Math.abs(frameScoresPlayer1[i]);
-                if (x == 40) {
-                    x = 0;
-                }
-                frameTotalScoresPlayer1[j] += x;
-                i++;
-                j++;
+                l--;
             }
+            tScorePlayer1 = frameTotalScoresPlayer1[frameNumber];
         } else {
-            // process player 2 vectors
-            int i = 1;
-            int j = 1;
-            while (i < frameNumber * 2 + 1) {
-                int x = Math.abs(frameScoresPlayer1[i]);
-                if (x == 40) {
-                    x = 0;
+            frameTotalScoresPlayer2 = new int[11];
+            while (l > 0) {
+                k = l * 2 - 1;
+                while (k > 0) {
+                    x = Math.abs(frameScoresPlayer2[k]);
+                    if (x == 40) {
+                        x = 0;
+                    }
+                    frameTotalScoresPlayer2[l] += x;
+                    k--;
                 }
-                frameTotalScoresPlayer2[j] = x;
-                i++;
-                x = Math.abs(frameScoresPlayer1[i]);
-                if (x == 40) {
-                    x = 0;
-                }
-                frameTotalScoresPlayer2[j] += x;
-                i++;
-                j++;
+                l--;
             }
+            tScorePlayer2 = frameTotalScoresPlayer2[frameNumber];
         }
+
+        // trigger visual score update
         updateScores();
     }
 
@@ -848,10 +869,19 @@ public class MainActivity extends AppCompatActivity {
         frameScoresPlayer2 = new int[22];
         frameTotalScoresPlayer1 = new int[11];
         frameTotalScoresPlayer2 = new int[11];
+        tScorePlayer1 = 0;
+        tScorePlayer2 = 0;
         activePlayer = 2;
         updateScores();
-        activePlayer = 1;
+        activePlayer();
         updateScores();
+
+        //reset relevant variables
+        downedPinsPointer = -1;
+        frameNumber = 1;
+        frameEnd = false;
+        maxPins = 10;
+
 
         //set number of pins to the instructions
         Drawable instructions = getResources().getDrawable(R.drawable.instructions);
