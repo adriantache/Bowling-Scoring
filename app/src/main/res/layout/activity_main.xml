@@ -439,7 +439,7 @@
                 android:textSize="14sp" />
 
             <TextView
-                android:id="@+id/frame10Score2Player1"
+                android:id="@+id/frame10Score3Player1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
@@ -450,11 +450,11 @@
                 android:textSize="14sp" />
 
             <TextView
-                android:id="@+id/frame10Score3Player1"
+                android:id="@+id/frame10Score2Player1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
-                android:layout_toLeftOf="@id/frame10Score2Player1"
+                android:layout_toLeftOf="@id/frame10Score3Player1"
                 android:background="@drawable/border"
                 android:padding="2dp"
                 android:text="4"
@@ -465,7 +465,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
-                android:layout_toLeftOf="@id/frame10Score3Player1"
+                android:layout_toLeftOf="@id/frame10Score2Player1"
                 android:background="@drawable/border"
                 android:padding="2dp"
                 android:text="9"
@@ -903,7 +903,7 @@
                 android:textSize="14sp" />
 
             <TextView
-                android:id="@+id/frame10Score2Player2"
+                android:id="@+id/frame10Score3Player2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
@@ -914,11 +914,11 @@
                 android:textSize="14sp" />
 
             <TextView
-                android:id="@+id/frame10Score3Player2"
+                android:id="@+id/frame10Score2Player2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
-                android:layout_toLeftOf="@id/frame10Score2Player2"
+                android:layout_toLeftOf="@id/frame10Score3Player2"
                 android:background="@drawable/border"
                 android:padding="2dp"
                 android:text="4"
@@ -929,7 +929,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
-                android:layout_toLeftOf="@id/frame10Score3Player2"
+                android:layout_toLeftOf="@id/frame10Score2Player2"
                 android:background="@drawable/border"
                 android:padding="2dp"
                 android:text="9"

@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -860,6 +861,11 @@ public class MainActivity extends AppCompatActivity {
     // process end of game
     private void gameEnd() {
         //change winning player card background? remember to reset it. or change layout under scores
+        //disable submit button, remember to reset it
+
+        //we can use this, or not
+        Toast toast = Toast.makeText(MainActivity.this, "Game OVER!", Toast.LENGTH_SHORT);
+        toast.show();
     }
 
     // recursively calculate score for each frame, taking into account strikes and spares
@@ -871,10 +877,43 @@ public class MainActivity extends AppCompatActivity {
         int lastScore;
         int strikeScore;
 
-        //!!! add separate logic for frame 10
+        //!!! fix sequential strike scoring (MAX 30 not 20!)
 
         if (activePlayer == 1) {
             frameTotalScoresPlayer1 = new int[11];
+
+            // process frame 10 first, if it is the current frame
+            if (l == 10) {
+                k = l * 2 - 2;
+
+                // 1. first process frame 10 scores, since there are no special rules
+                frameTotalScoresPlayer1[l] = frameScoresPlayer1[k + 1] + frameScoresPlayer1[k + 2] + frameScoresPlayer1[k + 3];
+
+                // 2. then just use the recursive for the rest of the frames
+                while (k > 0) {
+                    // add "future" scores for strike and spare calculation
+                    lastScore = frameScoresPlayer1[k + k % 2 + 1];
+                    strikeScore = frameScoresPlayer1[k + k % 2 + 2];
+
+                    // decode scores and add strike or spare scores
+                    x = frameScoresPlayer1[k];
+                    if (x == 40) {
+                        x = 0;
+                    } else if (x <= 0) {
+                        x = Math.abs(x);
+                        x += lastScore;
+                    } else if (x == 10) {
+                        x += lastScore;
+                        x += strikeScore;
+                    }
+
+                    frameTotalScoresPlayer1[l] += x;
+                    k--;
+                }
+
+                // 3. then decrease current frame and process frames 1-9 as usual
+                l--;
+            }
 
             // calculate scores for current frame and those before it
             //!!! limit this to frames possibly modified by current shot (fN - 1?)
@@ -884,13 +923,8 @@ public class MainActivity extends AppCompatActivity {
 
                 while (k > 0) {
                     // add "future" scores for strike and spare calculation
-                    if (l < frameNumber) {
-                        lastScore = frameScoresPlayer1[k + k % 2 + 1];
-                        strikeScore = frameScoresPlayer1[k + k % 2 + 2];
-                    } else {
-                        lastScore = 0;
-                        strikeScore = 0;
-                    }
+                    lastScore = frameScoresPlayer1[k + k % 2 + 1];
+                    strikeScore = frameScoresPlayer1[k + k % 2 + 2];
 
                     // decode scores and add strike or spare scores
                     x = frameScoresPlayer1[k];
@@ -914,6 +948,39 @@ public class MainActivity extends AppCompatActivity {
         } else {
             frameTotalScoresPlayer2 = new int[11];
 
+            // process frame 10 first, if it is the current frame
+            if (l == 10) {
+                k = l * 2 - 2;
+
+                // 1. first process frame 10 scores, since there are no special rules
+                frameTotalScoresPlayer2[l] = frameScoresPlayer2[k + 1] + frameScoresPlayer2[k + 2] + frameScoresPlayer2[k + 3];
+
+                // 2. then just use the recursive for the rest of the frames
+                while (k > 0) {
+                    // add "future" scores for strike and spare calculation
+                    lastScore = frameScoresPlayer2[k + k % 2 + 1];
+                    strikeScore = frameScoresPlayer2[k + k % 2 + 2];
+
+                    // decode scores and add strike or spare scores
+                    x = frameScoresPlayer2[k];
+                    if (x == 40) {
+                        x = 0;
+                    } else if (x <= 0) {
+                        x = Math.abs(x);
+                        x += lastScore;
+                    } else if (x == 10) {
+                        x += lastScore;
+                        x += strikeScore;
+                    }
+
+                    frameTotalScoresPlayer2[l] += x;
+                    k--;
+                }
+
+                // 3. then decrease current frame and process frames 1-9 as usual
+                l--;
+            }
+
             // calculate scores for current frame and those before it
             //!!! limit this to frames possibly modified by current shot (fN - 1?)
             while (l > 0) {
@@ -922,13 +989,8 @@ public class MainActivity extends AppCompatActivity {
 
                 while (k > 0) {
                     // add "future" scores for strike and spare calculation
-                    if (l < frameNumber) {
-                        lastScore = frameScoresPlayer2[k + k % 2 + 1];
-                        strikeScore = frameScoresPlayer2[k + k % 2 + 2];
-                    } else {
-                        lastScore = 0;
-                        strikeScore = 0;
-                    }
+                    lastScore = frameScoresPlayer2[k + k % 2 + 1];
+                    strikeScore = frameScoresPlayer2[k + k % 2 + 2];
 
                     // decode scores and add strike or spare scores
                     x = frameScoresPlayer2[k];
@@ -956,6 +1018,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // change active player and icon
+
     private void activePlayer() {
         if (activePlayer == 1) {
             activePlayer = 2;
