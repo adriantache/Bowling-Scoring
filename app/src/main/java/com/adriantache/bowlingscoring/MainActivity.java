@@ -715,6 +715,7 @@ public class MainActivity extends AppCompatActivity {
 
         // for last frame process three scores instead of two, but only if first two scores sum 10+
         if (frameNumber == 10) {
+
             if (!frameEnd && !extraScore) {
                 if (activePlayer == 1) {
                     frameScoresPlayer1[frameNumber * 2 - 1] = downedPinsPointer;
@@ -728,6 +729,7 @@ public class MainActivity extends AppCompatActivity {
                 updateDownedPins();
                 frameEnd = true;
                 calculateScore();
+
             } else if (frameEnd && !extraScore) {
                 if (activePlayer == 1) {
                     if (frameScoresPlayer1[frameNumber * 2 - 1] + downedPinsPointer >= 10) {
@@ -761,8 +763,9 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
             }
-            //add third shot per player
-            else if (!frameEnd && extraScore) {
+
+            // add third shot per player if applicable
+            else if (extraScore && !frameEnd) {
                 if (activePlayer == 1) {
                     frameScoresPlayer1[frameNumber * 2 + 1] = downedPinsPointer;
                     extraScore = false;
@@ -779,8 +782,9 @@ public class MainActivity extends AppCompatActivity {
 
         // score for frames 1-9
         else {
+
             //process strike
-            if (downedPinsPointer == 10) {
+            if (downedPinsPointer == 10 && !frameEnd) {
                 if (activePlayer == 1) {
                     frameScoresPlayer1[frameNumber * 2 - 1] = downedPinsPointer;
                     frameScoresPlayer1[frameNumber * 2] = 40;
@@ -798,41 +802,42 @@ public class MainActivity extends AppCompatActivity {
             //if not strike
             else if (!frameEnd) {
                 if (activePlayer == 1) {
-                    frameScoresPlayer1[frameNumber] = downedPinsPointer;
+                    frameScoresPlayer1[frameNumber * 2 - 1] = downedPinsPointer;
                 } else {
-                    frameScoresPlayer2[frameNumber] = downedPinsPointer;
+                    frameScoresPlayer2[frameNumber * 2 - 1] = downedPinsPointer;
                 }
                 maxPins = 10 - downedPinsPointer;
                 downedPinsPointer = maxPins;
                 updateDownedPins();
                 frameEnd = true;
                 calculateScore();
+
             } else if (frameEnd) {
                 if (activePlayer == 1) {
-                    if (frameScoresPlayer1[frameNumber] + downedPinsPointer == 10) {
-                        frameScoresPlayer1[frameNumber + 1] = -downedPinsPointer;
+                    if (frameScoresPlayer1[frameNumber * 2 - 1] + downedPinsPointer == 10) {
+                        frameScoresPlayer1[frameNumber * 2] = -downedPinsPointer;
                         maxPins = 10;
                         frameEnd = false;
                         calculateScore();
                         activePlayer();
 
                     } else {
-                        frameScoresPlayer1[frameNumber + 1] = downedPinsPointer;
+                        frameScoresPlayer1[frameNumber * 2] = downedPinsPointer;
                         maxPins = 10;
                         frameEnd = false;
                         calculateScore();
                         activePlayer();
                     }
                 } else {
-                    if (frameScoresPlayer2[frameNumber] + downedPinsPointer == 10) {
-                        frameScoresPlayer2[frameNumber + 1] = -downedPinsPointer;
+                    if (frameScoresPlayer2[frameNumber * 2 - 1] + downedPinsPointer == 10) {
+                        frameScoresPlayer2[frameNumber * 2] = -downedPinsPointer;
                         maxPins = 10;
                         frameEnd = false;
                         calculateScore();
                         activePlayer();
                         nextFrame();
                     } else {
-                        frameScoresPlayer2[frameNumber + 1] = downedPinsPointer;
+                        frameScoresPlayer2[frameNumber * 2] = downedPinsPointer;
                         maxPins = 10;
                         frameEnd = false;
                         calculateScore();
@@ -841,59 +846,106 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
             }
+
         }
     }
 
-    //move to next frame
+    // move to next frame
     private void nextFrame() {
         if (frameNumber < 10) {
             frameNumber++;
         }
     }
 
-    //process end of game
+    // process end of game
     private void gameEnd() {
         //change winning player card background? remember to reset it. or change layout under scores
     }
 
-    // retroactively calculate score for strikes and spares
+    // recursively calculate score for each frame, taking into account strikes and spares
     private void calculateScore() {
-        // !!!process score vectors as appropriate using lastScore and strikeScore and frameNumber
-        int k; //!!!remember to plan for frameNumber = 10;
+        // declaring work variables
+        int k;
         int l = frameNumber;
         int x;
-        int lastScore = 0;
-        int strikeScore = 0;
+        int lastScore;
+        int strikeScore;
+
+        //!!! add separate logic for frame 10
 
         if (activePlayer == 1) {
-            lastScore = frameScoresPlayer1[frameNumber * 2 - 1];
-            strikeScore = frameScoresPlayer1[frameNumber * 2];
             frameTotalScoresPlayer1 = new int[11];
+
+            // calculate scores for current frame and those before it
+            //!!! limit this to frames possibly modified by current shot (fN - 1?)
             while (l > 0) {
-                k = l * 2 - 1;
+
+                k = l * 2;
+
                 while (k > 0) {
-                    x = Math.abs(frameScoresPlayer1[k]);
+                    // add "future" scores for strike and spare calculation
+                    if (l < frameNumber) {
+                        lastScore = frameScoresPlayer1[k + k % 2 + 1];
+                        strikeScore = frameScoresPlayer1[k + k % 2 + 2];
+                    } else {
+                        lastScore = 0;
+                        strikeScore = 0;
+                    }
+
+                    // decode scores and add strike or spare scores
+                    x = frameScoresPlayer1[k];
                     if (x == 40) {
                         x = 0;
+                    } else if (x <= 0) {
+                        x = Math.abs(x);
+                        x += lastScore;
+                    } else if (x == 10) {
+                        x += lastScore;
+                        x += strikeScore;
                     }
+
                     frameTotalScoresPlayer1[l] += x;
                     k--;
                 }
+
                 l--;
             }
             tScorePlayer1 = frameTotalScoresPlayer1[frameNumber];
         } else {
             frameTotalScoresPlayer2 = new int[11];
+
+            // calculate scores for current frame and those before it
+            //!!! limit this to frames possibly modified by current shot (fN - 1?)
             while (l > 0) {
-                k = l * 2 - 1;
+
+                k = l * 2;
+
                 while (k > 0) {
-                    x = Math.abs(frameScoresPlayer2[k]);
+                    // add "future" scores for strike and spare calculation
+                    if (l < frameNumber) {
+                        lastScore = frameScoresPlayer2[k + k % 2 + 1];
+                        strikeScore = frameScoresPlayer2[k + k % 2 + 2];
+                    } else {
+                        lastScore = 0;
+                        strikeScore = 0;
+                    }
+
+                    // decode scores and add strike or spare scores
+                    x = frameScoresPlayer2[k];
                     if (x == 40) {
                         x = 0;
+                    } else if (x <= 0) {
+                        x = Math.abs(x);
+                        x += lastScore;
+                    } else if (x == 10) {
+                        x += lastScore;
+                        x += strikeScore;
                     }
+
                     frameTotalScoresPlayer2[l] += x;
                     k--;
                 }
+
                 l--;
             }
             tScorePlayer2 = frameTotalScoresPlayer2[frameNumber];
@@ -903,7 +955,7 @@ public class MainActivity extends AppCompatActivity {
         updateScores();
     }
 
-    // change player icon when appropriate
+    // change active player and icon
     private void activePlayer() {
         if (activePlayer == 1) {
             activePlayer = 2;
@@ -919,7 +971,7 @@ public class MainActivity extends AppCompatActivity {
     // reset the game
     public void resetGame(View v) {
 
-        //reset all scores
+        // reset all scores
         frameScoresPlayer1 = new int[22];
         frameScoresPlayer2 = new int[22];
         frameTotalScoresPlayer1 = new int[11];
@@ -931,17 +983,15 @@ public class MainActivity extends AppCompatActivity {
         activePlayer();
         updateScores();
 
-        //reset relevant variables
+        // reset relevant variables
         downedPinsPointer = -1;
         frameNumber = 1;
         frameEnd = false;
         extraScore = false;
         maxPins = 10;
 
-
-        //set number of pins to the instructions
+        // set number of pins to the instructions
         Drawable instructions = getResources().getDrawable(R.drawable.instructions);
         imageViewDownedPins.setImageDrawable(instructions);
     }
-
 }
