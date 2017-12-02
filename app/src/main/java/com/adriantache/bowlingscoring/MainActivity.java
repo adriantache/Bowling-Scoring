@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
     // declare the array that contains the images for number of downed pins
     // and the pointer to the position in the array and the downedPins ImageView
     // and all score TextViews to prevent always searching for them.
-    // Thanks a lot to @Thor on Slack for the solution to the downedPins mechanism!
+    // ~~~Thanks a lot to @Thor on Slack for the solution to the downedPins mechanism!~~~
     int downedPinsPointer = -1;
     TypedArray downedPins;
     ImageView imageViewDownedPins;
@@ -184,7 +184,6 @@ public class MainActivity extends AppCompatActivity {
 
     // update all the TextViews that display scores, by assigning values from
     // the vectors with frame scores and frame total scores (split/condition it per player?)
-    //!!! also update total scores
     public void updateScores() {
         if (activePlayer == 1) {
 
@@ -709,19 +708,18 @@ public class MainActivity extends AppCompatActivity {
     // also add the current score to the array, if applicable
     // stop if strike, store spare as special number (negative?/11?)
     public void submitScore(View view) {
-        //exit out if player hasn't chosen a score before pressing the button
+        // exit out if player hasn't chosen a score before pressing the button
         if (downedPinsPointer < 0) {
             return;
         }
 
-        // !!! RECHECK THIS !!!
-        // for last frame process three scores instead of two, but only if first two scores == 10+
+        // for last frame process three scores instead of two, but only if first two scores sum 10+
         if (frameNumber == 10) {
             if (!frameEnd && !extraScore) {
                 if (activePlayer == 1) {
-                    frameScoresPlayer1[frameNumber] = downedPinsPointer;
+                    frameScoresPlayer1[frameNumber * 2 - 1] = downedPinsPointer;
                 } else {
-                    frameScoresPlayer2[frameNumber] = downedPinsPointer;
+                    frameScoresPlayer2[frameNumber * 2 - 1] = downedPinsPointer;
                 }
                 if (downedPinsPointer < 10) {
                     maxPins = 10 - downedPinsPointer;
@@ -732,30 +730,30 @@ public class MainActivity extends AppCompatActivity {
                 calculateScore();
             } else if (frameEnd && !extraScore) {
                 if (activePlayer == 1) {
-                    if (frameScoresPlayer1[frameNumber] + downedPinsPointer >= 10) {
+                    if (frameScoresPlayer1[frameNumber * 2 - 1] + downedPinsPointer >= 10) {
                         extraScore = true;
-                        frameScoresPlayer1[frameNumber + 1] = downedPinsPointer;
+                        frameScoresPlayer1[frameNumber * 2] = downedPinsPointer;
                         maxPins = 10;
                         frameEnd = false;
                         calculateScore();
                     } else {
-                        frameScoresPlayer1[frameNumber + 1] = downedPinsPointer;
-                        frameScoresPlayer1[frameNumber + 2] = 0;
+                        frameScoresPlayer1[frameNumber * 2] = downedPinsPointer;
+                        frameScoresPlayer1[frameNumber * 2 + 1] = 0;
                         maxPins = 10;
                         frameEnd = false;
                         calculateScore();
                         activePlayer();
                     }
                 } else {
-                    if (frameScoresPlayer2[frameNumber] + downedPinsPointer >= 10) {
+                    if (frameScoresPlayer2[frameNumber * 2 - 1] + downedPinsPointer >= 10) {
                         extraScore = true;
-                        frameScoresPlayer2[frameNumber + 1] = downedPinsPointer;
+                        frameScoresPlayer2[frameNumber * 2] = downedPinsPointer;
                         maxPins = 10;
                         frameEnd = false;
                         calculateScore();
                     } else {
-                        frameScoresPlayer2[frameNumber + 1] = downedPinsPointer;
-                        frameScoresPlayer2[frameNumber + 2] = 0;
+                        frameScoresPlayer2[frameNumber * 2] = downedPinsPointer;
+                        frameScoresPlayer2[frameNumber * 2 + 1] = 0;
                         maxPins = 10;
                         frameEnd = false;
                         calculateScore();
@@ -763,16 +761,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
             }
-
             //add third shot per player
-            if (extraScore) {
+            else if (!frameEnd && extraScore) {
                 if (activePlayer == 1) {
-                    frameScoresPlayer1[frameNumber + 2] = downedPinsPointer;
+                    frameScoresPlayer1[frameNumber * 2 + 1] = downedPinsPointer;
                     extraScore = false;
                     calculateScore();
                     activePlayer();
                 } else {
-                    frameScoresPlayer2[frameNumber + 2] = downedPinsPointer;
+                    frameScoresPlayer2[frameNumber * 2 + 1] = downedPinsPointer;
                     extraScore = false;
                     calculateScore();
                     gameEnd();
@@ -851,14 +848,12 @@ public class MainActivity extends AppCompatActivity {
     private void nextFrame() {
         if (frameNumber < 10) {
             frameNumber++;
-        } else if (frameNumber == 10) {
-            gameEnd();
         }
     }
 
     //process end of game
     private void gameEnd() {
-        //change winning player card background? remember to reset it.
+        //change winning player card background? remember to reset it. or change layout under scores
     }
 
     // retroactively calculate score for strikes and spares
