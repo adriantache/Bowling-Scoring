@@ -862,6 +862,8 @@ public class MainActivity extends AppCompatActivity {
     private void gameEnd() {
         //change winning player card background? remember to reset it. or change layout under scores
         //disable submit button, remember to reset it
+        ImageView image = findViewById(R.id.submit);
+        image.setClickable(false);
 
         //we can use this, or not
         Toast toast = Toast.makeText(MainActivity.this, "Game OVER!", Toast.LENGTH_SHORT);
@@ -899,7 +901,7 @@ public class MainActivity extends AppCompatActivity {
                     x = frameScoresPlayer1[k];
                     if (x == 40) {
                         x = 0;
-                    } else if (x <= 0) {
+                    } else if (x < 0) {
                         x = Math.abs(x);
                         x += lastScore;
                     } else if (x == 10) {
@@ -930,7 +932,7 @@ public class MainActivity extends AppCompatActivity {
                     x = frameScoresPlayer1[k];
                     if (x == 40) {
                         x = 0;
-                    } else if (x <= 0) {
+                    } else if (x < 0) {
                         x = Math.abs(x);
                         x += lastScore;
                     } else if (x == 10) {
@@ -965,7 +967,7 @@ public class MainActivity extends AppCompatActivity {
                     x = frameScoresPlayer2[k];
                     if (x == 40) {
                         x = 0;
-                    } else if (x <= 0) {
+                    } else if (x < 0) {
                         x = Math.abs(x);
                         x += lastScore;
                     } else if (x == 10) {
@@ -996,7 +998,7 @@ public class MainActivity extends AppCompatActivity {
                     x = frameScoresPlayer2[k];
                     if (x == 40) {
                         x = 0;
-                    } else if (x <= 0) {
+                    } else if (x < 0) {
                         x = Math.abs(x);
                         x += lastScore;
                     } else if (x == 10) {
@@ -1056,5 +1058,9 @@ public class MainActivity extends AppCompatActivity {
         // set number of pins to the instructions
         Drawable instructions = getResources().getDrawable(R.drawable.instructions);
         imageViewDownedPins.setImageDrawable(instructions);
+
+        //reset submit button
+        ImageView image = findViewById(R.id.submit);
+        image.setClickable(true);
     }
 }
