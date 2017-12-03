@@ -17,6 +17,8 @@ nesting other LinearLayouts and RelativeLayouts, and tried making everything wor
 coded some values. Certain parts work as intended, and scale down on tiny screens (top logo disappears entirely), but others do not, 
 and it's beyond the scope of this project to improve this, since I am not allowed to use a ConstraintLayout.  
 
+**Please try out the app and report any bugs.**
+
 _It's been tough, making this rather simple app, with a lot of bugs to fix and logical structures to figure out, but I've learned a lot and I'd like to especially thank @Thor from the Udacity slack for helping with the Drawables vector and java code._
 
 **Features I'd like to implement:**
@@ -26,7 +28,6 @@ _It's been tough, making this rather simple app, with a lot of bugs to fix and l
 - (optional) highlight current frame
 - (optional) maybe add more fun to it, such as multiple messages for winners, sound or vibration, etc.
 
-Please try out the app and report any bugs.
 
 **Known issues:**
 - layout is a bit of a mess
