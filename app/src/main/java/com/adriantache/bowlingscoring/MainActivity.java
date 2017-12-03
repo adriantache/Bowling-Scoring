@@ -196,7 +196,7 @@ public class MainActivity extends AppCompatActivity {
             } else if (frameScoresPlayer1[1] == 0) {
                 frame1Score1Player1.setText("-");
             } else {
-                frame1Score1Player1.setText("" + frameScoresPlayer1[1]);
+                frame1Score1Player1.setText(String.format("%d",frameScoresPlayer1[1]));
             }
             if (frameScoresPlayer1[2] == 10) {
                 frame1Score2Player1.setText("X");
@@ -207,7 +207,7 @@ public class MainActivity extends AppCompatActivity {
             } else if (frameScoresPlayer1[2] == 0) {
                 frame1Score2Player1.setText("-");
             } else {
-                frame1Score2Player1.setText("" + frameScoresPlayer1[2]);
+                frame1Score2Player1.setText(String.format("%d",frameScoresPlayer1[2]));
             }
             if (frameScoresPlayer1[3] == 10) {
                 frame2Score1Player1.setText("X");
@@ -218,7 +218,7 @@ public class MainActivity extends AppCompatActivity {
             } else if (frameScoresPlayer1[3] == 0) {
                 frame2Score1Player1.setText("-");
             } else {
-                frame2Score1Player1.setText("" + frameScoresPlayer1[3]);
+                frame2Score1Player1.setText(String.format("%d",frameScoresPlayer1[3]));
             }
             if (frameScoresPlayer1[4] == 10) {
                 frame2Score2Player1.setText("X");
@@ -229,7 +229,7 @@ public class MainActivity extends AppCompatActivity {
             } else if (frameScoresPlayer1[4] == 0) {
                 frame2Score2Player1.setText("-");
             } else {
-                frame2Score2Player1.setText("" + frameScoresPlayer1[4]);
+                frame2Score2Player1.setText(String.format("%d",frameScoresPlayer1[4]));
             }
             if (frameScoresPlayer1[5] == 10) {
                 frame3Score1Player1.setText("X");
@@ -240,7 +240,7 @@ public class MainActivity extends AppCompatActivity {
             } else if (frameScoresPlayer1[5] == 0) {
                 frame3Score1Player1.setText("-");
             } else {
-                frame3Score1Player1.setText("" + frameScoresPlayer1[5]);
+                frame3Score1Player1.setText(String.format("%d",frameScoresPlayer1[5]));
             }
             if (frameScoresPlayer1[6] == 10) {
                 frame3Score2Player1.setText("X");
@@ -251,7 +251,7 @@ public class MainActivity extends AppCompatActivity {
             } else if (frameScoresPlayer1[6] == 0) {
                 frame3Score2Player1.setText("-");
             } else {
-                frame3Score2Player1.setText("" + frameScoresPlayer1[6]);
+                frame3Score2Player1.setText(String.format("%d",frameScoresPlayer1[6]));
             }
             if (frameScoresPlayer1[7] == 10) {
                 frame4Score1Player1.setText("X");
@@ -262,7 +262,7 @@ public class MainActivity extends AppCompatActivity {
             } else if (frameScoresPlayer1[7] == 0) {
                 frame4Score1Player1.setText("-");
             } else {
-                frame4Score1Player1.setText("" + frameScoresPlayer1[7]);
+                frame4Score1Player1.setText(String.format("%d",frameScoresPlayer1[7]));
             }
             if (frameScoresPlayer1[8] == 10) {
                 frame4Score2Player1.setText("X");
@@ -273,7 +273,7 @@ public class MainActivity extends AppCompatActivity {
             } else if (frameScoresPlayer1[8] == 0) {
                 frame4Score2Player1.setText("-");
             } else {
-                frame4Score2Player1.setText("" + frameScoresPlayer1[8]);
+                frame4Score2Player1.setText(String.format("%d",frameScoresPlayer1[8]));
             }
             if (frameScoresPlayer1[9] == 10) {
                 frame5Score1Player1.setText("X");
@@ -284,7 +284,7 @@ public class MainActivity extends AppCompatActivity {
             } else if (frameScoresPlayer1[9] == 0) {
                 frame5Score1Player1.setText("-");
             } else {
-                frame5Score1Player1.setText("" + frameScoresPlayer1[9]);
+                frame5Score1Player1.setText(String.format("%d",frameScoresPlayer1[9]));
             }
             if (frameScoresPlayer1[10] == 10) {
                 frame5Score2Player1.setText("X");
@@ -295,7 +295,7 @@ public class MainActivity extends AppCompatActivity {
             } else if (frameScoresPlayer1[10] == 0) {
                 frame5Score2Player1.setText("-");
             } else {
-                frame5Score2Player1.setText("" + frameScoresPlayer1[10]);
+                frame5Score2Player1.setText(String.format("%d",frameScoresPlayer1[10]));
             }
             if (frameScoresPlayer1[11] == 10) {
                 frame6Score1Player1.setText("X");
@@ -306,7 +306,7 @@ public class MainActivity extends AppCompatActivity {
             } else if (frameScoresPlayer1[11] == 0) {
                 frame6Score1Player1.setText("-");
             } else {
-                frame6Score1Player1.setText("" + frameScoresPlayer1[11]);
+                frame6Score1Player1.setText(String.format("%d",frameScoresPlayer1[11]));
             }
             if (frameScoresPlayer1[12] == 10) {
                 frame6Score2Player1.setText("X");
@@ -317,7 +317,7 @@ public class MainActivity extends AppCompatActivity {
             } else if (frameScoresPlayer1[12] == 0) {
                 frame6Score2Player1.setText("-");
             } else {
-                frame6Score2Player1.setText("" + frameScoresPlayer1[12]);
+                frame6Score2Player1.setText(String.format("%d",frameScoresPlayer1[12]));
             }
             if (frameScoresPlayer1[13] == 10) {
                 frame7Score1Player1.setText("X");
@@ -328,7 +328,7 @@ public class MainActivity extends AppCompatActivity {
             } else if (frameScoresPlayer1[13] == 0) {
                 frame7Score1Player1.setText("-");
             } else {
-                frame7Score1Player1.setText("" + frameScoresPlayer1[13]);
+                frame7Score1Player1.setText(String.format("%d",frameScoresPlayer1[13]));
             }
             if (frameScoresPlayer1[14] == 10) {
                 frame7Score2Player1.setText("X");
@@ -339,7 +339,7 @@ public class MainActivity extends AppCompatActivity {
             } else if (frameScoresPlayer1[14] == 0) {
                 frame7Score2Player1.setText("-");
             } else {
-                frame7Score2Player1.setText("" + frameScoresPlayer1[14]);
+                frame7Score2Player1.setText(String.format("%d",frameScoresPlayer1[14]));
             }
             if (frameScoresPlayer1[15] == 10) {
                 frame8Score1Player1.setText("X");
@@ -350,7 +350,7 @@ public class MainActivity extends AppCompatActivity {
             } else if (frameScoresPlayer1[15] == 0) {
                 frame8Score1Player1.setText("-");
             } else {
-                frame8Score1Player1.setText("" + frameScoresPlayer1[15]);
+                frame8Score1Player1.setText(String.format("%d",frameScoresPlayer1[15]));
             }
             if (frameScoresPlayer1[16] == 10) {
                 frame8Score2Player1.setText("X");
@@ -361,7 +361,7 @@ public class MainActivity extends AppCompatActivity {
             } else if (frameScoresPlayer1[16] == 0) {
                 frame8Score2Player1.setText("-");
             } else {
-                frame8Score2Player1.setText("" + frameScoresPlayer1[16]);
+                frame8Score2Player1.setText(String.format("%d",frameScoresPlayer1[16]));
             }
             if (frameScoresPlayer1[17] == 10) {
                 frame9Score1Player1.setText("X");
@@ -372,7 +372,7 @@ public class MainActivity extends AppCompatActivity {
             } else if (frameScoresPlayer1[17] == 0) {
                 frame9Score1Player1.setText("-");
             } else {
-                frame9Score1Player1.setText("" + frameScoresPlayer1[17]);
+                frame9Score1Player1.setText(String.format("%d",frameScoresPlayer1[17]));
             }
             if (frameScoresPlayer1[18] == 10) {
                 frame9Score2Player1.setText("X");
@@ -383,7 +383,7 @@ public class MainActivity extends AppCompatActivity {
             } else if (frameScoresPlayer1[18] == 0) {
                 frame9Score2Player1.setText("-");
             } else {
-                frame9Score2Player1.setText("" + frameScoresPlayer1[18]);
+                frame9Score2Player1.setText(String.format("%d",frameScoresPlayer1[18]));
             }
             if (frameScoresPlayer1[19] == 10) {
                 frame10Score1Player1.setText("X");
@@ -394,7 +394,7 @@ public class MainActivity extends AppCompatActivity {
             } else if (frameScoresPlayer1[19] == 0) {
                 frame10Score1Player1.setText("-");
             } else {
-                frame10Score1Player1.setText("" + frameScoresPlayer1[19]);
+                frame10Score1Player1.setText(String.format("%d",frameScoresPlayer1[19]));
             }
             if (frameScoresPlayer1[20] == 10) {
                 frame10Score2Player1.setText("X");
@@ -405,7 +405,7 @@ public class MainActivity extends AppCompatActivity {
             } else if (frameScoresPlayer1[20] == 0) {
                 frame10Score2Player1.setText("-");
             } else {
-                frame10Score2Player1.setText("" + frameScoresPlayer1[20]);
+                frame10Score2Player1.setText(String.format("%d",frameScoresPlayer1[20]));
             }
             if (frameScoresPlayer1[21] == 10) {
                 frame10Score3Player1.setText("X");
@@ -416,19 +416,19 @@ public class MainActivity extends AppCompatActivity {
             } else if (frameScoresPlayer1[21] == 0) {
                 frame10Score3Player1.setText("-");
             } else {
-                frame10Score3Player1.setText("" + frameScoresPlayer1[21]);
+                frame10Score3Player1.setText(String.format("%d",frameScoresPlayer1[21]));
             }
-            frame1TotalScorePlayer1.setText("" + frameTotalScoresPlayer1[1]);
-            frame2TotalScorePlayer1.setText("" + frameTotalScoresPlayer1[2]);
-            frame3TotalScorePlayer1.setText("" + frameTotalScoresPlayer1[3]);
-            frame4TotalScorePlayer1.setText("" + frameTotalScoresPlayer1[4]);
-            frame5TotalScorePlayer1.setText("" + frameTotalScoresPlayer1[5]);
-            frame6TotalScorePlayer1.setText("" + frameTotalScoresPlayer1[6]);
-            frame7TotalScorePlayer1.setText("" + frameTotalScoresPlayer1[7]);
-            frame8TotalScorePlayer1.setText("" + frameTotalScoresPlayer1[8]);
-            frame9TotalScorePlayer1.setText("" + frameTotalScoresPlayer1[9]);
-            frame10TotalScorePlayer1.setText("" + frameTotalScoresPlayer1[10]);
-            totalScorePlayer1.setText("" + tScorePlayer1);
+            frame1TotalScorePlayer1.setText(String.format("%d",frameTotalScoresPlayer1[1]));
+            frame2TotalScorePlayer1.setText(String.format("%d",frameTotalScoresPlayer1[2]));
+            frame3TotalScorePlayer1.setText(String.format("%d",frameTotalScoresPlayer1[3]));
+            frame4TotalScorePlayer1.setText(String.format("%d",frameTotalScoresPlayer1[4]));
+            frame5TotalScorePlayer1.setText(String.format("%d",frameTotalScoresPlayer1[5]));
+            frame6TotalScorePlayer1.setText(String.format("%d",frameTotalScoresPlayer1[6]));
+            frame7TotalScorePlayer1.setText(String.format("%d",frameTotalScoresPlayer1[7]));
+            frame8TotalScorePlayer1.setText(String.format("%d",frameTotalScoresPlayer1[8]));
+            frame9TotalScorePlayer1.setText(String.format("%d",frameTotalScoresPlayer1[9]));
+            frame10TotalScorePlayer1.setText(String.format("%d",frameTotalScoresPlayer1[10]));
+            totalScorePlayer1.setText(String.format("%d",tScorePlayer1));
 
         } else {
             if (frameScoresPlayer2[1] == 10) {
@@ -440,7 +440,7 @@ public class MainActivity extends AppCompatActivity {
             } else if (frameScoresPlayer2[1] == 0) {
                 frame1Score1Player2.setText("-");
             } else {
-                frame1Score1Player2.setText("" + frameScoresPlayer2[1]);
+                frame1Score1Player2.setText(String.format("%d",frameScoresPlayer2[1]));
             }
             if (frameScoresPlayer2[2] == 10) {
                 frame1Score2Player2.setText("X");
@@ -451,7 +451,7 @@ public class MainActivity extends AppCompatActivity {
             } else if (frameScoresPlayer2[2] == 0) {
                 frame1Score2Player2.setText("-");
             } else {
-                frame1Score2Player2.setText("" + frameScoresPlayer2[2]);
+                frame1Score2Player2.setText(String.format("%d",frameScoresPlayer2[2]));
             }
             if (frameScoresPlayer2[3] == 10) {
                 frame2Score1Player2.setText("X");
@@ -462,7 +462,7 @@ public class MainActivity extends AppCompatActivity {
             } else if (frameScoresPlayer2[3] == 0) {
                 frame2Score1Player2.setText("-");
             } else {
-                frame2Score1Player2.setText("" + frameScoresPlayer2[3]);
+                frame2Score1Player2.setText(String.format("%d",frameScoresPlayer2[3]));
             }
             if (frameScoresPlayer2[4] == 10) {
                 frame2Score2Player2.setText("X");
@@ -473,7 +473,7 @@ public class MainActivity extends AppCompatActivity {
             } else if (frameScoresPlayer2[4] == 0) {
                 frame2Score2Player2.setText("-");
             } else {
-                frame2Score2Player2.setText("" + frameScoresPlayer2[4]);
+                frame2Score2Player2.setText(String.format("%d",frameScoresPlayer2[4]));
             }
             if (frameScoresPlayer2[5] == 10) {
                 frame3Score1Player2.setText("X");
@@ -484,7 +484,7 @@ public class MainActivity extends AppCompatActivity {
             } else if (frameScoresPlayer2[5] == 0) {
                 frame3Score1Player2.setText("-");
             } else {
-                frame3Score1Player2.setText("" + frameScoresPlayer2[5]);
+                frame3Score1Player2.setText(String.format("%d",frameScoresPlayer2[5]));
             }
             if (frameScoresPlayer2[6] == 10) {
                 frame3Score2Player2.setText("X");
@@ -495,7 +495,7 @@ public class MainActivity extends AppCompatActivity {
             } else if (frameScoresPlayer2[6] == 0) {
                 frame3Score2Player2.setText("-");
             } else {
-                frame3Score2Player2.setText("" + frameScoresPlayer2[6]);
+                frame3Score2Player2.setText(String.format("%d",frameScoresPlayer2[6]));
             }
             if (frameScoresPlayer2[7] == 10) {
                 frame4Score1Player2.setText("X");
@@ -506,7 +506,7 @@ public class MainActivity extends AppCompatActivity {
             } else if (frameScoresPlayer2[7] == 0) {
                 frame4Score1Player2.setText("-");
             } else {
-                frame4Score1Player2.setText("" + frameScoresPlayer2[7]);
+                frame4Score1Player2.setText(String.format("%d",frameScoresPlayer2[7]));
             }
             if (frameScoresPlayer2[8] == 10) {
                 frame4Score2Player2.setText("X");
@@ -517,7 +517,7 @@ public class MainActivity extends AppCompatActivity {
             } else if (frameScoresPlayer2[8] == 0) {
                 frame4Score2Player2.setText("-");
             } else {
-                frame4Score2Player2.setText("" + frameScoresPlayer2[8]);
+                frame4Score2Player2.setText(String.format("%d",frameScoresPlayer2[8]));
             }
             if (frameScoresPlayer2[9] == 10) {
                 frame5Score1Player2.setText("X");
@@ -528,7 +528,7 @@ public class MainActivity extends AppCompatActivity {
             } else if (frameScoresPlayer2[9] == 0) {
                 frame5Score1Player2.setText("-");
             } else {
-                frame5Score1Player2.setText("" + frameScoresPlayer2[9]);
+                frame5Score1Player2.setText(String.format("%d",frameScoresPlayer2[9]));
             }
             if (frameScoresPlayer2[10] == 10) {
                 frame5Score2Player2.setText("X");
@@ -539,7 +539,7 @@ public class MainActivity extends AppCompatActivity {
             } else if (frameScoresPlayer2[10] == 0) {
                 frame5Score2Player2.setText("-");
             } else {
-                frame5Score2Player2.setText("" + frameScoresPlayer2[10]);
+                frame5Score2Player2.setText(String.format("%d",frameScoresPlayer2[10]));
             }
             if (frameScoresPlayer2[11] == 10) {
                 frame6Score1Player2.setText("X");
@@ -550,7 +550,7 @@ public class MainActivity extends AppCompatActivity {
             } else if (frameScoresPlayer2[11] == 0) {
                 frame6Score1Player2.setText("-");
             } else {
-                frame6Score1Player2.setText("" + frameScoresPlayer2[11]);
+                frame6Score1Player2.setText(String.format("%d",frameScoresPlayer2[11]));
             }
             if (frameScoresPlayer2[12] == 10) {
                 frame6Score2Player2.setText("X");
@@ -561,7 +561,7 @@ public class MainActivity extends AppCompatActivity {
             } else if (frameScoresPlayer2[12] == 0) {
                 frame6Score2Player2.setText("-");
             } else {
-                frame6Score2Player2.setText("" + frameScoresPlayer2[12]);
+                frame6Score2Player2.setText(String.format("%d",frameScoresPlayer2[12]));
             }
             if (frameScoresPlayer2[13] == 10) {
                 frame7Score1Player2.setText("X");
@@ -572,7 +572,7 @@ public class MainActivity extends AppCompatActivity {
             } else if (frameScoresPlayer2[13] == 0) {
                 frame7Score1Player2.setText("-");
             } else {
-                frame7Score1Player2.setText("" + frameScoresPlayer2[13]);
+                frame7Score1Player2.setText(String.format("%d",frameScoresPlayer2[13]));
             }
             if (frameScoresPlayer2[14] == 10) {
                 frame7Score2Player2.setText("X");
@@ -583,7 +583,7 @@ public class MainActivity extends AppCompatActivity {
             } else if (frameScoresPlayer2[14] == 0) {
                 frame7Score2Player2.setText("-");
             } else {
-                frame7Score2Player2.setText("" + frameScoresPlayer2[14]);
+                frame7Score2Player2.setText(String.format("%d",frameScoresPlayer2[14]));
             }
             if (frameScoresPlayer2[15] == 10) {
                 frame8Score1Player2.setText("X");
@@ -594,7 +594,7 @@ public class MainActivity extends AppCompatActivity {
             } else if (frameScoresPlayer2[15] == 0) {
                 frame8Score1Player2.setText("-");
             } else {
-                frame8Score1Player2.setText("" + frameScoresPlayer2[15]);
+                frame8Score1Player2.setText(String.format("%d",frameScoresPlayer2[15]));
             }
             if (frameScoresPlayer2[16] == 10) {
                 frame8Score2Player2.setText("X");
@@ -605,7 +605,7 @@ public class MainActivity extends AppCompatActivity {
             } else if (frameScoresPlayer2[16] == 0) {
                 frame8Score2Player2.setText("-");
             } else {
-                frame8Score2Player2.setText("" + frameScoresPlayer2[16]);
+                frame8Score2Player2.setText(String.format("%d",frameScoresPlayer2[16]));
             }
             if (frameScoresPlayer2[17] == 10) {
                 frame9Score1Player2.setText("X");
@@ -616,7 +616,7 @@ public class MainActivity extends AppCompatActivity {
             } else if (frameScoresPlayer2[17] == 0) {
                 frame9Score1Player2.setText("-");
             } else {
-                frame9Score1Player2.setText("" + frameScoresPlayer2[17]);
+                frame9Score1Player2.setText(String.format("%d",frameScoresPlayer2[17]));
             }
             if (frameScoresPlayer2[18] == 10) {
                 frame9Score2Player2.setText("X");
@@ -627,7 +627,7 @@ public class MainActivity extends AppCompatActivity {
             } else if (frameScoresPlayer2[18] == 0) {
                 frame9Score2Player2.setText("-");
             } else {
-                frame9Score2Player2.setText("" + frameScoresPlayer2[18]);
+                frame9Score2Player2.setText(String.format("%d",frameScoresPlayer2[18]));
             }
             if (frameScoresPlayer2[19] == 10) {
                 frame10Score1Player2.setText("X");
@@ -638,7 +638,7 @@ public class MainActivity extends AppCompatActivity {
             } else if (frameScoresPlayer2[19] == 0) {
                 frame10Score1Player2.setText("-");
             } else {
-                frame10Score1Player2.setText("" + frameScoresPlayer2[19]);
+                frame10Score1Player2.setText(String.format("%d",frameScoresPlayer2[19]));
             }
             if (frameScoresPlayer2[20] == 10) {
                 frame10Score2Player2.setText("X");
@@ -649,7 +649,7 @@ public class MainActivity extends AppCompatActivity {
             } else if (frameScoresPlayer2[20] == 0) {
                 frame10Score2Player2.setText("-");
             } else {
-                frame10Score2Player2.setText("" + frameScoresPlayer2[20]);
+                frame10Score2Player2.setText(String.format("%d",frameScoresPlayer2[20]));
             }
             if (frameScoresPlayer2[21] == 10) {
                 frame10Score3Player2.setText("X");
@@ -660,20 +660,20 @@ public class MainActivity extends AppCompatActivity {
             } else if (frameScoresPlayer2[21] == 0) {
                 frame10Score3Player2.setText("-");
             } else {
-                frame10Score3Player2.setText("" + frameScoresPlayer2[21]);
+                frame10Score3Player2.setText(String.format("%d",frameScoresPlayer2[21]));
             }
-            frame1TotalScorePlayer2.setText("" + frameTotalScoresPlayer2[1]);
-            frame2TotalScorePlayer2.setText("" + frameTotalScoresPlayer2[2]);
-            frame3TotalScorePlayer2.setText("" + frameTotalScoresPlayer2[3]);
-            frame4TotalScorePlayer2.setText("" + frameTotalScoresPlayer2[4]);
-            frame5TotalScorePlayer2.setText("" + frameTotalScoresPlayer2[5]);
-            frame6TotalScorePlayer2.setText("" + frameTotalScoresPlayer2[6]);
-            frame7TotalScorePlayer2.setText("" + frameTotalScoresPlayer2[7]);
-            frame8TotalScorePlayer2.setText("" + frameTotalScoresPlayer2[8]);
-            frame9TotalScorePlayer2.setText("" + frameTotalScoresPlayer2[9]);
-            frame10TotalScorePlayer2.setText("" + frameTotalScoresPlayer2[10]);
+            frame1TotalScorePlayer2.setText(String.format("%d",frameTotalScoresPlayer2[1]));
+            frame2TotalScorePlayer2.setText(String.format("%d",frameTotalScoresPlayer2[2]));
+            frame3TotalScorePlayer2.setText(String.format("%d",frameTotalScoresPlayer2[3]));
+            frame4TotalScorePlayer2.setText(String.format("%d",frameTotalScoresPlayer2[4]));
+            frame5TotalScorePlayer2.setText(String.format("%d",frameTotalScoresPlayer2[5]));
+            frame6TotalScorePlayer2.setText(String.format("%d",frameTotalScoresPlayer2[6]));
+            frame7TotalScorePlayer2.setText(String.format("%d",frameTotalScoresPlayer2[7]));
+            frame8TotalScorePlayer2.setText(String.format("%d",frameTotalScoresPlayer2[8]));
+            frame9TotalScorePlayer2.setText(String.format("%d",frameTotalScoresPlayer2[9]));
+            frame10TotalScorePlayer2.setText(String.format("%d",frameTotalScoresPlayer2[10]));
 
-            totalScorePlayer2.setText("" + tScorePlayer2);
+            totalScorePlayer2.setText(String.format("%d",tScorePlayer2));
         }
     }
 
@@ -706,7 +706,7 @@ public class MainActivity extends AppCompatActivity {
 
     // process the indicated number of downed pins and calculate current score
     // also add the current score to the array, if applicable
-    // stop if strike, store spare as special number (negative?/11?)
+    // stop if strike, store spare as negative number
     public void submitScore(View view) {
         // exit out if player hasn't chosen a score before pressing the button
         if (downedPinsPointer < 0) {
