@@ -860,14 +860,21 @@ public class MainActivity extends AppCompatActivity {
 
     // process end of game
     private void gameEnd() {
-        //change winning player card background? remember to reset it. or change layout under scores
         //disable submit button, remember to reset it
         ImageView image = findViewById(R.id.submit);
         image.setClickable(false);
 
-        //we can use this, or not
-        Toast toast = Toast.makeText(MainActivity.this, "Game OVER!", Toast.LENGTH_SHORT);
-        toast.show();
+        // use pin selection ImageView to display winner
+        if (tScorePlayer1>tScorePlayer2) {
+            Drawable player1Win = getResources().getDrawable(R.drawable.playeronewin);
+            imageViewDownedPins.setImageDrawable(player1Win);
+        } else if (tScorePlayer2>tScorePlayer1) {
+            Drawable player2Win = getResources().getDrawable(R.drawable.playertwowin);
+            imageViewDownedPins.setImageDrawable(player2Win);
+        } else {
+            Drawable draw = getResources().getDrawable(R.drawable.draw);
+            imageViewDownedPins.setImageDrawable(draw);
+        }
     }
 
     // recursively calculate score for each frame, taking into account strikes and spares
