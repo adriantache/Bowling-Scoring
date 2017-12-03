@@ -26,8 +26,7 @@ _It's been tough, making this rather simple app, with a lot of bugs to fix and l
 - (optional) highlight current frame
 - (optional) maybe add more fun to it, such as multiple messages for winners, sound or vibration, etc.
 
-Please try out the app below and report any bugs:
-![apk location](https://github.com/adriantache/Bowling-Scoring/blob/master/app/build/outputs/apk/debug/)
+Please try out the app and report any bugs.
 
 **Known issues:**
 - layout is a bit of a mess
