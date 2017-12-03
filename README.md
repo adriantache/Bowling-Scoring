@@ -34,4 +34,4 @@ Please try out the app and report any bugs.
 - app cannot make you better at bowling :)
 
 You can see the design mockup below:
-![design mockup](https://github.com/adriantache/Bowling-Scoring/blob/master/app/src/main/res/drawable-xxhdpi/mockup.png)
+![design mockup](https://github.com/adriantache/Bowling-Scoring/blob/master/app/src/main/res/drawable-xxhdpi/mockupsmall.png)
