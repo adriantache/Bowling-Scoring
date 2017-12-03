@@ -47,7 +47,7 @@
             android:layout_marginRight="16dp"
             android:layout_weight="1"
             android:gravity="center_vertical"
-            android:text="300"
+            android:text="0"
             android:textColor="#fff"
             android:textStyle="bold" />
 
@@ -74,7 +74,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentLeft="true"
-                android:text="153"
+                android:text="0"
                 android:textSize="14sp" />
 
             <TextView
@@ -85,7 +85,7 @@
                 android:layout_alignParentTop="true"
                 android:background="@drawable/border"
                 android:padding="2dp"
-                android:text="X"
+                android:text="0"
                 android:textSize="14sp" />
 
             <TextView
@@ -96,7 +96,7 @@
                 android:layout_toLeftOf="@id/frame1Score2Player1"
                 android:background="@drawable/border"
                 android:padding="2dp"
-                android:text="9"
+                android:text="0"
                 android:textSize="14sp" />
 
         </RelativeLayout>
@@ -114,7 +114,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentLeft="true"
-                android:text="153"
+                android:text="0"
                 android:textSize="14sp" />
 
             <TextView
@@ -125,7 +125,7 @@
                 android:layout_alignParentTop="true"
                 android:background="@drawable/border"
                 android:padding="2dp"
-                android:text="X"
+                android:text="0"
                 android:textSize="14sp" />
 
             <TextView
@@ -136,7 +136,7 @@
                 android:layout_toLeftOf="@id/frame2Score2Player1"
                 android:background="@drawable/border"
                 android:padding="2dp"
-                android:text="9"
+                android:text="0"
                 android:textSize="14sp" />
 
         </RelativeLayout>
@@ -154,7 +154,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentLeft="true"
-                android:text="153"
+                android:text="0"
                 android:textSize="14sp" />
 
             <TextView
@@ -165,7 +165,7 @@
                 android:layout_alignParentTop="true"
                 android:background="@drawable/border"
                 android:padding="2dp"
-                android:text="X"
+                android:text="0"
                 android:textSize="14sp" />
 
             <TextView
@@ -176,7 +176,7 @@
                 android:layout_toLeftOf="@id/frame3Score2Player1"
                 android:background="@drawable/border"
                 android:padding="2dp"
-                android:text="9"
+                android:text="0"
                 android:textSize="14sp" />
 
         </RelativeLayout>
@@ -194,7 +194,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentLeft="true"
-                android:text="153"
+                android:text="0"
                 android:textSize="14sp" />
 
             <TextView
@@ -205,7 +205,7 @@
                 android:layout_alignParentTop="true"
                 android:background="@drawable/border"
                 android:padding="2dp"
-                android:text="X"
+                android:text="0"
                 android:textSize="14sp" />
 
             <TextView
@@ -216,7 +216,7 @@
                 android:layout_toLeftOf="@id/frame4Score2Player1"
                 android:background="@drawable/border"
                 android:padding="2dp"
-                android:text="9"
+                android:text="0"
                 android:textSize="14sp" />
 
         </RelativeLayout>
@@ -234,7 +234,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentLeft="true"
-                android:text="153"
+                android:text="0"
                 android:textSize="14sp" />
 
             <TextView
@@ -245,7 +245,7 @@
                 android:layout_alignParentTop="true"
                 android:background="@drawable/border"
                 android:padding="2dp"
-                android:text="X"
+                android:text="0"
                 android:textSize="14sp" />
 
             <TextView
@@ -256,7 +256,7 @@
                 android:layout_toLeftOf="@id/frame5Score2Player1"
                 android:background="@drawable/border"
                 android:padding="2dp"
-                android:text="9"
+                android:text="0"
                 android:textSize="14sp" />
 
         </RelativeLayout>
@@ -274,7 +274,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentLeft="true"
-                android:text="153"
+                android:text="0"
                 android:textSize="14sp" />
 
             <TextView
@@ -285,7 +285,7 @@
                 android:layout_alignParentTop="true"
                 android:background="@drawable/border"
                 android:padding="2dp"
-                android:text="X"
+                android:text="0"
                 android:textSize="14sp" />
 
             <TextView
@@ -296,7 +296,7 @@
                 android:layout_toLeftOf="@id/frame6Score2Player1"
                 android:background="@drawable/border"
                 android:padding="2dp"
-                android:text="9"
+                android:text="0"
                 android:textSize="14sp" />
 
 
@@ -315,7 +315,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentLeft="true"
-                android:text="153"
+                android:text="0"
                 android:textSize="14sp" />
 
             <TextView
@@ -326,7 +326,7 @@
                 android:layout_alignParentTop="true"
                 android:background="@drawable/border"
                 android:padding="2dp"
-                android:text="X"
+                android:text="0"
                 android:textSize="14sp" />
 
             <TextView
@@ -337,7 +337,7 @@
                 android:layout_toLeftOf="@id/frame7Score2Player1"
                 android:background="@drawable/border"
                 android:padding="2dp"
-                android:text="9"
+                android:text="0"
                 android:textSize="14sp" />
 
         </RelativeLayout>
@@ -355,7 +355,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentLeft="true"
-                android:text="153"
+                android:text="0"
                 android:textSize="14sp" />
 
             <TextView
@@ -366,7 +366,7 @@
                 android:layout_alignParentTop="true"
                 android:background="@drawable/border"
                 android:padding="2dp"
-                android:text="X"
+                android:text="0"
                 android:textSize="14sp" />
 
             <TextView
@@ -377,7 +377,7 @@
                 android:layout_toLeftOf="@id/frame8Score2Player1"
                 android:background="@drawable/border"
                 android:padding="2dp"
-                android:text="9"
+                android:text="0"
                 android:textSize="14sp" />
 
         </RelativeLayout>
@@ -395,7 +395,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentLeft="true"
-                android:text="153"
+                android:text="0"
                 android:textSize="14sp" />
 
             <TextView
@@ -406,7 +406,7 @@
                 android:layout_alignParentTop="true"
                 android:background="@drawable/border"
                 android:padding="2dp"
-                android:text="X"
+                android:text="0"
                 android:textSize="14sp" />
 
             <TextView
@@ -417,7 +417,7 @@
                 android:layout_toLeftOf="@id/frame9Score2Player1"
                 android:background="@drawable/border"
                 android:padding="2dp"
-                android:text="9"
+                android:text="0"
                 android:textSize="14sp" />
 
         </RelativeLayout>
@@ -435,7 +435,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentLeft="true"
-                android:text="153"
+                android:text="0"
                 android:textSize="14sp" />
 
             <TextView
@@ -446,7 +446,7 @@
                 android:layout_alignParentTop="true"
                 android:background="@drawable/border"
                 android:padding="2dp"
-                android:text="X"
+                android:text="0"
                 android:textSize="14sp" />
 
             <TextView
@@ -457,7 +457,7 @@
                 android:layout_toLeftOf="@id/frame10Score3Player1"
                 android:background="@drawable/border"
                 android:padding="2dp"
-                android:text="4"
+                android:text="0"
                 android:textSize="14sp" />
 
             <TextView
@@ -468,7 +468,7 @@
                 android:layout_toLeftOf="@id/frame10Score2Player1"
                 android:background="@drawable/border"
                 android:padding="2dp"
-                android:text="9"
+                android:text="0"
                 android:textSize="14sp" />
 
         </RelativeLayout>
@@ -510,7 +510,7 @@
             android:layout_marginRight="16dp"
             android:layout_weight="1"
             android:gravity="center_vertical"
-            android:text="300"
+            android:text="0"
             android:textColor="#fff"
             android:textStyle="bold" />
 
@@ -538,7 +538,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentLeft="true"
-                android:text="153"
+                android:text="0"
                 android:textSize="14sp" />
 
             <TextView
@@ -549,7 +549,7 @@
                 android:layout_alignParentTop="true"
                 android:background="@drawable/border"
                 android:padding="2dp"
-                android:text="X"
+                android:text="0"
                 android:textSize="14sp" />
 
             <TextView
@@ -560,7 +560,7 @@
                 android:layout_toLeftOf="@id/frame1Score2Player2"
                 android:background="@drawable/border"
                 android:padding="2dp"
-                android:text="9"
+                android:text="0"
                 android:textSize="14sp" />
 
         </RelativeLayout>
@@ -578,7 +578,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentLeft="true"
-                android:text="153"
+                android:text="0"
                 android:textSize="14sp" />
 
             <TextView
@@ -589,7 +589,7 @@
                 android:layout_alignParentTop="true"
                 android:background="@drawable/border"
                 android:padding="2dp"
-                android:text="X"
+                android:text="0"
                 android:textSize="14sp" />
 
             <TextView
@@ -600,7 +600,7 @@
                 android:layout_toLeftOf="@id/frame2Score2Player2"
                 android:background="@drawable/border"
                 android:padding="2dp"
-                android:text="9"
+                android:text="0"
                 android:textSize="14sp" />
 
         </RelativeLayout>
@@ -618,7 +618,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentLeft="true"
-                android:text="153"
+                android:text="0"
                 android:textSize="14sp" />
 
             <TextView
@@ -629,7 +629,7 @@
                 android:layout_alignParentTop="true"
                 android:background="@drawable/border"
                 android:padding="2dp"
-                android:text="X"
+                android:text="0"
                 android:textSize="14sp" />
 
             <TextView
@@ -640,7 +640,7 @@
                 android:layout_toLeftOf="@id/frame3Score2Player2"
                 android:background="@drawable/border"
                 android:padding="2dp"
-                android:text="9"
+                android:text="0"
                 android:textSize="14sp" />
 
         </RelativeLayout>
@@ -658,7 +658,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentLeft="true"
-                android:text="153"
+                android:text="0"
                 android:textSize="14sp" />
 
             <TextView
@@ -669,7 +669,7 @@
                 android:layout_alignParentTop="true"
                 android:background="@drawable/border"
                 android:padding="2dp"
-                android:text="X"
+                android:text="0"
                 android:textSize="14sp" />
 
             <TextView
@@ -680,7 +680,7 @@
                 android:layout_toLeftOf="@id/frame4Score2Player2"
                 android:background="@drawable/border"
                 android:padding="2dp"
-                android:text="9"
+                android:text="0"
                 android:textSize="14sp" />
 
         </RelativeLayout>
@@ -698,7 +698,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentLeft="true"
-                android:text="153"
+                android:text="0"
                 android:textSize="14sp" />
 
             <TextView
@@ -709,7 +709,7 @@
                 android:layout_alignParentTop="true"
                 android:background="@drawable/border"
                 android:padding="2dp"
-                android:text="X"
+                android:text="0"
                 android:textSize="14sp" />
 
             <TextView
@@ -720,7 +720,7 @@
                 android:layout_toLeftOf="@id/frame5Score2Player2"
                 android:background="@drawable/border"
                 android:padding="2dp"
-                android:text="9"
+                android:text="0"
                 android:textSize="14sp" />
 
         </RelativeLayout>
@@ -738,7 +738,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentLeft="true"
-                android:text="153"
+                android:text="0"
                 android:textSize="14sp" />
 
             <TextView
@@ -749,7 +749,7 @@
                 android:layout_alignParentTop="true"
                 android:background="@drawable/border"
                 android:padding="2dp"
-                android:text="X"
+                android:text="0"
                 android:textSize="14sp" />
 
             <TextView
@@ -760,7 +760,7 @@
                 android:layout_toLeftOf="@id/frame6Score2Player2"
                 android:background="@drawable/border"
                 android:padding="2dp"
-                android:text="9"
+                android:text="0"
                 android:textSize="14sp" />
 
 
@@ -779,7 +779,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentLeft="true"
-                android:text="153"
+                android:text="0"
                 android:textSize="14sp" />
 
             <TextView
@@ -790,7 +790,7 @@
                 android:layout_alignParentTop="true"
                 android:background="@drawable/border"
                 android:padding="2dp"
-                android:text="X"
+                android:text="0"
                 android:textSize="14sp" />
 
             <TextView
@@ -801,7 +801,7 @@
                 android:layout_toLeftOf="@id/frame7Score2Player2"
                 android:background="@drawable/border"
                 android:padding="2dp"
-                android:text="9"
+                android:text="0"
                 android:textSize="14sp" />
 
         </RelativeLayout>
@@ -819,7 +819,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentLeft="true"
-                android:text="153"
+                android:text="0"
                 android:textSize="14sp" />
 
             <TextView
@@ -830,7 +830,7 @@
                 android:layout_alignParentTop="true"
                 android:background="@drawable/border"
                 android:padding="2dp"
-                android:text="X"
+                android:text="0"
                 android:textSize="14sp" />
 
             <TextView
@@ -841,7 +841,7 @@
                 android:layout_toLeftOf="@id/frame8Score2Player2"
                 android:background="@drawable/border"
                 android:padding="2dp"
-                android:text="9"
+                android:text="0"
                 android:textSize="14sp" />
 
         </RelativeLayout>
@@ -859,7 +859,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentLeft="true"
-                android:text="153"
+                android:text="0"
                 android:textSize="14sp" />
 
             <TextView
@@ -870,7 +870,7 @@
                 android:layout_alignParentTop="true"
                 android:background="@drawable/border"
                 android:padding="2dp"
-                android:text="X"
+                android:text="0"
                 android:textSize="14sp" />
 
             <TextView
@@ -881,7 +881,7 @@
                 android:layout_toLeftOf="@id/frame9Score2Player2"
                 android:background="@drawable/border"
                 android:padding="2dp"
-                android:text="9"
+                android:text="0"
                 android:textSize="14sp" />
 
         </RelativeLayout>
@@ -899,7 +899,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentLeft="true"
-                android:text="153"
+                android:text="0"
                 android:textSize="14sp" />
 
             <TextView
@@ -910,7 +910,7 @@
                 android:layout_alignParentTop="true"
                 android:background="@drawable/border"
                 android:padding="2dp"
-                android:text="X"
+                android:text="0"
                 android:textSize="14sp" />
 
             <TextView
@@ -921,7 +921,7 @@
                 android:layout_toLeftOf="@id/frame10Score3Player2"
                 android:background="@drawable/border"
                 android:padding="2dp"
-                android:text="4"
+                android:text="0"
                 android:textSize="14sp" />
 
             <TextView
@@ -932,7 +932,7 @@
                 android:layout_toLeftOf="@id/frame10Score2Player2"
                 android:background="@drawable/border"
                 android:padding="2dp"
-                android:text="9"
+                android:text="0"
                 android:textSize="14sp" />
 
         </RelativeLayout>

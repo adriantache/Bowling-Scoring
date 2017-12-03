@@ -7,7 +7,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -116,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
         activePlayer1 = findViewById(R.id.activePlayer1);
         activePlayer2 = findViewById(R.id.activePlayer2);
 
-        // find all score TextViews
+        // find all score TextViews (masked by splash screen)
         frame1Score1Player1 = findViewById(R.id.frame1Score1Player1);
         frame1Score2Player1 = findViewById(R.id.frame1Score2Player1);
         frame2Score1Player1 = findViewById(R.id.frame2Score1Player1);
@@ -870,11 +869,15 @@ public class MainActivity extends AppCompatActivity {
         ImageView image3 = findViewById(R.id.plus);
         image3.setClickable(false);
 
+        //hide active player icon
+        activePlayer1.setVisibility(activePlayer1.INVISIBLE);
+        activePlayer2.setVisibility(activePlayer2.INVISIBLE);
+
         // use pin selection ImageView to display winner
-        if (tScorePlayer1>tScorePlayer2) {
+        if (tScorePlayer1 > tScorePlayer2) {
             Drawable player1Win = getResources().getDrawable(R.drawable.playeronewin);
             imageViewDownedPins.setImageDrawable(player1Win);
-        } else if (tScorePlayer2>tScorePlayer1) {
+        } else if (tScorePlayer2 > tScorePlayer1) {
             Drawable player2Win = getResources().getDrawable(R.drawable.playertwowin);
             imageViewDownedPins.setImageDrawable(player2Win);
         } else {
@@ -885,7 +888,8 @@ public class MainActivity extends AppCompatActivity {
 
     // recursively calculate score for each frame, taking into account strikes and spares
     private void calculateScore() {
-        // declaring work variables
+        // declaring work variables; k is the score pointer, l is the frame pointer,
+        // x is a placeholder to decode scores
         int k;
         int l = frameNumber;
         int x;
@@ -940,7 +944,6 @@ public class MainActivity extends AppCompatActivity {
             }
 
             // calculate scores for current frame and those before it
-            //!!! limit this to frames possibly modified by current shot (fN - 1?)
             while (l > 0) {
 
                 k = l * 2;
@@ -979,15 +982,16 @@ public class MainActivity extends AppCompatActivity {
                 l--;
             }
             tScorePlayer1 = frameTotalScoresPlayer1[frameNumber];
+
+            // logic for second player
         } else {
             frameTotalScoresPlayer2 = new int[11];
 
-            // process frame 10 first, if it is the current frame
+            // 0. process frame 10 first, if it is the current frame
             if (l == 10) {
                 k = l * 2 - 2;
 
                 // 1. first process frame 10 scores, since there are no special rules
-                // !!! decode spare
                 frameTotalScoresPlayer2[l] = frameScoresPlayer2[k + 1] + frameScoresPlayer2[k + 2] + frameScoresPlayer2[k + 3];
 
                 // 2. then just use the recursive for the rest of the frames
@@ -1004,7 +1008,7 @@ public class MainActivity extends AppCompatActivity {
                         strikeScore = frameScoresPlayer2[k + k % 2 + 3];
                     } else if (strikeScore < 0) {
                         strikeScore = Math.abs(strikeScore);
-                }
+                    }
 
                     // decode scores and add strike or spare scores
                     x = frameScoresPlayer2[k];
@@ -1027,13 +1031,11 @@ public class MainActivity extends AppCompatActivity {
             }
 
             // calculate scores for current frame and those before it
-            //!!! limit this to frames possibly modified by current shot (fN - 1?)
             while (l > 0) {
 
                 k = l * 2;
 
                 while (k > 0) {
-                    // add "future" scores for strike and spare calculation
                     // add "future" scores for strike and spare calculation and decode
                     lastScore = frameScoresPlayer2[k + k % 2 + 1];
                     if (lastScore == 40) {
@@ -1090,7 +1092,7 @@ public class MainActivity extends AppCompatActivity {
     // reset the game
     public void resetGame(View v) {
 
-        // reset all scores
+        // reset all scores and active player icon
         frameScoresPlayer1 = new int[22];
         frameScoresPlayer2 = new int[22];
         frameTotalScoresPlayer1 = new int[11];
@@ -1109,7 +1111,7 @@ public class MainActivity extends AppCompatActivity {
         extraScore = false;
         maxPins = 10;
 
-        // set number of pins to the instructions
+        // set number of pins ImageView to the instructions
         Drawable instructions = getResources().getDrawable(R.drawable.instructions);
         imageViewDownedPins.setImageDrawable(instructions);
 
