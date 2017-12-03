@@ -892,8 +892,7 @@ public class MainActivity extends AppCompatActivity {
         int lastScore;
         int strikeScore;
 
-        //!!! fix sequential strike scoring (MAX 30 not 20!)
-
+        // test for active player, so we don't update all scores needlessly
         if (activePlayer == 1) {
             frameTotalScoresPlayer1 = new int[11];
 
@@ -906,9 +905,19 @@ public class MainActivity extends AppCompatActivity {
 
                 // 2. then just use the recursive for the rest of the frames
                 while (k > 0) {
-                    // add "future" scores for strike and spare calculation
+                    // add "future" scores for strike and spare calculation and decode
                     lastScore = frameScoresPlayer1[k + k % 2 + 1];
+                    if (lastScore == 40) {
+                        lastScore = 0;
+                    } else if (lastScore < 0) {
+                        lastScore = Math.abs(lastScore);
+                    }
                     strikeScore = frameScoresPlayer1[k + k % 2 + 2];
+                    if (strikeScore == 40) {
+                        strikeScore = frameScoresPlayer1[k + k % 2 + 3];
+                    } else if (strikeScore < 0) {
+                        strikeScore = Math.abs(strikeScore);
+                    }
 
                     // decode scores and add strike or spare scores
                     x = frameScoresPlayer1[k];
@@ -937,9 +946,19 @@ public class MainActivity extends AppCompatActivity {
                 k = l * 2;
 
                 while (k > 0) {
-                    // add "future" scores for strike and spare calculation
+                    // add "future" scores for strike and spare calculation and decode
                     lastScore = frameScoresPlayer1[k + k % 2 + 1];
+                    if (lastScore == 40) {
+                        lastScore = 0;
+                    } else if (lastScore < 0) {
+                        lastScore = Math.abs(lastScore);
+                    }
                     strikeScore = frameScoresPlayer1[k + k % 2 + 2];
+                    if (strikeScore == 40) {
+                        strikeScore = frameScoresPlayer1[k + k % 2 + 3];
+                    } else if (strikeScore < 0) {
+                        strikeScore = Math.abs(strikeScore);
+                    }
 
                     // decode scores and add strike or spare scores
                     x = frameScoresPlayer1[k];
@@ -968,13 +987,24 @@ public class MainActivity extends AppCompatActivity {
                 k = l * 2 - 2;
 
                 // 1. first process frame 10 scores, since there are no special rules
+                // !!! decode spare
                 frameTotalScoresPlayer2[l] = frameScoresPlayer2[k + 1] + frameScoresPlayer2[k + 2] + frameScoresPlayer2[k + 3];
 
                 // 2. then just use the recursive for the rest of the frames
                 while (k > 0) {
-                    // add "future" scores for strike and spare calculation
+                    // add "future" scores for strike and spare calculation and decode
                     lastScore = frameScoresPlayer2[k + k % 2 + 1];
+                    if (lastScore == 40) {
+                        lastScore = 0;
+                    } else if (lastScore < 0) {
+                        lastScore = Math.abs(lastScore);
+                    }
                     strikeScore = frameScoresPlayer2[k + k % 2 + 2];
+                    if (strikeScore == 40) {
+                        strikeScore = frameScoresPlayer2[k + k % 2 + 3];
+                    } else if (strikeScore < 0) {
+                        strikeScore = Math.abs(strikeScore);
+                }
 
                     // decode scores and add strike or spare scores
                     x = frameScoresPlayer2[k];
@@ -1004,8 +1034,19 @@ public class MainActivity extends AppCompatActivity {
 
                 while (k > 0) {
                     // add "future" scores for strike and spare calculation
+                    // add "future" scores for strike and spare calculation and decode
                     lastScore = frameScoresPlayer2[k + k % 2 + 1];
+                    if (lastScore == 40) {
+                        lastScore = 0;
+                    } else if (lastScore < 0) {
+                        lastScore = Math.abs(lastScore);
+                    }
                     strikeScore = frameScoresPlayer2[k + k % 2 + 2];
+                    if (strikeScore == 40) {
+                        strikeScore = frameScoresPlayer2[k + k % 2 + 3];
+                    } else if (strikeScore < 0) {
+                        strikeScore = Math.abs(strikeScore);
+                    }
 
                     // decode scores and add strike or spare scores
                     x = frameScoresPlayer2[k];
