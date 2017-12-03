@@ -860,9 +860,15 @@ public class MainActivity extends AppCompatActivity {
 
     // process end of game
     private void gameEnd() {
-        //disable submit button, remember to reset it
+        //disable submit button
         ImageView image = findViewById(R.id.submit);
         image.setClickable(false);
+
+        //disable pin +/- buttons
+        ImageView image2 = findViewById(R.id.minus);
+        image2.setClickable(false);
+        ImageView image3 = findViewById(R.id.plus);
+        image3.setClickable(false);
 
         // use pin selection ImageView to display winner
         if (tScorePlayer1>tScorePlayer2) {
@@ -1069,5 +1075,11 @@ public class MainActivity extends AppCompatActivity {
         //reset submit button
         ImageView image = findViewById(R.id.submit);
         image.setClickable(true);
+
+        //reset pin +/- buttons
+        ImageView image2 = findViewById(R.id.minus);
+        image2.setClickable(true);
+        ImageView image3 = findViewById(R.id.plus);
+        image3.setClickable(true);
     }
 }
