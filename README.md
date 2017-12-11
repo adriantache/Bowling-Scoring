@@ -19,15 +19,9 @@ and it's beyond the scope of this project to improve this, since I am not allowe
 
 **Please try out the app and report any bugs.**
 
-_It's been tough, making this rather simple app, with a lot of bugs to fix and logical structures to figure out, but I've learned a lot and I'd like to especially thank @Thor from the Udacity slack for helping with the Drawables vector and java code._
+_It's been tough, making this rather simple app, with a lot of bugs to fix and logical structures to figure out, but I've learned a lot and I'd like to especially thank @Thor from the Udacity slack for helping with the Drawables vector and respective java code._
 
-**Features I'd like to implement:**
-- (optional) create a landscape layout
-- (optional) improve UI for selection of # of pins
-- (optional) add UNDO button
-- (optional) highlight current frame
-- (optional) maybe add more fun to it, such as multiple messages for winners, sound or vibration, etc.
-
+**Features I'd like to implement:** Please see the ![Issues section](https://github.com/adriantache/Bowling-Scoring/issues)
 
 **Known issues:**
 - layout is a bit of a mess
