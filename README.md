@@ -21,7 +21,7 @@ and it's beyond the scope of this project to improve this, since I am not allowe
 
 _It's been tough, making this rather simple app, with a lot of bugs to fix and logical structures to figure out, but I've learned a lot and I'd like to especially thank @Thor from the Udacity slack for helping with the Drawables vector and respective java code._
 
-**Features I'd like to implement:** Please see the ![Issues section](https://github.com/adriantache/Bowling-Scoring/issues)
+**Features I'd like to implement:** Please see the [Issues section](https://github.com/adriantache/Bowling-Scoring/issues)
 
 **Known issues:**
 - layout is a bit of a mess
