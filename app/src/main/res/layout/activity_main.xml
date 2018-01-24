@@ -1,1035 +1,1082 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical">
+
+<!--Top logo-->
+<ImageView
+    android:layout_width="wrap_content"
+    android:layout_height="0dp"
+    android:layout_weight="2"
+    android:maxHeight="100dp"
+    android:scaleType="centerCrop"
+    android:src="@drawable/logo" />
+
+<!--Player 1 Tag-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="40dp"
 
-    <!--Top logo-->
+    android:background="#ff5722"
+    android:orientation="horizontal"
+    android:paddingBottom="8dp"
+    android:paddingTop="8dp">
+
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_weight="2"
-        android:maxHeight="100dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/logo" />
-
-    <!--Player 1 Tag-->
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-
-        android:background="#ff5722"
-        android:orientation="horizontal"
-        android:paddingBottom="8dp"
-        android:paddingTop="8dp">
-
-        <ImageView
-            android:id="@+id/activePlayer1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="16dp"
-            android:layout_weight="1"
-            android:src="@drawable/ball" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="8"
-            android:gravity="center_vertical"
-            android:text="Player 1"
-            android:textColor="#fff"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/totalScorePlayer1"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginRight="16dp"
-            android:layout_weight="1"
-            android:gravity="center_vertical"
-            android:text="0"
-            android:textColor="#fff"
-            android:textStyle="bold" />
-
-    </LinearLayout>
-
-    <!--Player 1 Scores-->
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/activePlayer1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
-        android:layout_marginTop="4dp"
-        android:orientation="horizontal">
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="16dp"
+        android:layout_weight="1"
+        android:src="@drawable/ball" />
 
-        <RelativeLayout
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_weight="2"
-            android:background="@drawable/border"
-            android:padding="2dp">
-
-            <TextView
-                android:id="@+id/frame1TotalScorePlayer1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentLeft="true"
-                android:text="0"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/frame1Score2Player1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentTop="true"
-                android:background="@drawable/border"
-                android:padding="2dp"
-                android:text="0"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/frame1Score1Player1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_toLeftOf="@id/frame1Score2Player1"
-                android:background="@drawable/border"
-                android:padding="2dp"
-                android:text="0"
-                android:textSize="14sp" />
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_weight="2"
-            android:background="@drawable/border"
-            android:padding="2dp">
-
-            <TextView
-                android:id="@+id/frame2TotalScorePlayer1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentLeft="true"
-                android:text="0"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/frame2Score2Player1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentTop="true"
-                android:background="@drawable/border"
-                android:padding="2dp"
-                android:text="0"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/frame2Score1Player1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_toLeftOf="@id/frame2Score2Player1"
-                android:background="@drawable/border"
-                android:padding="2dp"
-                android:text="0"
-                android:textSize="14sp" />
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_weight="2"
-            android:background="@drawable/border"
-            android:padding="2dp">
-
-            <TextView
-                android:id="@+id/frame3TotalScorePlayer1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentLeft="true"
-                android:text="0"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/frame3Score2Player1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentTop="true"
-                android:background="@drawable/border"
-                android:padding="2dp"
-                android:text="0"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/frame3Score1Player1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_toLeftOf="@id/frame3Score2Player1"
-                android:background="@drawable/border"
-                android:padding="2dp"
-                android:text="0"
-                android:textSize="14sp" />
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_weight="2"
-            android:background="@drawable/border"
-            android:padding="2dp">
-
-            <TextView
-                android:id="@+id/frame4TotalScorePlayer1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentLeft="true"
-                android:text="0"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/frame4Score2Player1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentTop="true"
-                android:background="@drawable/border"
-                android:padding="2dp"
-                android:text="0"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/frame4Score1Player1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_toLeftOf="@id/frame4Score2Player1"
-                android:background="@drawable/border"
-                android:padding="2dp"
-                android:text="0"
-                android:textSize="14sp" />
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_weight="2"
-            android:background="@drawable/border"
-            android:padding="2dp">
-
-            <TextView
-                android:id="@+id/frame5TotalScorePlayer1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentLeft="true"
-                android:text="0"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/frame5Score2Player1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentTop="true"
-                android:background="@drawable/border"
-                android:padding="2dp"
-                android:text="0"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/frame5Score1Player1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_toLeftOf="@id/frame5Score2Player1"
-                android:background="@drawable/border"
-                android:padding="2dp"
-                android:text="0"
-                android:textSize="14sp" />
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_weight="2"
-            android:background="@drawable/border"
-            android:padding="2dp">
-
-            <TextView
-                android:id="@+id/frame6TotalScorePlayer1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentLeft="true"
-                android:text="0"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/frame6Score2Player1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentTop="true"
-                android:background="@drawable/border"
-                android:padding="2dp"
-                android:text="0"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/frame6Score1Player1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_toLeftOf="@id/frame6Score2Player1"
-                android:background="@drawable/border"
-                android:padding="2dp"
-                android:text="0"
-                android:textSize="14sp" />
-
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_weight="2"
-            android:background="@drawable/border"
-            android:padding="2dp">
-
-            <TextView
-                android:id="@+id/frame7TotalScorePlayer1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentLeft="true"
-                android:text="0"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/frame7Score2Player1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentTop="true"
-                android:background="@drawable/border"
-                android:padding="2dp"
-                android:text="0"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/frame7Score1Player1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_toLeftOf="@id/frame7Score2Player1"
-                android:background="@drawable/border"
-                android:padding="2dp"
-                android:text="0"
-                android:textSize="14sp" />
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_weight="2"
-            android:background="@drawable/border"
-            android:padding="2dp">
-
-            <TextView
-                android:id="@+id/frame8TotalScorePlayer1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentLeft="true"
-                android:text="0"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/frame8Score2Player1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentTop="true"
-                android:background="@drawable/border"
-                android:padding="2dp"
-                android:text="0"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/frame8Score1Player1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_toLeftOf="@id/frame8Score2Player1"
-                android:background="@drawable/border"
-                android:padding="2dp"
-                android:text="0"
-                android:textSize="14sp" />
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_weight="2"
-            android:background="@drawable/border"
-            android:padding="2dp">
-
-            <TextView
-                android:id="@+id/frame9TotalScorePlayer1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentLeft="true"
-                android:text="0"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/frame9Score2Player1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentTop="true"
-                android:background="@drawable/border"
-                android:padding="2dp"
-                android:text="0"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/frame9Score1Player1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_toLeftOf="@id/frame9Score2Player1"
-                android:background="@drawable/border"
-                android:padding="2dp"
-                android:text="0"
-                android:textSize="14sp" />
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            android:background="@drawable/border"
-            android:padding="2dp">
-
-            <TextView
-                android:id="@+id/frame10TotalScorePlayer1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentLeft="true"
-                android:text="0"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/frame10Score3Player1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentTop="true"
-                android:background="@drawable/border"
-                android:padding="2dp"
-                android:text="0"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/frame10Score2Player1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_toLeftOf="@id/frame10Score3Player1"
-                android:background="@drawable/border"
-                android:padding="2dp"
-                android:text="0"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/frame10Score1Player1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_toLeftOf="@id/frame10Score2Player1"
-                android:background="@drawable/border"
-                android:padding="2dp"
-                android:text="0"
-                android:textSize="14sp" />
-
-        </RelativeLayout>
-
-    </LinearLayout>
-
-    <!--Player 2 Tag-->
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:background="#3e2723"
-        android:orientation="horizontal"
-        android:paddingBottom="8dp"
-        android:paddingTop="8dp">
-
-        <ImageView
-            android:id="@+id/activePlayer2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="16dp"
-            android:layout_weight="1"
-            android:src="@drawable/ball"
-            android:visibility="invisible" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="8"
-            android:gravity="center_vertical"
-            android:text="Player 2"
-            android:textColor="#fff"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/totalScorePlayer2"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginRight="16dp"
-            android:layout_weight="1"
-            android:gravity="center_vertical"
-            android:text="0"
-            android:textColor="#fff"
-            android:textStyle="bold" />
-
-    </LinearLayout>
-
-    <!--Player 2 Scores-->
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
-        android:layout_marginTop="4dp"
-
-        android:orientation="horizontal">
-
-        <RelativeLayout
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_weight="2"
-            android:background="@drawable/border"
-            android:padding="2dp">
-
-            <TextView
-                android:id="@+id/frame1TotalScorePlayer2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentLeft="true"
-                android:text="0"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/frame1Score2Player2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentTop="true"
-                android:background="@drawable/border"
-                android:padding="2dp"
-                android:text="0"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/frame1Score1Player2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_toLeftOf="@id/frame1Score2Player2"
-                android:background="@drawable/border"
-                android:padding="2dp"
-                android:text="0"
-                android:textSize="14sp" />
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_weight="2"
-            android:background="@drawable/border"
-            android:padding="2dp">
-
-            <TextView
-                android:id="@+id/frame2TotalScorePlayer2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentLeft="true"
-                android:text="0"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/frame2Score2Player2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentTop="true"
-                android:background="@drawable/border"
-                android:padding="2dp"
-                android:text="0"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/frame2Score1Player2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_toLeftOf="@id/frame2Score2Player2"
-                android:background="@drawable/border"
-                android:padding="2dp"
-                android:text="0"
-                android:textSize="14sp" />
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_weight="2"
-            android:background="@drawable/border"
-            android:padding="2dp">
-
-            <TextView
-                android:id="@+id/frame3TotalScorePlayer2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentLeft="true"
-                android:text="0"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/frame3Score2Player2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentTop="true"
-                android:background="@drawable/border"
-                android:padding="2dp"
-                android:text="0"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/frame3Score1Player2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_toLeftOf="@id/frame3Score2Player2"
-                android:background="@drawable/border"
-                android:padding="2dp"
-                android:text="0"
-                android:textSize="14sp" />
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_weight="2"
-            android:background="@drawable/border"
-            android:padding="2dp">
-
-            <TextView
-                android:id="@+id/frame4TotalScorePlayer2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentLeft="true"
-                android:text="0"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/frame4Score2Player2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentTop="true"
-                android:background="@drawable/border"
-                android:padding="2dp"
-                android:text="0"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/frame4Score1Player2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_toLeftOf="@id/frame4Score2Player2"
-                android:background="@drawable/border"
-                android:padding="2dp"
-                android:text="0"
-                android:textSize="14sp" />
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_weight="2"
-            android:background="@drawable/border"
-            android:padding="2dp">
-
-            <TextView
-                android:id="@+id/frame5TotalScorePlayer2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentLeft="true"
-                android:text="0"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/frame5Score2Player2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentTop="true"
-                android:background="@drawable/border"
-                android:padding="2dp"
-                android:text="0"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/frame5Score1Player2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_toLeftOf="@id/frame5Score2Player2"
-                android:background="@drawable/border"
-                android:padding="2dp"
-                android:text="0"
-                android:textSize="14sp" />
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_weight="2"
-            android:background="@drawable/border"
-            android:padding="2dp">
-
-            <TextView
-                android:id="@+id/frame6TotalScorePlayer2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentLeft="true"
-                android:text="0"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/frame6Score2Player2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentTop="true"
-                android:background="@drawable/border"
-                android:padding="2dp"
-                android:text="0"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/frame6Score1Player2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_toLeftOf="@id/frame6Score2Player2"
-                android:background="@drawable/border"
-                android:padding="2dp"
-                android:text="0"
-                android:textSize="14sp" />
-
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_weight="2"
-            android:background="@drawable/border"
-            android:padding="2dp">
-
-            <TextView
-                android:id="@+id/frame7TotalScorePlayer2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentLeft="true"
-                android:text="0"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/frame7Score2Player2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentTop="true"
-                android:background="@drawable/border"
-                android:padding="2dp"
-                android:text="0"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/frame7Score1Player2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_toLeftOf="@id/frame7Score2Player2"
-                android:background="@drawable/border"
-                android:padding="2dp"
-                android:text="0"
-                android:textSize="14sp" />
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_weight="2"
-            android:background="@drawable/border"
-            android:padding="2dp">
-
-            <TextView
-                android:id="@+id/frame8TotalScorePlayer2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentLeft="true"
-                android:text="0"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/frame8Score2Player2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentTop="true"
-                android:background="@drawable/border"
-                android:padding="2dp"
-                android:text="0"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/frame8Score1Player2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_toLeftOf="@id/frame8Score2Player2"
-                android:background="@drawable/border"
-                android:padding="2dp"
-                android:text="0"
-                android:textSize="14sp" />
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_weight="2"
-            android:background="@drawable/border"
-            android:padding="2dp">
-
-            <TextView
-                android:id="@+id/frame9TotalScorePlayer2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentLeft="true"
-                android:text="0"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/frame9Score2Player2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentTop="true"
-                android:background="@drawable/border"
-                android:padding="2dp"
-                android:text="0"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/frame9Score1Player2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_toLeftOf="@id/frame9Score2Player2"
-                android:background="@drawable/border"
-                android:padding="2dp"
-                android:text="0"
-                android:textSize="14sp" />
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            android:background="@drawable/border"
-            android:padding="2dp">
-
-            <TextView
-                android:id="@+id/frame10TotalScorePlayer2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentLeft="true"
-                android:text="0"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/frame10Score3Player2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentTop="true"
-                android:background="@drawable/border"
-                android:padding="2dp"
-                android:text="0"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/frame10Score2Player2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_toLeftOf="@id/frame10Score3Player2"
-                android:background="@drawable/border"
-                android:padding="2dp"
-                android:text="0"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/frame10Score1Player2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_toLeftOf="@id/frame10Score2Player2"
-                android:background="@drawable/border"
-                android:padding="2dp"
-                android:text="0"
-                android:textSize="14sp" />
-
-        </RelativeLayout>
-
-    </LinearLayout>
-
-    <!--separator-->
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="4dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/line" />
-
-    <!--Downed pins tag-->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_gravity="center"
-        android:background="#f44336"
-        android:gravity="center"
-        android:paddingBottom="8dp"
-        android:paddingTop="8dp"
-        android:text="select number of downed pins:"
+        android:id="@+id/namePlayer1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="8"
+        android:gravity="center_vertical"
+        android:text="Player 1"
         android:textColor="#fff"
         android:textStyle="bold" />
 
-    <!--Pin number selector-->
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <EditText
+        android:id="@+id/editNamePlayer1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        android:background="#fff"
-        android:orientation="horizontal">
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:hint="Player 1"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:visibility="gone" />
 
-        <ImageView
-            android:id="@+id/minus"
-            android:layout_width="wrap_content"
-            android:layout_height="75dp"
-            android:layout_gravity="center_vertical"
-            android:layout_weight="1"
-            android:clickable="true"
-            android:focusable="true"
-            android:onClick="minusDownedPin"
-            android:src="@drawable/subtract" />
-
-        <ImageView
-            android:id="@+id/downedPins"
-            android:layout_width="wrap_content"
-            android:layout_height="200dp"
-            android:layout_weight="2"
-            android:src="@drawable/instructions" />
-
-        <ImageView
-            android:id="@+id/plus"
-            android:layout_width="wrap_content"
-            android:layout_height="75dp"
-            android:layout_gravity="center_vertical"
-            android:layout_weight="1"
-            android:clickable="true"
-            android:focusable="true"
-            android:onClick="plusDownedPin"
-            android:src="@drawable/add" />
-
-    </LinearLayout>
-
-    <!--Pin submit button-->
-    <ImageView
-        android:id="@+id/submit"
-        android:layout_width="match_parent"
-        android:layout_height="120dp"
-        android:clickable="true"
-        android:focusable="true"
-        android:onClick="submitScore"
-        android:scaleType="centerCrop"
-        android:src="@drawable/submit" />
-
-    <!--separator-->
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="8dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/line" />
-
-    <!--Reset button-->
+    <Button
+        android:id="@+id/changePlayer1Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:layout_weight="1"
+        android:background="#E63E09"
+        android:onClick="changePlayer1Name"
+        android:padding="3sp"
+        android:text="Change name"
+        android:textAllCaps="false"
+        android:textColor="#FFF" />
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:id="@+id/totalScorePlayer1"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginRight="16dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:text="0"
+        android:textColor="#fff"
+        android:textStyle="bold" />
+</LinearLayout>
+
+
+<!--Player 1 Scores-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="4dp"
+    android:layout_marginTop="4dp"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_weight="2"
+        android:background="@drawable/border"
+        android:padding="2dp">
+
+        <TextView
+            android:id="@+id/frame1TotalScorePlayer1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:text="0"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/frame1Score2Player1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/border"
+            android:padding="2dp"
+            android:text="0"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/frame1Score1Player1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@id/frame1Score2Player1"
+            android:background="@drawable/border"
+            android:padding="2dp"
+            android:text="0"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_weight="2"
+        android:background="@drawable/border"
+        android:padding="2dp">
+
+        <TextView
+            android:id="@+id/frame2TotalScorePlayer1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:text="0"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/frame2Score2Player1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/border"
+            android:padding="2dp"
+            android:text="0"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/frame2Score1Player1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@id/frame2Score2Player1"
+            android:background="@drawable/border"
+            android:padding="2dp"
+            android:text="0"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_weight="2"
+        android:background="@drawable/border"
+        android:padding="2dp">
+
+        <TextView
+            android:id="@+id/frame3TotalScorePlayer1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:text="0"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/frame3Score2Player1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/border"
+            android:padding="2dp"
+            android:text="0"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/frame3Score1Player1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@id/frame3Score2Player1"
+            android:background="@drawable/border"
+            android:padding="2dp"
+            android:text="0"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_weight="2"
+        android:background="@drawable/border"
+        android:padding="2dp">
+
+        <TextView
+            android:id="@+id/frame4TotalScorePlayer1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:text="0"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/frame4Score2Player1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/border"
+            android:padding="2dp"
+            android:text="0"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/frame4Score1Player1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@id/frame4Score2Player1"
+            android:background="@drawable/border"
+            android:padding="2dp"
+            android:text="0"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_weight="2"
+        android:background="@drawable/border"
+        android:padding="2dp">
+
+        <TextView
+            android:id="@+id/frame5TotalScorePlayer1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:text="0"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/frame5Score2Player1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/border"
+            android:padding="2dp"
+            android:text="0"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/frame5Score1Player1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@id/frame5Score2Player1"
+            android:background="@drawable/border"
+            android:padding="2dp"
+            android:text="0"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_weight="2"
+        android:background="@drawable/border"
+        android:padding="2dp">
+
+        <TextView
+            android:id="@+id/frame6TotalScorePlayer1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:text="0"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/frame6Score2Player1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/border"
+            android:padding="2dp"
+            android:text="0"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/frame6Score1Player1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@id/frame6Score2Player1"
+            android:background="@drawable/border"
+            android:padding="2dp"
+            android:text="0"
+            android:textSize="14sp" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_weight="2"
+        android:background="@drawable/border"
+        android:padding="2dp">
+
+        <TextView
+            android:id="@+id/frame7TotalScorePlayer1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:text="0"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/frame7Score2Player1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/border"
+            android:padding="2dp"
+            android:text="0"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/frame7Score1Player1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@id/frame7Score2Player1"
+            android:background="@drawable/border"
+            android:padding="2dp"
+            android:text="0"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_weight="2"
+        android:background="@drawable/border"
+        android:padding="2dp">
+
+        <TextView
+            android:id="@+id/frame8TotalScorePlayer1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:text="0"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/frame8Score2Player1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/border"
+            android:padding="2dp"
+            android:text="0"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/frame8Score1Player1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@id/frame8Score2Player1"
+            android:background="@drawable/border"
+            android:padding="2dp"
+            android:text="0"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_weight="2"
+        android:background="@drawable/border"
+        android:padding="2dp">
+
+        <TextView
+            android:id="@+id/frame9TotalScorePlayer1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:text="0"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/frame9Score2Player1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/border"
+            android:padding="2dp"
+            android:text="0"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/frame9Score1Player1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@id/frame9Score2Player1"
+            android:background="@drawable/border"
+            android:padding="2dp"
+            android:text="0"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:background="@drawable/border"
+        android:padding="2dp">
+
+        <TextView
+            android:id="@+id/frame10TotalScorePlayer1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:text="0"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/frame10Score3Player1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/border"
+            android:padding="2dp"
+            android:text="0"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/frame10Score2Player1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@id/frame10Score3Player1"
+            android:background="@drawable/border"
+            android:padding="2dp"
+            android:text="0"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/frame10Score1Player1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@id/frame10Score2Player1"
+            android:background="@drawable/border"
+            android:padding="2dp"
+            android:text="0"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+</LinearLayout>
+
+<!--Player 2 Tag-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+
+    android:background="#ff5722"
+    android:orientation="horizontal"
+    android:paddingBottom="8dp"
+    android:paddingTop="8dp">
+
+    <ImageView
+        android:id="@+id/activePlayer2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
-        android:background="#ffeb3b"
+        android:layout_marginLeft="16dp"
+        android:layout_weight="1"
+        android:src="@drawable/ball" />
+
+    <TextView
+        android:id="@+id/namePlayer2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="8"
+        android:gravity="center_vertical"
+        android:text="Player 2"
+        android:textColor="#fff"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editNamePlayer2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:hint="Player 2"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/changePlayer2Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:layout_weight="1"
+        android:background="#E63E09"
+        android:onClick="changePlayer1Name"
+        android:padding="3sp"
+        android:text="Change name"
+        android:textAllCaps="false"
+        android:textColor="#FFF" />
+    <TextView
+        android:id="@+id/totalScorePlayer2"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginRight="16dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:text="0"
+        android:textColor="#fff"
+        android:textStyle="bold" />
+</LinearLayout>
+
+<!--Player 2 Scores-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="4dp"
+    android:layout_marginTop="4dp"
+
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_weight="2"
+        android:background="@drawable/border"
+        android:padding="2dp">
+
+        <TextView
+            android:id="@+id/frame1TotalScorePlayer2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:text="0"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/frame1Score2Player2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/border"
+            android:padding="2dp"
+            android:text="0"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/frame1Score1Player2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@id/frame1Score2Player2"
+            android:background="@drawable/border"
+            android:padding="2dp"
+            android:text="0"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_weight="2"
+        android:background="@drawable/border"
+        android:padding="2dp">
+
+        <TextView
+            android:id="@+id/frame2TotalScorePlayer2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:text="0"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/frame2Score2Player2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/border"
+            android:padding="2dp"
+            android:text="0"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/frame2Score1Player2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@id/frame2Score2Player2"
+            android:background="@drawable/border"
+            android:padding="2dp"
+            android:text="0"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_weight="2"
+        android:background="@drawable/border"
+        android:padding="2dp">
+
+        <TextView
+            android:id="@+id/frame3TotalScorePlayer2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:text="0"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/frame3Score2Player2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/border"
+            android:padding="2dp"
+            android:text="0"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/frame3Score1Player2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@id/frame3Score2Player2"
+            android:background="@drawable/border"
+            android:padding="2dp"
+            android:text="0"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_weight="2"
+        android:background="@drawable/border"
+        android:padding="2dp">
+
+        <TextView
+            android:id="@+id/frame4TotalScorePlayer2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:text="0"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/frame4Score2Player2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/border"
+            android:padding="2dp"
+            android:text="0"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/frame4Score1Player2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@id/frame4Score2Player2"
+            android:background="@drawable/border"
+            android:padding="2dp"
+            android:text="0"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_weight="2"
+        android:background="@drawable/border"
+        android:padding="2dp">
+
+        <TextView
+            android:id="@+id/frame5TotalScorePlayer2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:text="0"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/frame5Score2Player2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/border"
+            android:padding="2dp"
+            android:text="0"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/frame5Score1Player2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@id/frame5Score2Player2"
+            android:background="@drawable/border"
+            android:padding="2dp"
+            android:text="0"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_weight="2"
+        android:background="@drawable/border"
+        android:padding="2dp">
+
+        <TextView
+            android:id="@+id/frame6TotalScorePlayer2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:text="0"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/frame6Score2Player2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/border"
+            android:padding="2dp"
+            android:text="0"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/frame6Score1Player2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@id/frame6Score2Player2"
+            android:background="@drawable/border"
+            android:padding="2dp"
+            android:text="0"
+            android:textSize="14sp" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_weight="2"
+        android:background="@drawable/border"
+        android:padding="2dp">
+
+        <TextView
+            android:id="@+id/frame7TotalScorePlayer2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:text="0"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/frame7Score2Player2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/border"
+            android:padding="2dp"
+            android:text="0"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/frame7Score1Player2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@id/frame7Score2Player2"
+            android:background="@drawable/border"
+            android:padding="2dp"
+            android:text="0"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_weight="2"
+        android:background="@drawable/border"
+        android:padding="2dp">
+
+        <TextView
+            android:id="@+id/frame8TotalScorePlayer2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:text="0"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/frame8Score2Player2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/border"
+            android:padding="2dp"
+            android:text="0"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/frame8Score1Player2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@id/frame8Score2Player2"
+            android:background="@drawable/border"
+            android:padding="2dp"
+            android:text="0"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_weight="2"
+        android:background="@drawable/border"
+        android:padding="2dp">
+
+        <TextView
+            android:id="@+id/frame9TotalScorePlayer2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:text="0"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/frame9Score2Player2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/border"
+            android:padding="2dp"
+            android:text="0"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/frame9Score1Player2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@id/frame9Score2Player2"
+            android:background="@drawable/border"
+            android:padding="2dp"
+            android:text="0"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:background="@drawable/border"
+        android:padding="2dp">
+
+        <TextView
+            android:id="@+id/frame10TotalScorePlayer2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:text="0"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/frame10Score3Player2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/border"
+            android:padding="2dp"
+            android:text="0"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/frame10Score2Player2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@id/frame10Score3Player2"
+            android:background="@drawable/border"
+            android:padding="2dp"
+            android:text="0"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/frame10Score1Player2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@id/frame10Score2Player2"
+            android:background="@drawable/border"
+            android:padding="2dp"
+            android:text="0"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+</LinearLayout>
+
+<!--separator-->
+<ImageView
+    android:layout_width="match_parent"
+    android:layout_height="4dp"
+    android:scaleType="centerCrop"
+    android:src="@drawable/line" />
+
+<!--Downed pins tag-->
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:layout_gravity="center"
+    android:background="#f44336"
+    android:gravity="center"
+    android:paddingBottom="8dp"
+    android:paddingTop="8dp"
+    android:text="select number of downed pins:"
+    android:textColor="#fff"
+    android:textStyle="bold" />
+
+<!--Pin number selector-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:layout_marginTop="8dp"
+    android:background="#fff"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/minus"
+        android:layout_width="wrap_content"
+        android:layout_height="75dp"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
         android:clickable="true"
         android:focusable="true"
-        android:gravity="center"
-        android:onClick="resetGame"
-        android:text="reset"
-        android:textColor="#000"
-        android:textSize="18sp"
-        android:textStyle="bold" />
+        android:onClick="minusDownedPin"
+        android:src="@drawable/subtract" />
+
+    <ImageView
+        android:id="@+id/downedPins"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_weight="2"
+        android:src="@drawable/instructions" />
+
+    <ImageView
+        android:id="@+id/plus"
+        android:layout_width="wrap_content"
+        android:layout_height="75dp"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="plusDownedPin"
+        android:src="@drawable/add" />
+
+</LinearLayout>
+
+<!--Pin submit button-->
+<ImageView
+    android:id="@+id/submit"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:onClick="submitScore"
+    android:scaleType="centerCrop"
+    android:src="@drawable/submit" />
+
+<!--separator-->
+<ImageView
+    android:layout_width="match_parent"
+    android:layout_height="8dp"
+    android:scaleType="centerCrop"
+    android:src="@drawable/line" />
+
+<!--Reset button-->
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:layout_gravity="center_vertical"
+    android:background="#ffeb3b"
+    android:clickable="true"
+    android:focusable="true"
+    android:gravity="center"
+    android:onClick="resetGame"
+    android:text="reset"
+    android:textColor="#000"
+    android:textSize="18sp"
+    android:textStyle="bold" />
 
 </LinearLayout>
