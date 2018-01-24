@@ -1,9 +1,4 @@
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -15,13 +10,12 @@
         android:layout_weight="2"
         android:maxHeight="100dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/logo"
-        android:visibility="gone"/>
+        android:src="@drawable/logo" />
 
     <!--Player 1 Tag-->
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="40dp"
 
         android:background="#ff5722"
         android:orientation="horizontal"
@@ -38,7 +32,6 @@
             android:src="@drawable/ball" />
 
         <TextView
-            android:id="@+id/namePlayer1"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="8"
@@ -47,35 +40,12 @@
             android:textColor="#fff"
             android:textStyle="bold" />
 
-        <EditText
-            android:id="@+id/editNamePlayer1"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="8"
-            android:gravity="center_vertical"
-            android:hint="Player 1"
-            android:textColor="#fff"
-            android:textStyle="bold"
-            android:visibility="gone"/>
-
-        <Button
-            android:id="@+id/changePlayer1Name"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="Change name"
-            android:textAllCaps="false"
-            android:textColor="#FFF"
-            android:background="#E63E09"
-            android:padding="3sp"
-            android:layout_marginRight="16dp"
-            android:onClick="changePlayer1Name"/>
-
         <TextView
             android:id="@+id/totalScorePlayer1"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginRight="16dp"
-            android:layout_weight="0"
+            android:layout_weight="1"
             android:gravity="center_vertical"
             android:text="0"
             android:textColor="#fff"
@@ -508,7 +478,7 @@
     <!--Player 2 Tag-->
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="40dp"
         android:background="#3e2723"
         android:orientation="horizontal"
         android:paddingBottom="8dp"
@@ -525,45 +495,20 @@
             android:visibility="invisible" />
 
         <TextView
-            android:id="@+id/namePlayer2"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_weight="10"
+            android:layout_weight="8"
             android:gravity="center_vertical"
             android:text="Player 2"
             android:textColor="#fff"
-            android:textStyle="bold"/>
-
-
-        <EditText
-            android:id="@+id/editNamePlayer2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="8"
-            android:gravity="center_vertical"
-            android:hint="Player 2"
-            android:textColor="#fff"
-            android:textStyle="bold"
-            android:visibility="gone"/>
-
-        <Button
-            android:id="@+id/changePlayer2Name"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="Change name"
-            android:textAllCaps="false"
-            android:textColor="#FFF"
-            android:background="#250E0A"
-            android:padding="3sp"
-            android:layout_marginRight="16dp"
-            android:onClick="changePlayer2Name"/>
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/totalScorePlayer2"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginRight="16dp"
-            android:layout_weight="0"
+            android:layout_weight="1"
             android:gravity="center_vertical"
             android:text="0"
             android:textColor="#fff"
@@ -1088,4 +1033,3 @@
         android:textStyle="bold" />
 
 </LinearLayout>
-</ScrollView>
