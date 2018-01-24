@@ -4,6 +4,7 @@ import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Editable;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -1140,6 +1141,9 @@ public class MainActivity extends AppCompatActivity {
         image2.setClickable(true);
         ImageView image3 = findViewById(R.id.plus);
         image3.setClickable(true);
+
+        resetPlayerNameAndEditText(nameOfPlayer1, editNamePlayer1, 1);
+        resetPlayerNameAndEditText(nameOfPlayer2, editNamePlayer2, 2);
     }
 
 
@@ -1161,9 +1165,19 @@ public class MainActivity extends AppCompatActivity {
         else if (editNamePlayer1.getVisibility() == View.VISIBLE) {
             editNamePlayer1.setVisibility(View.GONE);
             nameOfPlayer1.setVisibility(View.VISIBLE);
-            nameOfPlayer1.setText(editNamePlayer1.getText());
+            Editable nameOfPlayer = editNamePlayer1.getText();
+            if(nameOfPlayer.equals(""))
+                resetPlayerNameAndEditText(nameOfPlayer1, editNamePlayer1, 1);
+            else
+                nameOfPlayer1.setText(nameOfPlayer);
+
             changePlayer1Name.setText("Change name");
         }
+    }
+
+    public void resetPlayerNameAndEditText(TextView playerName, EditText editNamePlayer, int playerNumber){
+        playerName.setText("Player " + playerNumber);
+        editNamePlayer.setText("Player " + playerName);
     }
 
     public void changePlayer2Name(View v) {
@@ -1181,7 +1195,12 @@ public class MainActivity extends AppCompatActivity {
         else if (editNamePlayer2.getVisibility() == View.VISIBLE) {
             editNamePlayer2.setVisibility(View.GONE);
             nameOfPlayer2.setVisibility(View.VISIBLE);
-            nameOfPlayer2.setText(editNamePlayer2.getText());
+            Editable nameOfPlayer = editNamePlayer2.getText();
+            if(nameOfPlayer.equals(""))
+                resetPlayerNameAndEditText(nameOfPlayer2, editNamePlayer2, 2);
+            else
+                nameOfPlayer2.setText(nameOfPlayer);
+
             changePlayer2Name.setText("Change name");
         }
     }
