@@ -4,6 +4,7 @@ import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -682,7 +683,6 @@ public class MainActivity extends AppCompatActivity {
         if (downedPinsPointer < maxPins) {
             downedPinsPointer++;
         }
-
         updateDownedPins();
 
     }
@@ -708,13 +708,14 @@ public class MainActivity extends AppCompatActivity {
     // also add the current score to the array, if applicable
     // stop if strike, store spare as negative number
     public void submitScore(View view) {
+        Log.v("The frame is: ", "" + frameNumber);
         // exit out if player hasn't chosen a score before pressing the button
         if (downedPinsPointer < 0) {
             return;
         }
 
         // for last frame process three scores instead of two, but only if first two scores sum 10+
-        if (frameNumber == 10) {
+            if (frameNumber == 10) {
 
             if (!frameEnd && !extraScore) {
                 if (activePlayer == 1) {
@@ -731,7 +732,7 @@ public class MainActivity extends AppCompatActivity {
                 calculateScore();
 
             } else if (frameEnd && !extraScore) {
-                if (activePlayer == 1) {
+                    if (activePlayer == 1) {
                     if (frameScoresPlayer1[frameNumber * 2 - 1] + downedPinsPointer >= 10) {
                         extraScore = true;
                         frameScoresPlayer1[frameNumber * 2] = downedPinsPointer;
@@ -852,13 +853,15 @@ public class MainActivity extends AppCompatActivity {
 
     // move to next frame
     private void nextFrame() {
-        if (frameNumber < 10) {
+        if (frameNumber < 11) {
             frameNumber++;
         }
     }
 
     // process end of game
     private void gameEnd() {
+        nextFrame();
+
         //disable submit button
         ImageView image = findViewById(R.id.submit);
         image.setClickable(false);
@@ -1124,5 +1127,223 @@ public class MainActivity extends AppCompatActivity {
         image2.setClickable(true);
         ImageView image3 = findViewById(R.id.plus);
         image3.setClickable(true);
+    }
+
+    /**
+     * The undo button will remove the last score/roll and let the user re-enter that score.
+     *
+     * @param v
+     */
+
+
+    public void undoTurn (View v){
+
+        // if the game is over but you want to undo the last roll from player 2
+        if (frameNumber == 11){
+            frameNumber = 10;
+
+            //enable submit button
+            ImageView image = findViewById(R.id.submit);
+            image.setClickable(true);
+
+            //enable pin +/- buttons
+            ImageView image2 = findViewById(R.id.minus);
+            image2.setClickable(true);
+            ImageView image3 = findViewById(R.id.plus);
+            image3.setClickable(true);
+
+            //show active player 2 icon
+            activePlayer1.setVisibility(activePlayer1.INVISIBLE);
+            activePlayer2.setVisibility(activePlayer2.VISIBLE);
+
+            // get the array from arrays.xml
+            downedPins = getResources().obtainTypedArray(R.array.number_of_pins);
+
+            // define the ImageView for downedPins
+            imageViewDownedPins = findViewById(R.id.downedPins);
+
+            // determine if player 2 had an extra roll in the 10th frame or not
+            if (frameScoresPlayer2[frameNumber * 2 - 1] + frameScoresPlayer2[frameNumber * 2] >= 10){
+                extraScore = true;
+                frameEnd = false;
+                activePlayer = 2;
+                frameScoresPlayer2[frameNumber*2 +1] = 0;
+                maxPins = 10;
+                calculateScore();
+                updateDownedPins();
+                updateScores();
+            }
+            else{
+                frameEnd = true;
+                activePlayer = 2;
+                frameScoresPlayer2[frameNumber*2] = 0;
+                maxPins = 10 - frameScoresPlayer2[frameNumber*2 - 1];
+                calculateScore();
+                updateDownedPins();
+                updateScores();
+            }
+        }
+        //This processes the undo button during frame 10
+        else if (frameNumber == 10 && (!(activePlayer == 1 && !frameEnd && !extraScore))){
+            // if the user wants to undo frame 10 roll 1
+            if (frameEnd && !extraScore){
+                if (activePlayer == 1){
+                    frameEnd = false;
+                    frameScoresPlayer1[frameNumber * 2 - 1] = 0;
+                    maxPins = 10;
+                    calculateScore();
+                    updateDownedPins();
+                    updateScores();
+
+                }
+                else if (activePlayer == 2){
+                    frameEnd = false;
+                    frameScoresPlayer2[frameNumber * 2 - 1] = 0;
+                    maxPins = 10;
+                    calculateScore();
+                    updateDownedPins();
+                    updateScores();
+                }
+            }
+            //if the player wants to undo frame 10, roll #3 from player one
+            else if (!frameEnd && !extraScore){
+                if (activePlayer == 2) {
+                    // if player 1  received an extra roll
+                    if (frameScoresPlayer1[frameNumber * 2] + frameScoresPlayer1[frameNumber * 2 - 1] >= 10) {
+                        activePlayer();
+                        extraScore = true;
+                        frameEnd = false;
+                        frameScoresPlayer1[frameNumber * 2 + 1] = 0;
+                        maxPins = 10;
+                        calculateScore();
+                        updateDownedPins();
+                        updateScores();
+                    }
+                    // if player 1 did not receive an extra roll
+                    else {
+                        activePlayer();
+                        frameEnd = true;
+                        extraScore = false;
+                        maxPins = 10 - frameScoresPlayer1[frameNumber * 2 - 1];
+                        frameScoresPlayer1[frameNumber * 2] = 0;
+                        calculateScore();
+                        updateDownedPins();
+                        updateScores();
+                    }
+                }
+            }
+            // if the player wants to undo the score for frame 10 roll 2
+            else if (!frameEnd && extraScore){
+                if (activePlayer == 1){
+                    frameEnd = true;
+                    extraScore = false;
+                    frameScoresPlayer1[frameNumber * 2] = 0;
+                    if (frameScoresPlayer1[frameNumber * 2 - 1] == 10){
+                        maxPins = 10;
+                    }
+                    else{
+                        maxPins = 10 - frameScoresPlayer1[frameNumber * 2 - 1];
+                    }
+                    calculateScore();
+                    updateDownedPins();
+                    updateScores();
+                }
+                else if (activePlayer == 2){
+                    frameEnd = true;
+                    extraScore = false;
+                    frameScoresPlayer2[frameNumber * 2] = 0;
+                    if (frameScoresPlayer2[frameNumber * 2 - 1] == 10){
+                        maxPins = 10;
+                    }
+                    else{
+                        maxPins = 10 - frameScoresPlayer2[frameNumber * 2 - 1];
+                    }
+                    calculateScore();
+                    updateDownedPins();
+                    updateScores();
+                }
+            }
+
+        }
+
+
+
+
+        // This processes the undo button for frames 1-9
+        else {
+        if (activePlayer == 1 && !frameEnd) {
+                // go back a frame unless it's frame 1
+                frameNumber = frameNumber - 1;
+                if (frameNumber < 1) {
+                    frameNumber = 1;
+                    return;
+                }
+                // if the last roll was a strike for player 2
+                if ((frameScoresPlayer2[frameNumber * 2 - 1] == 10)) {
+                    frameEnd = false;
+                    frameScoresPlayer2[frameNumber * 2 - 1] = 0;
+                    frameScoresPlayer2[frameNumber * 2] = 0;
+                    maxPins = 10;
+                    activePlayer();
+                    updateDownedPins();
+                    calculateScore();
+                    updateScores();
+                }
+                // if the last roll was not a strike for player 2
+                else {
+                    frameScoresPlayer2[frameNumber * 2] = 0;
+                    frameEnd = true;
+                    maxPins = 10 - frameScoresPlayer2[frameNumber * 2 - 1];
+                    activePlayer();
+                    calculateScore();
+                    updateDownedPins();
+                    updateScores();
+                }
+            }
+            // if player 1 is in the middle of a frame this resets the first score in the frame
+            else if (activePlayer == 1 && frameEnd) {
+                frameEnd = false;
+                frameScoresPlayer1[frameNumber * 2 - 1] = 0;
+                frameTotalScoresPlayer1[frameNumber] = 0;
+                maxPins = 10;
+                calculateScore();
+                updateDownedPins();
+                updateScores();
+            } else if (activePlayer == 2 && !frameEnd) {
+                // if the last roll was a strike for player 1
+                if (frameScoresPlayer1[frameNumber * 2 - 1] == 10) {
+                    frameEnd = false;
+                    frameScoresPlayer1[frameNumber * 2 - 1] = 0;
+                    frameScoresPlayer1[frameNumber * 2] = 0;
+                    maxPins = 10;
+                    activePlayer();
+                    updateDownedPins();
+                    calculateScore();
+                    updateScores();
+                }
+                //if the last roll was not a strike for player 1
+                else {
+                    frameScoresPlayer1[frameNumber * 2] = 0;
+                    frameEnd = true;
+                    maxPins = 10 - frameScoresPlayer1[frameNumber * 2 - 1];
+                    activePlayer();
+                    calculateScore();
+                    updateDownedPins();
+                    updateScores();
+                }
+            }
+            // if player 2 is in the middle of a frame this resets the first score in the frame
+            else if (activePlayer == 2 && frameEnd) {
+                frameEnd = false;
+                frameScoresPlayer2[frameNumber * 2 - 1] = 0;
+                frameTotalScoresPlayer2[frameNumber] = 0;
+                maxPins = 10;
+                calculateScore();
+                updateDownedPins();
+                updateScores();
+            }
+        }
+
+
     }
 }
