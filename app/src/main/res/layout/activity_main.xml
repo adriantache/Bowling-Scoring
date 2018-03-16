@@ -1003,7 +1003,7 @@
     <ImageView
         android:id="@+id/submit"
         android:layout_width="match_parent"
-        android:layout_height="72dp"
+        android:layout_height="120dp"
         android:clickable="true"
         android:focusable="true"
         android:onClick="submitScore"
@@ -1017,47 +1017,50 @@
         android:scaleType="centerCrop"
         android:src="@drawable/line" />
 
-    <!--Undo Button-->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:layout_gravity="center_vertical"
-        android:background="#ffeb3b"
-        android:clickable="true"
-        android:focusable="true"
-        android:gravity="center"
-        android:onClick="undoTurn"
-        android:text="Undo Last Roll"
-        android:textColor="#000"
-        android:textSize="18sp"
-        android:textStyle="bold" />
+        android:background="#000"
+        android:orientation="horizontal">
 
-    <!--separator-->
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="8dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/line" />
+        <!--Undo Button-->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_weight="2"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:background="#AED581"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:onClick="undoTurn"
+            android:text="Undo Last Roll"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
-    <!--Reset button-->
-    <TextView
-    android:layout_width="match_parent"
-    android:layout_height="40dp"
-    android:layout_gravity="center_vertical"
-    android:background="#ffeb3b"
-    android:clickable="true"
-        android:focusable="true"
-    android:gravity="center"
-    android:onClick="resetGame"
-    android:text="Reset Game"
-    android:textColor="#000"
-    android:textSize="18sp"
-    android:textStyle="bold" />
+        <!--Reset button-->
+        <TextView
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:background="#ffeb3b"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:onClick="resetGame"
+            android:text="Reset Game"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
-
-
-
-
-
+    </LinearLayout>
 
 </LinearLayout>
