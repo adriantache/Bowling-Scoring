@@ -1166,6 +1166,7 @@ public class MainActivity extends AppCompatActivity {
                 frameEnd = false;
                 activePlayer = 2;
                 frameScoresPlayer2[frameNumber * 2 + 1] = 0;
+                downedPinsPointer = 10;
                 maxPins = 10;
                 calculateScore();
                 updateDownedPins();
@@ -1175,6 +1176,7 @@ public class MainActivity extends AppCompatActivity {
                 activePlayer = 2;
                 frameScoresPlayer2[frameNumber * 2] = 0;
                 maxPins = 10 - frameScoresPlayer2[frameNumber * 2 - 1];
+                downedPinsPointer = 10 - frameScoresPlayer2[frameNumber * 2 - 1];
                 calculateScore();
                 updateDownedPins();
                 updateScores();
@@ -1187,6 +1189,7 @@ public class MainActivity extends AppCompatActivity {
                 if (activePlayer == 1) {
                     frameEnd = false;
                     frameScoresPlayer1[frameNumber * 2 - 1] = 0;
+                    downedPinsPointer = 10;
                     maxPins = 10;
                     calculateScore();
                     updateDownedPins();
@@ -1195,6 +1198,7 @@ public class MainActivity extends AppCompatActivity {
                 } else if (activePlayer == 2) {
                     frameEnd = false;
                     frameScoresPlayer2[frameNumber * 2 - 1] = 0;
+                    downedPinsPointer = 10;
                     maxPins = 10;
                     calculateScore();
                     updateDownedPins();
@@ -1210,6 +1214,7 @@ public class MainActivity extends AppCompatActivity {
                         extraScore = true;
                         frameEnd = false;
                         frameScoresPlayer1[frameNumber * 2 + 1] = 0;
+                        downedPinsPointer = 10;
                         maxPins = 10;
                         calculateScore();
                         updateDownedPins();
@@ -1221,6 +1226,7 @@ public class MainActivity extends AppCompatActivity {
                         frameEnd = true;
                         extraScore = false;
                         maxPins = 10 - frameScoresPlayer1[frameNumber * 2 - 1];
+                        downedPinsPointer = 10 - frameScoresPlayer1[frameNumber * 2 - 1];
                         frameScoresPlayer1[frameNumber * 2] = 0;
                         calculateScore();
                         updateDownedPins();
@@ -1235,8 +1241,10 @@ public class MainActivity extends AppCompatActivity {
                     extraScore = false;
                     frameScoresPlayer1[frameNumber * 2] = 0;
                     if (frameScoresPlayer1[frameNumber * 2 - 1] == 10) {
+                        downedPinsPointer = 10;
                         maxPins = 10;
                     } else {
+                        downedPinsPointer = 10 - frameScoresPlayer1[frameNumber * 2 - 1];
                         maxPins = 10 - frameScoresPlayer1[frameNumber * 2 - 1];
                     }
                     calculateScore();
@@ -1247,8 +1255,10 @@ public class MainActivity extends AppCompatActivity {
                     extraScore = false;
                     frameScoresPlayer2[frameNumber * 2] = 0;
                     if (frameScoresPlayer2[frameNumber * 2 - 1] == 10) {
+                        downedPinsPointer = 10;
                         maxPins = 10;
                     } else {
+                        downedPinsPointer = 10 - frameScoresPlayer2[frameNumber * 2 - 1];
                         maxPins = 10 - frameScoresPlayer2[frameNumber * 2 - 1];
                     }
                     calculateScore();
@@ -1285,6 +1295,7 @@ public class MainActivity extends AppCompatActivity {
                     frameScoresPlayer2[frameNumber * 2] = 0;
                     frameEnd = true;
                     maxPins = 10 - frameScoresPlayer2[frameNumber * 2 - 1];
+                    downedPinsPointer = 10 - frameScoresPlayer2[frameNumber * 2 - 1];
                     activePlayer();
                     calculateScore();
                     updateDownedPins();
@@ -1296,6 +1307,7 @@ public class MainActivity extends AppCompatActivity {
                 frameEnd = false;
                 frameScoresPlayer1[frameNumber * 2 - 1] = 0;
                 frameTotalScoresPlayer1[frameNumber] = 0;
+                downedPinsPointer = 10;
                 maxPins = 10;
                 calculateScore();
                 updateDownedPins();
@@ -1317,6 +1329,7 @@ public class MainActivity extends AppCompatActivity {
                     frameScoresPlayer1[frameNumber * 2] = 0;
                     frameEnd = true;
                     maxPins = 10 - frameScoresPlayer1[frameNumber * 2 - 1];
+                    downedPinsPointer = 10 - frameScoresPlayer1[frameNumber * 2 - 1];
                     activePlayer();
                     calculateScore();
                     updateDownedPins();
@@ -1328,6 +1341,7 @@ public class MainActivity extends AppCompatActivity {
                 frameEnd = false;
                 frameScoresPlayer2[frameNumber * 2 - 1] = 0;
                 frameTotalScoresPlayer2[frameNumber] = 0;
+                downedPinsPointer = 10;
                 maxPins = 10;
                 calculateScore();
                 updateDownedPins();
