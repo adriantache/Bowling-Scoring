@@ -19,27 +19,10 @@ public class MainActivity extends AppCompatActivity {
     ImageView imageViewDownedPins;
     ImageView activePlayer1;
     ImageView activePlayer2;
-    TextView frame1Score1Player1;
-    TextView frame1Score2Player1;
-    TextView frame2Score1Player1;
-    TextView frame2Score2Player1;
-    TextView frame3Score1Player1;
-    TextView frame3Score2Player1;
-    TextView frame4Score1Player1;
-    TextView frame4Score2Player1;
-    TextView frame5Score1Player1;
-    TextView frame5Score2Player1;
-    TextView frame6Score1Player1;
-    TextView frame6Score2Player1;
-    TextView frame7Score1Player1;
-    TextView frame7Score2Player1;
-    TextView frame8Score1Player1;
-    TextView frame8Score2Player1;
-    TextView frame9Score1Player1;
-    TextView frame9Score2Player1;
-    TextView frame10Score1Player1;
-    TextView frame10Score2Player1;
+    //Total 10 rounds and 2 iteration in each round
+    final TextView[][] frameScorePlayer1 = new TextView[10][2];
     TextView frame10Score3Player1;
+
     TextView frame1Score1Player2;
     TextView frame1Score2Player2;
     TextView frame2Score1Player2;
@@ -61,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
     TextView frame10Score1Player2;
     TextView frame10Score2Player2;
     TextView frame10Score3Player2;
+
     TextView frame1TotalScorePlayer1;
     TextView frame2TotalScorePlayer1;
     TextView frame3TotalScorePlayer1;
@@ -116,26 +100,26 @@ public class MainActivity extends AppCompatActivity {
         activePlayer2 = findViewById(R.id.activePlayer2);
 
         // find all score TextViews (masked by splash screen)
-        frame1Score1Player1 = findViewById(R.id.frame1Score1Player1);
-        frame1Score2Player1 = findViewById(R.id.frame1Score2Player1);
-        frame2Score1Player1 = findViewById(R.id.frame2Score1Player1);
-        frame2Score2Player1 = findViewById(R.id.frame2Score2Player1);
-        frame3Score1Player1 = findViewById(R.id.frame3Score1Player1);
-        frame3Score2Player1 = findViewById(R.id.frame3Score2Player1);
-        frame4Score1Player1 = findViewById(R.id.frame4Score1Player1);
-        frame4Score2Player1 = findViewById(R.id.frame4Score2Player1);
-        frame5Score1Player1 = findViewById(R.id.frame5Score1Player1);
-        frame5Score2Player1 = findViewById(R.id.frame5Score2Player1);
-        frame6Score1Player1 = findViewById(R.id.frame6Score1Player1);
-        frame6Score2Player1 = findViewById(R.id.frame6Score2Player1);
-        frame7Score1Player1 = findViewById(R.id.frame7Score1Player1);
-        frame7Score2Player1 = findViewById(R.id.frame7Score2Player1);
-        frame8Score1Player1 = findViewById(R.id.frame8Score1Player1);
-        frame8Score2Player1 = findViewById(R.id.frame8Score2Player1);
-        frame9Score1Player1 = findViewById(R.id.frame9Score1Player1);
-        frame9Score2Player1 = findViewById(R.id.frame9Score2Player1);
-        frame10Score1Player1 = findViewById(R.id.frame10Score1Player1);
-        frame10Score2Player1 = findViewById(R.id.frame10Score2Player1);
+        frameScorePlayer1[0][0] = findViewById(R.id.frame1Score1Player1);
+        frameScorePlayer1[0][1] = findViewById(R.id.frame1Score2Player1);
+        frameScorePlayer1[1][0] = findViewById(R.id.frame2Score1Player1);
+        frameScorePlayer1[1][1] = findViewById(R.id.frame2Score2Player1);
+        frameScorePlayer1[2][0] = findViewById(R.id.frame3Score1Player1);
+        frameScorePlayer1[2][1] = findViewById(R.id.frame3Score2Player1);
+        frameScorePlayer1[3][0] = findViewById(R.id.frame4Score1Player1);
+        frameScorePlayer1[3][1] = findViewById(R.id.frame4Score2Player1);
+        frameScorePlayer1[4][0] = findViewById(R.id.frame5Score1Player1);
+        frameScorePlayer1[4][1] = findViewById(R.id.frame5Score2Player1);
+        frameScorePlayer1[5][0] = findViewById(R.id.frame6Score1Player1);
+        frameScorePlayer1[5][1] = findViewById(R.id.frame6Score2Player1);
+        frameScorePlayer1[6][0] = findViewById(R.id.frame7Score1Player1);
+        frameScorePlayer1[6][1] = findViewById(R.id.frame7Score2Player1);
+        frameScorePlayer1[7][0] = findViewById(R.id.frame8Score1Player1);
+        frameScorePlayer1[7][1] = findViewById(R.id.frame8Score2Player1);
+        frameScorePlayer1[8][0] = findViewById(R.id.frame9Score1Player1);
+        frameScorePlayer1[8][1] = findViewById(R.id.frame9Score2Player1);
+        frameScorePlayer1[9][0] = findViewById(R.id.frame10Score1Player1);
+        frameScorePlayer1[9][1] = findViewById(R.id.frame10Score2Player1);
         frame10Score3Player1 = findViewById(R.id.frame10Score3Player1);
         frame1Score1Player2 = findViewById(R.id.frame1Score1Player2);
         frame1Score2Player2 = findViewById(R.id.frame1Score2Player2);
@@ -186,227 +170,23 @@ public class MainActivity extends AppCompatActivity {
     // the vectors with frame scores and frame total scores (split/condition it per player?)
     public void updateScores() {
         if (activePlayer == 1) {
+            int frameScoresPlayer1Iteration = 1;
+            for(int frame=0; frame < 10; frame++){
+                for(int score=0; score < 2; score++,frameScoresPlayer1Iteration++){
+                    if (frameScoresPlayer1[frameScoresPlayer1Iteration] == 10) {
+                        frameScorePlayer1[frame][score].setText("X");
+                    } else if (frameScoresPlayer1[frameScoresPlayer1Iteration] < 0) {
+                        frameScorePlayer1[frame][score].setText("/");
+                    } else if (frameScoresPlayer1[frameScoresPlayer1Iteration] == 40) {
+                        frameScorePlayer1[frame][score].setText("");
+                    } else if (frameScoresPlayer1[frameScoresPlayer1Iteration] == 0) {
+                        frameScorePlayer1[frame][score].setText("-");
+                    } else {
+                        frameScorePlayer1[frame][score].setText(String.format("%d", frameScoresPlayer1[frameScoresPlayer1Iteration]));
+                    }
+                }
+            }
 
-            if (frameScoresPlayer1[1] == 10) {
-                frame1Score1Player1.setText("X");
-            } else if (frameScoresPlayer1[1] < 0) {
-                frame1Score1Player1.setText("/");
-            } else if (frameScoresPlayer1[1] == 40) {
-                frame1Score1Player1.setText("");
-            } else if (frameScoresPlayer1[1] == 0) {
-                frame1Score1Player1.setText("-");
-            } else {
-                frame1Score1Player1.setText(String.format("%d", frameScoresPlayer1[1]));
-            }
-            if (frameScoresPlayer1[2] == 10) {
-                frame1Score2Player1.setText("X");
-            } else if (frameScoresPlayer1[2] < 0) {
-                frame1Score2Player1.setText("/");
-            } else if (frameScoresPlayer1[2] == 40) {
-                frame1Score2Player1.setText("");
-            } else if (frameScoresPlayer1[2] == 0) {
-                frame1Score2Player1.setText("-");
-            } else {
-                frame1Score2Player1.setText(String.format("%d", frameScoresPlayer1[2]));
-            }
-            if (frameScoresPlayer1[3] == 10) {
-                frame2Score1Player1.setText("X");
-            } else if (frameScoresPlayer1[3] < 0) {
-                frame2Score1Player1.setText("/");
-            } else if (frameScoresPlayer1[3] == 40) {
-                frame2Score1Player1.setText("");
-            } else if (frameScoresPlayer1[3] == 0) {
-                frame2Score1Player1.setText("-");
-            } else {
-                frame2Score1Player1.setText(String.format("%d", frameScoresPlayer1[3]));
-            }
-            if (frameScoresPlayer1[4] == 10) {
-                frame2Score2Player1.setText("X");
-            } else if (frameScoresPlayer1[4] < 0) {
-                frame2Score2Player1.setText("/");
-            } else if (frameScoresPlayer1[4] == 40) {
-                frame2Score2Player1.setText("");
-            } else if (frameScoresPlayer1[4] == 0) {
-                frame2Score2Player1.setText("-");
-            } else {
-                frame2Score2Player1.setText(String.format("%d", frameScoresPlayer1[4]));
-            }
-            if (frameScoresPlayer1[5] == 10) {
-                frame3Score1Player1.setText("X");
-            } else if (frameScoresPlayer1[5] < 0) {
-                frame3Score1Player1.setText("/");
-            } else if (frameScoresPlayer1[5] == 40) {
-                frame3Score1Player1.setText("");
-            } else if (frameScoresPlayer1[5] == 0) {
-                frame3Score1Player1.setText("-");
-            } else {
-                frame3Score1Player1.setText(String.format("%d", frameScoresPlayer1[5]));
-            }
-            if (frameScoresPlayer1[6] == 10) {
-                frame3Score2Player1.setText("X");
-            } else if (frameScoresPlayer1[6] < 0) {
-                frame3Score2Player1.setText("/");
-            } else if (frameScoresPlayer1[6] == 40) {
-                frame3Score2Player1.setText("");
-            } else if (frameScoresPlayer1[6] == 0) {
-                frame3Score2Player1.setText("-");
-            } else {
-                frame3Score2Player1.setText(String.format("%d", frameScoresPlayer1[6]));
-            }
-            if (frameScoresPlayer1[7] == 10) {
-                frame4Score1Player1.setText("X");
-            } else if (frameScoresPlayer1[7] < 0) {
-                frame4Score1Player1.setText("/");
-            } else if (frameScoresPlayer1[7] == 40) {
-                frame4Score1Player1.setText("");
-            } else if (frameScoresPlayer1[7] == 0) {
-                frame4Score1Player1.setText("-");
-            } else {
-                frame4Score1Player1.setText(String.format("%d", frameScoresPlayer1[7]));
-            }
-            if (frameScoresPlayer1[8] == 10) {
-                frame4Score2Player1.setText("X");
-            } else if (frameScoresPlayer1[8] < 0) {
-                frame4Score2Player1.setText("/");
-            } else if (frameScoresPlayer1[8] == 40) {
-                frame4Score2Player1.setText("");
-            } else if (frameScoresPlayer1[8] == 0) {
-                frame4Score2Player1.setText("-");
-            } else {
-                frame4Score2Player1.setText(String.format("%d", frameScoresPlayer1[8]));
-            }
-            if (frameScoresPlayer1[9] == 10) {
-                frame5Score1Player1.setText("X");
-            } else if (frameScoresPlayer1[9] < 0) {
-                frame5Score1Player1.setText("/");
-            } else if (frameScoresPlayer1[9] == 40) {
-                frame5Score1Player1.setText("");
-            } else if (frameScoresPlayer1[9] == 0) {
-                frame5Score1Player1.setText("-");
-            } else {
-                frame5Score1Player1.setText(String.format("%d", frameScoresPlayer1[9]));
-            }
-            if (frameScoresPlayer1[10] == 10) {
-                frame5Score2Player1.setText("X");
-            } else if (frameScoresPlayer1[10] < 0) {
-                frame5Score2Player1.setText("/");
-            } else if (frameScoresPlayer1[10] == 40) {
-                frame5Score2Player1.setText("");
-            } else if (frameScoresPlayer1[10] == 0) {
-                frame5Score2Player1.setText("-");
-            } else {
-                frame5Score2Player1.setText(String.format("%d", frameScoresPlayer1[10]));
-            }
-            if (frameScoresPlayer1[11] == 10) {
-                frame6Score1Player1.setText("X");
-            } else if (frameScoresPlayer1[11] < 0) {
-                frame6Score1Player1.setText("/");
-            } else if (frameScoresPlayer1[11] == 40) {
-                frame6Score1Player1.setText("");
-            } else if (frameScoresPlayer1[11] == 0) {
-                frame6Score1Player1.setText("-");
-            } else {
-                frame6Score1Player1.setText(String.format("%d", frameScoresPlayer1[11]));
-            }
-            if (frameScoresPlayer1[12] == 10) {
-                frame6Score2Player1.setText("X");
-            } else if (frameScoresPlayer1[12] < 0) {
-                frame6Score2Player1.setText("/");
-            } else if (frameScoresPlayer1[12] == 40) {
-                frame6Score2Player1.setText("");
-            } else if (frameScoresPlayer1[12] == 0) {
-                frame6Score2Player1.setText("-");
-            } else {
-                frame6Score2Player1.setText(String.format("%d", frameScoresPlayer1[12]));
-            }
-            if (frameScoresPlayer1[13] == 10) {
-                frame7Score1Player1.setText("X");
-            } else if (frameScoresPlayer1[13] < 0) {
-                frame7Score1Player1.setText("/");
-            } else if (frameScoresPlayer1[13] == 40) {
-                frame7Score1Player1.setText("");
-            } else if (frameScoresPlayer1[13] == 0) {
-                frame7Score1Player1.setText("-");
-            } else {
-                frame7Score1Player1.setText(String.format("%d", frameScoresPlayer1[13]));
-            }
-            if (frameScoresPlayer1[14] == 10) {
-                frame7Score2Player1.setText("X");
-            } else if (frameScoresPlayer1[14] < 0) {
-                frame7Score2Player1.setText("/");
-            } else if (frameScoresPlayer1[14] == 40) {
-                frame7Score2Player1.setText("");
-            } else if (frameScoresPlayer1[14] == 0) {
-                frame7Score2Player1.setText("-");
-            } else {
-                frame7Score2Player1.setText(String.format("%d", frameScoresPlayer1[14]));
-            }
-            if (frameScoresPlayer1[15] == 10) {
-                frame8Score1Player1.setText("X");
-            } else if (frameScoresPlayer1[15] < 0) {
-                frame8Score1Player1.setText("/");
-            } else if (frameScoresPlayer1[15] == 40) {
-                frame8Score1Player1.setText("");
-            } else if (frameScoresPlayer1[15] == 0) {
-                frame8Score1Player1.setText("-");
-            } else {
-                frame8Score1Player1.setText(String.format("%d", frameScoresPlayer1[15]));
-            }
-            if (frameScoresPlayer1[16] == 10) {
-                frame8Score2Player1.setText("X");
-            } else if (frameScoresPlayer1[16] < 0) {
-                frame8Score2Player1.setText("/");
-            } else if (frameScoresPlayer1[16] == 40) {
-                frame8Score2Player1.setText("");
-            } else if (frameScoresPlayer1[16] == 0) {
-                frame8Score2Player1.setText("-");
-            } else {
-                frame8Score2Player1.setText(String.format("%d", frameScoresPlayer1[16]));
-            }
-            if (frameScoresPlayer1[17] == 10) {
-                frame9Score1Player1.setText("X");
-            } else if (frameScoresPlayer1[17] < 0) {
-                frame9Score1Player1.setText("/");
-            } else if (frameScoresPlayer1[17] == 40) {
-                frame9Score1Player1.setText("");
-            } else if (frameScoresPlayer1[17] == 0) {
-                frame9Score1Player1.setText("-");
-            } else {
-                frame9Score1Player1.setText(String.format("%d", frameScoresPlayer1[17]));
-            }
-            if (frameScoresPlayer1[18] == 10) {
-                frame9Score2Player1.setText("X");
-            } else if (frameScoresPlayer1[18] < 0) {
-                frame9Score2Player1.setText("/");
-            } else if (frameScoresPlayer1[18] == 40) {
-                frame9Score2Player1.setText("");
-            } else if (frameScoresPlayer1[18] == 0) {
-                frame9Score2Player1.setText("-");
-            } else {
-                frame9Score2Player1.setText(String.format("%d", frameScoresPlayer1[18]));
-            }
-            if (frameScoresPlayer1[19] == 10) {
-                frame10Score1Player1.setText("X");
-            } else if (frameScoresPlayer1[19] < 0) {
-                frame10Score1Player1.setText("/");
-            } else if (frameScoresPlayer1[19] == 40) {
-                frame10Score1Player1.setText("");
-            } else if (frameScoresPlayer1[19] == 0) {
-                frame10Score1Player1.setText("-");
-            } else {
-                frame10Score1Player1.setText(String.format("%d", frameScoresPlayer1[19]));
-            }
-            if (frameScoresPlayer1[20] == 10) {
-                frame10Score2Player1.setText("X");
-            } else if (frameScoresPlayer1[20] < 0) {
-                frame10Score2Player1.setText("/");
-            } else if (frameScoresPlayer1[20] == 40) {
-                frame10Score2Player1.setText("");
-            } else if (frameScoresPlayer1[20] == 0) {
-                frame10Score2Player1.setText("-");
-            } else {
-                frame10Score2Player1.setText(String.format("%d", frameScoresPlayer1[20]));
-            }
             if (frameScoresPlayer1[21] == 10) {
                 frame10Score3Player1.setText("X");
             } else if (frameScoresPlayer1[21] < 0) {
